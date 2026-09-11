@@ -1,0 +1,58 @@
+{
+  "sections": [
+    {
+      "start_index": 0,
+      "end_index": 1,
+      "type": "INTRO",
+      "topic": "Introduction"
+    },
+    {
+      "start_index": 2,
+      "end_index": 23,
+      "type": "FPL_ANALYSIS",
+      "topic": "Injury and availability updates"
+    },
+    {
+      "start_index": 24,
+      "end_index": 53,
+      "type": "FPL_ANALYSIS",
+      "topic": "Transfer advice and player comparisons"
+    },
+    {
+      "start_index": 54,
+      "end_index": 60,
+      "type": "ADVERTISEMENT",
+      "topic": "Fantasy Football Hub promotion"
+    },
+    {
+      "start_index": 61,
+      "end_index": 80,
+      "type": "FPL_ANALYSIS",
+      "topic": "Captaincy options and analysis"
+    },
+    {
+      "start_index": 81,
+      "end_index": 95,
+      "type": "FPL_ANALYSIS",
+      "topic": "Triple captain chip strategy"
+    },
+    {
+      "start_index": 96,
+      "end_index": 108,
+      "type": "FPL_ANALYSIS",
+      "topic": "Benching decisions"
+    },
+    {
+      "start_index": 109,
+      "end_index": 131,
+      "type": "FPL_ANALYSIS",
+      "topic": "Wild card team discussion and squad structure"
+    },
+    {
+      "start_index": 132,
+      "end_index": 133,
+      "type": "INTRO",
+      "topic": "Video conclusion and call to action"
+    }
+  ]
+}

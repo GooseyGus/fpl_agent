@@ -1,0 +1,1082 @@
+{
+  "mentions": [
+    {
+      "mention_id": "GGjD_6itXSw|00:18|recommendation|brunog",
+      "source": "GGjD_6itXSw",
+      "timestamp": "00:18",
+      "raw_name": "Bruno G",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 452,
+      "selected_player_name": "Bruno Guimarães Rodriguez Moura",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 452,
+          "player_name": "Bruno Guimarães Rodriguez Moura",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "brunog",
+          "canonical_player_id": 452,
+          "canonical_player_name": "Bruno Guimarães Rodriguez Moura",
+          "confidence": 0.95,
+          "reason": "Common short form and alias map entries for Bruno Guimarães"
+        }
+      ],
+      "reason": "Alias 'Bruno G' maps to Bruno Guimarães Rodriguez Moura. Nearby context mentions arsenal."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|00:18|recommendation|moscara",
+      "source": "GGjD_6itXSw",
+      "timestamp": "00:18",
+      "raw_name": "Moscara",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 11,
+      "selected_player_name": "Cristhian Mosquera",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 11,
+          "player_name": "Cristhian Mosquera",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "moscara",
+          "canonical_player_id": 11,
+          "canonical_player_name": "Cristhian Mosquera",
+          "confidence": 0.9,
+          "reason": "Phonetic similarity and context of Arsenal training absence"
+        }
+      ],
+      "reason": "Alias 'Moscara' maps to Cristhian Mosquera. Nearby context mentions arsenal."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|00:37|recommendation|kza",
+      "source": "GGjD_6itXSw",
+      "timestamp": "00:37",
+      "raw_name": "KZA",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 31,
+      "selected_player_name": "Ezri Konsa Ngoyo",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 31,
+          "player_name": "Ezri Konsa Ngoyo",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "kza",
+          "canonical_player_id": 31,
+          "canonical_player_name": "Ezri Konsa Ngoyo",
+          "confidence": 0.9,
+          "reason": "Alias map includes 'kza' for Ezri Konsa Ngoyo"
+        }
+      ],
+      "reason": "Alias 'KZA' maps to Ezri Konsa Ngoyo. Nearby context mentions arsenal."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|01:13|recommendation|gonza",
+      "source": "GGjD_6itXSw",
+      "timestamp": "01:13",
+      "raw_name": "Gonza",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 31,
+      "selected_player_name": "Ezri Konsa Ngoyo",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 31,
+          "player_name": "Ezri Konsa Ngoyo",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "gonza",
+          "canonical_player_id": 31,
+          "canonical_player_name": "Ezri Konsa Ngoyo",
+          "confidence": 0.95,
+          "reason": "Phonetic match and alias map includes 'consa' and similar variants for Ezri Konsa Ngoyo"
+        }
+      ],
+      "reason": "Alias 'Gonza' maps to Ezri Konsa Ngoyo. Nearby context mentions arsenal."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|01:31|recommendation|timber",
+      "source": "GGjD_6itXSw",
+      "timestamp": "01:31",
+      "raw_name": "Timber",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 5,
+      "selected_player_name": "Jurriën Timber",
+      "confidence": 0.96,
+      "ranked_candidates": [
+        {
+          "player_id": 5,
+          "player_name": "Jurriën Timber",
+          "confidence": 0.96
+        },
+        {
+          "player_id": 644,
+          "player_name": "Quinten Timber",
+          "confidence": 0.64
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "timber",
+          "canonical_player_id": 5,
+          "canonical_player_name": "Jurriën Timber",
+          "confidence": 0.96,
+          "reason": "Transcript surface form 'Timber' maps to Jurriën Timber."
+        }
+      ],
+      "reason": "Best supported canonical candidate for 'Timber' is Jurriën Timber. Nearby context mentions arsenal."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|01:49|recommendation|rodon",
+      "source": "GGjD_6itXSw",
+      "timestamp": "01:49",
+      "raw_name": "Rodon",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 329,
+      "selected_player_name": "Joe Rodon",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 329,
+          "player_name": "Joe Rodon",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "rodon",
+          "canonical_player_id": 207,
+          "canonical_player_name": "Oscar Mingueza",
+          "confidence": 0.85,
+          "reason": "Phonetic similarity and context of Crystal Palace defender out for 8-10 weeks"
+        }
+      ],
+      "reason": "Unique supported canonical match for 'Rodon' resolves to Joe Rodon (Leeds, position 2). Nearby context mentions arsenal, crystal palace."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|02:08|recommendation|diper",
+      "source": "GGjD_6itXSw",
+      "timestamp": "02:08",
+      "raw_name": "Diper",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 115,
+      "selected_player_name": "Maxim De Cuyper",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 115,
+          "player_name": "Maxim De Cuyper",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "diper",
+          "canonical_player_id": 115,
+          "canonical_player_name": "Maxim De Cuyper",
+          "confidence": 0.9,
+          "reason": "Alias map includes 'diper' for Maxim De Cuyper"
+        }
+      ],
+      "reason": "Alias 'Diper' maps to Maxim De Cuyper. Nearby context mentions brentford, crystal palace, sunderland."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|02:08|recommendation|robinson",
+      "source": "GGjD_6itXSw",
+      "timestamp": "02:08",
+      "raw_name": "Robinson",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 254,
+      "selected_player_name": "Antonee Robinson",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 254,
+          "player_name": "Antonee Robinson",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "robinson",
+          "canonical_player_id": 254,
+          "canonical_player_name": "Antonee Robinson",
+          "confidence": 1,
+          "reason": "Transcript surface form 'Robinson' maps to Antonee Robinson."
+        }
+      ],
+      "reason": "Unique supported canonical match for 'Robinson' resolves to Antonee Robinson (Fulham, position 2). Nearby context mentions brentford, crystal palace, sunderland."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|02:26|recommendation|vandenberg",
+      "source": "GGjD_6itXSw",
+      "timestamp": "02:26",
+      "raw_name": "Vandenberg",
+      "mention_type": "recommendation",
+      "resolution_status": "unresolved",
+      "selected_player_id": null,
+      "selected_player_name": null,
+      "confidence": 0.85,
+      "ranked_candidates": [
+        {
+          "player_id": 85,
+          "player_name": "Sepp van den Berg",
+          "confidence": 0.85
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "vandenberg",
+          "canonical_player_id": 85,
+          "canonical_player_name": "Sepp van den Berg",
+          "confidence": 0.85,
+          "reason": "Phonetic similarity to 'van den Berg'"
+        }
+      ],
+      "reason": "Only a low-confidence phonetic candidate for 'Vandenberg' was found (Sepp van den Berg at 0.85); it stays unresolved. Nearby context mentions brentford, crystal palace, sunderland."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|03:20|recommendation|bara",
+      "source": "GGjD_6itXSw",
+      "timestamp": "03:20",
+      "raw_name": "Bara",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 627,
+      "selected_player_name": "Bradley Barcola",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 627,
+          "player_name": "Bradley Barcola",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "bara",
+          "canonical_player_id": 627,
+          "canonical_player_name": "Bradley Barcola",
+          "confidence": 0.9,
+          "reason": "Alias map includes 'bara' for Bradley Barcola"
+        }
+      ],
+      "reason": "Alias 'Bara' maps to Bradley Barcola. Nearby context mentions crystal palace, liverpool."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|03:57|recommendation|bosslie",
+      "source": "GGjD_6itXSw",
+      "timestamp": "03:57",
+      "raw_name": "Boss lie",
+      "mention_type": "recommendation",
+      "resolution_status": "unresolved",
+      "selected_player_id": null,
+      "selected_player_name": null,
+      "confidence": 0.85,
+      "ranked_candidates": [
+        {
+          "player_id": 114,
+          "player_name": "Olivier Boscagli",
+          "confidence": 0.85
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "bosslie",
+          "canonical_player_id": 114,
+          "canonical_player_name": "Olivier Boscagli",
+          "confidence": 0.85,
+          "reason": "Phonetic similarity and alias map includes 'busaggly' for Olivier Boscagli"
+        }
+      ],
+      "reason": "Only a low-confidence phonetic candidate for 'Boss lie' was found (Olivier Boscagli at 0.85); it stays unresolved. Nearby context mentions ipswich town."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|04:17|recommendation|gapo",
+      "source": "GGjD_6itXSw",
+      "timestamp": "04:17",
+      "raw_name": "Gapo",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 367,
+      "selected_player_name": "Cody Gakpo",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 367,
+          "player_name": "Cody Gakpo",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "gapo",
+          "canonical_player_id": 367,
+          "canonical_player_name": "Cody Gakpo",
+          "confidence": 0.9,
+          "reason": "Alias map includes 'gapo' for Cody Gakpo"
+        }
+      ],
+      "reason": "Alias 'Gapo' maps to Cody Gakpo. Nearby context mentions ipswich town."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|04:17|recommendation|soslay",
+      "source": "GGjD_6itXSw",
+      "timestamp": "04:17",
+      "raw_name": "Soslay",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 368,
+      "selected_player_name": "Dominik Szoboszlai",
+      "confidence": 0.9,
+      "ranked_candidates": [
+        {
+          "player_id": 368,
+          "player_name": "Dominik Szoboszlai",
+          "confidence": 0.9
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "soslay",
+          "canonical_player_id": 368,
+          "canonical_player_name": "Dominik Szoboszlai",
+          "confidence": 0.9,
+          "reason": "Alias map includes 'soslay' and similar variants for Dominik Szoboszlai"
+        }
+      ],
+      "reason": "Unique supported canonical match for 'Soslay' resolves to Dominik Szoboszlai (Liverpool, position 3). Nearby context mentions ipswich town."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|04:17|recommendation|verts",
+      "source": "GGjD_6itXSw",
+      "timestamp": "04:17",
+      "raw_name": "Verts",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 366,
+      "selected_player_name": "Florian Wirtz",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 366,
+          "player_name": "Florian Wirtz",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "verts",
+          "canonical_player_id": 366,
+          "canonical_player_name": "Florian Wirtz",
+          "confidence": 0.85,
+          "reason": "Alias map includes 'verts' for Florian Wirtz"
+        }
+      ],
+      "reason": "Alias 'Verts' maps to Florian Wirtz. Nearby context mentions ipswich town."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|05:09|recommendation|munoz",
+      "source": "GGjD_6itXSw",
+      "timestamp": "05:09",
+      "raw_name": "Munoz",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 377,
+      "selected_player_name": "Victor Munoz",
+      "confidence": 0.95,
+      "ranked_candidates": [
+        {
+          "player_id": 377,
+          "player_name": "Victor Munoz",
+          "confidence": 0.95
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "munoz",
+          "canonical_player_id": 377,
+          "canonical_player_name": "Victor Munoz",
+          "confidence": 0.8,
+          "reason": "Phonetic similarity and context of Nottingham Forest player"
+        }
+      ],
+      "reason": "Unique supported canonical match for 'Munoz' resolves to Victor Munoz (Liverpool, position 3). Nearby context mentions crystal palace, newcastle, nott'm forest."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|05:27|recommendation|dead",
+      "source": "GGjD_6itXSw",
+      "timestamp": "05:27",
+      "raw_name": "Dead",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 593,
+      "selected_player_name": "Amar Dedic",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 593,
+          "player_name": "Amar Dedic",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "dead",
+          "canonical_player_id": 593,
+          "canonical_player_name": "Amar Dedic",
+          "confidence": 0.9,
+          "reason": "Alias map includes 'dead' for Amar Dedic"
+        }
+      ],
+      "reason": "Alias 'Dead' maps to Amar Dedic. Nearby context mentions crystal palace, newcastle."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|06:04|recommendation|chia",
+      "source": "GGjD_6itXSw",
+      "timestamp": "06:04",
+      "raw_name": "Chia",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 445,
+      "selected_player_name": "Malick Thiaw",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 445,
+          "player_name": "Malick Thiaw",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "chia",
+          "canonical_player_id": 445,
+          "canonical_player_name": "Malick Thiaw",
+          "confidence": 0.9,
+          "reason": "Alias map includes 'chia' and 'chaw' for Malick Thiaw"
+        }
+      ],
+      "reason": "Alias 'Chia' maps to Malick Thiaw. Nearby context mentions aston villa, bournemouth, crystal palace, everton, hull city, newcastle."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|06:04|recommendation|lewishall",
+      "source": "GGjD_6itXSw",
+      "timestamp": "06:04",
+      "raw_name": "Lewis Hall",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 449,
+      "selected_player_name": "Lewis Hall",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 449,
+          "player_name": "Lewis Hall",
+          "confidence": 1
+        },
+        {
+          "player_id": 236,
+          "player_name": "Kiernan Dewsbury-Hall",
+          "confidence": 0.88
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "lewishall",
+          "canonical_player_id": 449,
+          "canonical_player_name": "Lewis Hall",
+          "confidence": 1,
+          "reason": "Transcript surface form 'Lewis Hall' maps to Lewis Hall."
+        }
+      ],
+      "reason": "Best supported canonical candidate for 'Lewis Hall' is Lewis Hall. Nearby context mentions aston villa, bournemouth, crystal palace, everton, hull city, newcastle."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|07:19|recommendation|mint",
+      "source": "GGjD_6itXSw",
+      "timestamp": "07:19",
+      "raw_name": "Mint",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 122,
+      "selected_player_name": "Yankuba Minteh",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 122,
+          "player_name": "Yankuba Minteh",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "mint",
+          "canonical_player_id": 122,
+          "canonical_player_name": "Yankuba Minteh",
+          "confidence": 1,
+          "reason": "Transcript surface form 'Mint' maps to Yankuba Minteh."
+        }
+      ],
+      "reason": "Unique supported canonical match for 'Mint' resolves to Yankuba Minteh (Brighton, position 3). Nearby context mentions brighton."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|07:19|recommendation|weifer",
+      "source": "GGjD_6itXSw",
+      "timestamp": "07:19",
+      "raw_name": "Weifer",
+      "mention_type": "recommendation",
+      "resolution_status": "unresolved",
+      "selected_player_id": null,
+      "selected_player_name": null,
+      "confidence": 0.0,
+      "ranked_candidates": [],
+      "suggested_aliases": [],
+      "reason": "No supported canonical candidate found for 'Weifer'. Nearby context mentions brighton."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|07:19|recommendation|zimass",
+      "source": "GGjD_6itXSw",
+      "timestamp": "07:19",
+      "raw_name": "Zimass",
+      "mention_type": "recommendation",
+      "resolution_status": "unresolved",
+      "selected_player_id": null,
+      "selected_player_name": null,
+      "confidence": 0.0,
+      "ranked_candidates": [],
+      "suggested_aliases": [],
+      "reason": "No supported canonical candidate found for 'Zimass'. Nearby context mentions brighton."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|07:37|recommendation|kyper",
+      "source": "GGjD_6itXSw",
+      "timestamp": "07:37",
+      "raw_name": "Kyper",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 115,
+      "selected_player_name": "Maxim De Cuyper",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 115,
+          "player_name": "Maxim De Cuyper",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "kyper",
+          "canonical_player_id": 115,
+          "canonical_player_name": "Maxim De Cuyper",
+          "confidence": 0.9,
+          "reason": "Alias map includes 'kyper' and similar variants for Maxim De Cuyper"
+        }
+      ],
+      "reason": "Alias 'Kyper' maps to Maxim De Cuyper. Nearby context mentions brighton."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|13:20|captain|xiaopedro",
+      "source": "GGjD_6itXSw",
+      "timestamp": "13:20",
+      "raw_name": "Xiao Pedro",
+      "mention_type": "captain",
+      "resolution_status": "resolved",
+      "selected_player_id": 165,
+      "selected_player_name": "João Pedro Junqueira de Jesus",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 165,
+          "player_name": "João Pedro Junqueira de Jesus",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "xiaopedro",
+          "canonical_player_id": 119,
+          "canonical_player_name": "João Pedro Junqueira de Jesus",
+          "confidence": 0.95,
+          "reason": "Alias map includes 'xiaopedro' for João Pedro Junqueira de Jesus"
+        }
+      ],
+      "reason": "Alias 'Xiao Pedro' maps to João Pedro Junqueira de Jesus."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|13:56|recommendation|palmer",
+      "source": "GGjD_6itXSw",
+      "timestamp": "13:56",
+      "raw_name": "Palmer",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 154,
+      "selected_player_name": "Cole Palmer",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 154,
+          "player_name": "Cole Palmer",
+          "confidence": 1
+        },
+        {
+          "player_id": 301,
+          "player_name": "Alex Palmer",
+          "confidence": 0.74
+        }
+      ],
+      "suggested_aliases": [],
+      "reason": "Alias 'Palmer' maps to Cole Palmer. Nearby context mentions arsenal, chelsea, sunderland."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|16:04|recommendation|rogers",
+      "source": "GGjD_6itXSw",
+      "timestamp": "16:04",
+      "raw_name": "Rogers",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 40,
+      "selected_player_name": "Morgan Rogers",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 40,
+          "player_name": "Morgan Rogers",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "rogers",
+          "canonical_player_id": 40,
+          "canonical_player_name": "Morgan Rogers",
+          "confidence": 1,
+          "reason": "Transcript surface form 'Rogers' maps to Morgan Rogers."
+        }
+      ],
+      "reason": "Unique supported canonical match for 'Rogers' resolves to Morgan Rogers (Chelsea, position 3). Nearby context mentions chelsea."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|20:17|recommendation|cherky",
+      "source": "GGjD_6itXSw",
+      "timestamp": "20:17",
+      "raw_name": "Cherky",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 399,
+      "selected_player_name": "Rayan Cherki",
+      "confidence": 0.9,
+      "ranked_candidates": [
+        {
+          "player_id": 399,
+          "player_name": "Rayan Cherki",
+          "confidence": 0.9
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "cherky",
+          "canonical_player_id": 399,
+          "canonical_player_name": "Rayan Cherki",
+          "confidence": 0.9,
+          "reason": "Alias map includes 'churkey' and similar variants for Rayan Cherki"
+        }
+      ],
+      "reason": "Unique supported canonical match for 'Cherky' resolves to Rayan Cherki (Man City, position 3). Nearby context mentions arsenal, brentford, chelsea."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|20:17|recommendation|foden",
+      "source": "GGjD_6itXSw",
+      "timestamp": "20:17",
+      "raw_name": "Foden",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 398,
+      "selected_player_name": "Phil Foden",
+      "confidence": 0.95,
+      "ranked_candidates": [
+        {
+          "player_id": 398,
+          "player_name": "Phil Foden",
+          "confidence": 0.95
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "foden",
+          "canonical_player_id": 398,
+          "canonical_player_name": "Phil Foden",
+          "confidence": 0.95,
+          "reason": "Transcript surface form 'Foden' maps to Phil Foden."
+        }
+      ],
+      "reason": "Unique supported canonical match for 'Foden' resolves to Phil Foden (Man City, position 3). Nearby context mentions arsenal, brentford, chelsea."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|28:18|captain|harland",
+      "source": "GGjD_6itXSw",
+      "timestamp": "28:18",
+      "raw_name": "Harland",
+      "mention_type": "captain",
+      "resolution_status": "resolved",
+      "selected_player_id": 411,
+      "selected_player_name": "Erling Haaland",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 411,
+          "player_name": "Erling Haaland",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "harland",
+          "canonical_player_id": 411,
+          "canonical_player_name": "Erling Haaland",
+          "confidence": 0.95,
+          "reason": "Alias map includes 'harland' and similar variants for Erling Haaland"
+        }
+      ],
+      "reason": "Alias 'Harland' maps to Erling Haaland. Nearby context mentions arsenal."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|32:20|recommendation|sharda",
+      "source": "GGjD_6itXSw",
+      "timestamp": "32:20",
+      "raw_name": "Sharda",
+      "mention_type": "recommendation",
+      "resolution_status": "unresolved",
+      "selected_player_id": null,
+      "selected_player_name": null,
+      "confidence": 0.82,
+      "ranked_candidates": [
+        {
+          "player_id": 94,
+          "player_name": "Kevin Schade",
+          "confidence": 0.82
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "sharda",
+          "canonical_player_id": 94,
+          "canonical_player_name": "Kevin Schade",
+          "confidence": 0.85,
+          "reason": "Alias map includes 'kevinsharda' for Kevin Schade"
+        }
+      ],
+      "reason": "Only a low-confidence phonetic candidate for 'Sharda' was found (Kevin Schade at 0.82); it stays unresolved. Nearby context mentions bournemouth."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|32:39|recommendation|soslies",
+      "source": "GGjD_6itXSw",
+      "timestamp": "32:39",
+      "raw_name": "Sos lies",
+      "mention_type": "recommendation",
+      "resolution_status": "unresolved",
+      "selected_player_id": null,
+      "selected_player_name": null,
+      "confidence": 1.0,
+      "ranked_candidates": [
+        {
+          "player_id": 557,
+          "player_name": "Christos Tzolis",
+          "confidence": 1.0
+        },
+        {
+          "player_id": 368,
+          "player_name": "Dominik Szoboszlai",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "soslies",
+          "canonical_player_id": 368,
+          "canonical_player_name": "Dominik Szoboszlai",
+          "confidence": 0.9,
+          "reason": "Alias map includes 'soslies' and similar variants for Dominik Szoboszlai"
+        }
+      ],
+      "reason": "No alias match for 'Sos lies' and multiple plausible canonical candidates remain."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|32:39|recommendation|sosai",
+      "source": "GGjD_6itXSw",
+      "timestamp": "32:39",
+      "raw_name": "Sosai",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 368,
+      "selected_player_name": "Dominik Szoboszlai",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 368,
+          "player_name": "Dominik Szoboszlai",
+          "confidence": 1
+        },
+        {
+          "player_id": 205,
+          "player_name": "Borna Sosa",
+          "confidence": 0.9
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "sosai",
+          "canonical_player_id": 368,
+          "canonical_player_name": "Dominik Szoboszlai",
+          "confidence": 0.9,
+          "reason": "Alias map includes 'sosai' and similar variants for Dominik Szoboszlai"
+        }
+      ],
+      "reason": "Alias 'Sosai' maps to Dominik Szoboszlai."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|33:33|recommendation|churkey",
+      "source": "GGjD_6itXSw",
+      "timestamp": "33:33",
+      "raw_name": "Churkey",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 399,
+      "selected_player_name": "Rayan Cherki",
+      "confidence": 0.99,
+      "ranked_candidates": [
+        {
+          "player_id": 399,
+          "player_name": "Rayan Cherki",
+          "confidence": 0.99
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "churkey",
+          "canonical_player_id": 399,
+          "canonical_player_name": "Rayan Cherki",
+          "confidence": 0.9,
+          "reason": "Alias map includes 'churkey' and similar variants for Rayan Cherki"
+        }
+      ],
+      "reason": "Alias 'Churkey' maps to Rayan Cherki. Nearby context mentions brighton, man utd, sunderland."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|33:52|recommendation|calfury",
+      "source": "GGjD_6itXSw",
+      "timestamp": "33:52",
+      "raw_name": "Calfury",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 8,
+      "selected_player_name": "Riccardo Calafiori",
+      "confidence": 0.99,
+      "ranked_candidates": [
+        {
+          "player_id": 8,
+          "player_name": "Riccardo Calafiori",
+          "confidence": 0.99
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "calfury",
+          "canonical_player_id": 8,
+          "canonical_player_name": "Riccardo Calafiori",
+          "confidence": 0.9,
+          "reason": "Alias map includes 'calfury' and similar variants for Riccardo Calafiori"
+        }
+      ],
+      "reason": "Alias 'Calfury' maps to Riccardo Calafiori. Nearby context mentions brighton, man utd, sunderland."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|34:12|recommendation|kza",
+      "source": "GGjD_6itXSw",
+      "timestamp": "34:12",
+      "raw_name": "KZA",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 31,
+      "selected_player_name": "Ezri Konsa Ngoyo",
+      "confidence": 0.89,
+      "ranked_candidates": [
+        {
+          "player_id": 31,
+          "player_name": "Ezri Konsa Ngoyo",
+          "confidence": 0.89
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "kza",
+          "canonical_player_id": 31,
+          "canonical_player_name": "Ezri Konsa Ngoyo",
+          "confidence": 0.9,
+          "reason": "Alias map includes 'kza' for Ezri Konsa Ngoyo"
+        }
+      ],
+      "reason": "Alias 'KZA' maps to Ezri Konsa Ngoyo. Nearby context mentions brighton."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|34:49|recommendation|oreilly",
+      "source": "GGjD_6itXSw",
+      "timestamp": "34:49",
+      "raw_name": "O'Reilly",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 387,
+      "selected_player_name": "Nico O'Reilly",
+      "confidence": 0.97,
+      "ranked_candidates": [
+        {
+          "player_id": 387,
+          "player_name": "Nico O'Reilly",
+          "confidence": 0.97
+        }
+      ],
+      "suggested_aliases": [],
+      "reason": "Alias 'O'Reilly' maps to Nico O'Reilly. Nearby context mentions arsenal."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|35:09|recommendation|lewishall",
+      "source": "GGjD_6itXSw",
+      "timestamp": "35:09",
+      "raw_name": "Lewis Hall",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 449,
+      "selected_player_name": "Lewis Hall",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 449,
+          "player_name": "Lewis Hall",
+          "confidence": 1
+        },
+        {
+          "player_id": 236,
+          "player_name": "Kiernan Dewsbury-Hall",
+          "confidence": 0.74
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "lewishall",
+          "canonical_player_id": 449,
+          "canonical_player_name": "Lewis Hall",
+          "confidence": 1,
+          "reason": "Transcript surface form 'Lewis Hall' maps to Lewis Hall."
+        }
+      ],
+      "reason": "Best supported canonical candidate for 'Lewis Hall' is Lewis Hall. Nearby context mentions arsenal, newcastle."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|38:40|recommendation|sacka",
+      "source": "GGjD_6itXSw",
+      "timestamp": "38:40",
+      "raw_name": "Sacka",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 12,
+      "selected_player_name": "Bukayo Saka",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 12,
+          "player_name": "Bukayo Saka",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "sacka",
+          "canonical_player_id": 12,
+          "canonical_player_name": "Bukayo Saka",
+          "confidence": 0.95,
+          "reason": "Alias map includes 'sacka' and 'saka' for Bukayo Saka"
+        }
+      ],
+      "reason": "Alias 'Sacka' maps to Bukayo Saka. Nearby context mentions arsenal, aston villa, bournemouth, brentford, brighton, chelsea, crystal palace, everton, hull city, ipswich town, liverpool, man city, man utd, newcastle, nott'm forest, spurs, sunderland."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|38:40|recommendation|vardial",
+      "source": "GGjD_6itXSw",
+      "timestamp": "38:40",
+      "raw_name": "Vardial",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 391,
+      "selected_player_name": "Joško Gvardiol",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 391,
+          "player_name": "Joško Gvardiol",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "vardial",
+          "canonical_player_id": 391,
+          "canonical_player_name": "Joško Gvardiol",
+          "confidence": 0.85,
+          "reason": "Alias map includes 'vardial' for Joško Gvardiol"
+        }
+      ],
+      "reason": "Alias 'Vardial' maps to Joško Gvardiol. Nearby context mentions arsenal, aston villa, bournemouth, brentford, brighton, chelsea, crystal palace, everton, hull city, ipswich town, liverpool, man city, man utd, newcastle, nott'm forest, spurs, sunderland."
+    },
+    {
+      "mention_id": "GGjD_6itXSw|39:41|recommendation|whista",
+      "source": "GGjD_6itXSw",
+      "timestamp": "39:41",
+      "raw_name": "Whista",
+      "mention_type": "recommendation",
+      "resolution_status": "unresolved",
+      "selected_player_id": null,
+      "selected_player_name": null,
+      "confidence": 0.85,
+      "ranked_candidates": [
+        {
+          "player_id": 427,
+          "player_name": "Bryan Mbeumo",
+          "confidence": 0.85
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "whista",
+          "canonical_player_id": 427,
+          "canonical_player_name": "Bryan Mbeumo",
+          "confidence": 0.85,
+          "reason": "Alias map includes 'bumo' and similar variants for Bryan Mbeumo"
+        }
+      ],
+      "reason": "Only a low-confidence phonetic candidate for 'Whista' was found (Bryan Mbeumo at 0.85); it stays unresolved."
+    }
+  ]
+}

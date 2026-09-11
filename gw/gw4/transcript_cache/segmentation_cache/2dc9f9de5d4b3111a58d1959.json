@@ -1,0 +1,58 @@
+{
+  "sections": [
+    {
+      "start_index": 0,
+      "end_index": 5,
+      "type": "INTRO",
+      "topic": "Free Hit Overview and Fixture Context"
+    },
+    {
+      "start_index": 6,
+      "end_index": 19,
+      "type": "FPL_ANALYSIS",
+      "topic": "Liverpool Players and Injury Concerns"
+    },
+    {
+      "start_index": 20,
+      "end_index": 24,
+      "type": "FPL_ANALYSIS",
+      "topic": "Chelsea and Arsenal Picks for Free Hit"
+    },
+    {
+      "start_index": 25,
+      "end_index": 26,
+      "type": "ADVERTISEMENT",
+      "topic": "Team Rating Tool Promotion"
+    },
+    {
+      "start_index": 27,
+      "end_index": 36,
+      "type": "FPL_ANALYSIS",
+      "topic": "Goalkeeper and Bench Decisions with Liverpool Attackers"
+    },
+    {
+      "start_index": 37,
+      "end_index": 40,
+      "type": "ADVERTISEMENT",
+      "topic": "Oxford Natural Sleep and Weight Loss Products"
+    },
+    {
+      "start_index": 41,
+      "end_index": 50,
+      "type": "FPL_ANALYSIS",
+      "topic": "Locked Players and Final Team Structure"
+    },
+    {
+      "start_index": 51,
+      "end_index": 57,
+      "type": "FPL_ANALYSIS",
+      "topic": "Captaincy Debate: Palmer vs João Pedro vs Haaland"
+    },
+    {
+      "start_index": 58,
+      "end_index": 58,
+      "type": "BANTER",
+      "topic": "Closing Remarks and Deadline Stream"
+    }
+  ]
+}

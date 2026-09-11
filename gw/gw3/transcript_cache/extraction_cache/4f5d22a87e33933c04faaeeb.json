@@ -1,0 +1,227 @@
+{
+  "recommendations": [
+    {
+      "player_name": "Ezri Konsa Ngoyo",
+      "stance": "consider",
+      "sentiment": "Good value Arsenal defender with potential starts",
+      "confidence": 4,
+      "rationale": "KZA is a cheap Arsenal defender at 4.4 million with a chance to start due to Moscara's fitness issues.",
+      "supporting_quote": "So for me KZA becomes a pretty good pick at 4.4 million. And my hope, and it is just hope, there's no guarantees with this, is that he'll play this week cuz Moscow is not fully fit.",
+      "reasons": [
+        "Cheap price at 4.4 million",
+        "Potential starting spot if Moscara is unfit",
+        "Arsenal defense is strong",
+        "Good short-term option for wild card or free hit"
+      ],
+      "risks": [
+        "No guarantee of starting every game",
+        "Rotation risk with Champions League and Carabao Cup",
+        "Fitness of other Arsenal defenders may affect minutes"
+      ],
+      "time_horizon": "short-term"
+    },
+    {
+      "player_name": "Joe Rodon",
+      "stance": "sell",
+      "sentiment": "Injured and out for 8-10 weeks, not viable now",
+      "confidence": 5,
+      "rationale": "Rodon is out for 8 to 10 weeks and will need to be sold when his spot is needed.",
+      "supporting_quote": "Rodon is out for 8 to 10 weeks. So at some point when you might need him, he's got to be sold.",
+      "reasons": [
+        "Long-term injury",
+        "Unavailable for upcoming fixtures",
+        "No immediate replacement at similar price"
+      ],
+      "risks": [
+        "Holding him wastes a squad spot",
+        "Price may drop further",
+        "Limited cheap replacement options"
+      ],
+      "time_horizon": "short-term"
+    },
+    {
+      "player_name": "Maxim De Cuyper",
+      "stance": "buy",
+      "sentiment": "Good short-term attacking upside at Brentford",
+      "confidence": 4,
+      "rationale": "Diper has attacking potential playing left wing and is likely to get regular minutes while Vandenberg is out.",
+      "supporting_quote": "Diper is a nice short-term risk playing left wing. ... He's going to play regularly while Vandenberg is out.",
+      "reasons": [
+        "Attacking role on left wing",
+        "Regular playing time expected",
+        "Affordable price at 4.5 million",
+        "Good fixtures coming up"
+      ],
+      "risks": [
+        "Minutes may reduce when Vandenberg returns",
+        "Uncertainty about long-term role",
+        "Possible rotation with new signings"
+      ],
+      "time_horizon": "short-term"
+    },
+    {
+      "player_name": "Lewis Hall",
+      "stance": "hold",
+      "sentiment": "Safer long-term pick despite injury concerns",
+      "confidence": 4,
+      "rationale": "Lewis Hall is considered a nailed Newcastle defender with good attacking potential and a better injury record than some peers.",
+      "supporting_quote": "Lewis Hall is fine. And if you want to be a bit more sure about minutes, you can just go ciao instead. Either way, I'm picking a Newcastle defender. I'm pretty pretty sure.",
+      "reasons": [
+        "Nailed starter for Newcastle",
+        "Good attacking potential",
+        "Better injury record than some defenders",
+        "Good fixtures for next few weeks"
+      ],
+      "risks": [
+        "Some concerns about injury proneness",
+        "Competition for places in defense",
+        "Fixture difficulty may vary"
+      ],
+      "time_horizon": "medium-term"
+    },
+    {
+      "player_name": "Cole Palmer",
+      "stance": "buy",
+      "sentiment": "High potential midfielder with penalties and captaincy appeal",
+      "confidence": 5,
+      "rationale": "Palmer has historic high points returns, penalty duties, and is preferred over Rogers for consistency and captaincy potential.",
+      "supporting_quote": "Palmer all day. Like I wouldn't even have to think about it. So there is some added value in that as well.",
+      "reasons": [
+        "Penalty taker for Chelsea",
+        "Proven high points scorer historically",
+        "Good fixtures coming up",
+        "Captaincy potential"
+      ],
+      "risks": [
+        "Higher price than some alternatives",
+        "Minutes not guaranteed every week",
+        "Competition in Chelsea midfield"
+      ],
+      "time_horizon": "medium-term"
+    },
+    {
+      "player_name": "Rayan Cherki",
+      "stance": "consider",
+      "sentiment": "Potential one-week punt with good fixtures",
+      "confidence": 3,
+      "rationale": "Cherki could be a short-term differential pick with good fixtures and potential minutes.",
+      "supporting_quote": "I'd be tempted to go in Burma to Churkey or in Burmo to Foden. Just use one of them and then you've still got two free transfers next week.",
+      "reasons": [
+        "Good fixtures in next weeks",
+        "Potential to start and get minutes",
+        "Affordable price"
+      ],
+      "risks": [
+        "Minutes not guaranteed long-term",
+        "Harder to hide rotation risk as midfielder",
+        "Uncertainty about consistent starts"
+      ],
+      "time_horizon": "short-term"
+    },
+    {
+      "player_name": "Dominik Szoboszlai",
+      "stance": "hold",
+      "sentiment": "Still a solid pick despite playing right back temporarily",
+      "confidence": 4,
+      "rationale": "Szoboszlai is likely to start as right back but remains first choice penalty taker and set piece taker, maintaining his FPL value.",
+      "supporting_quote": "He's still going to get forward a little bit. He's more likely to pick up Defcon. He's still on all set pieces and he's probably still first choice penalty taker.",
+      "reasons": [
+        "First choice penalty taker",
+        "Set piece duties",
+        "Likely to start games",
+        "Good attacking potential"
+      ],
+      "risks": [
+        "Playing out of natural position",
+        "Possible reduced attacking returns",
+        "Uncertainty about minutes if position changes"
+      ],
+      "time_horizon": "medium-term"
+    },
+    {
+      "player_name": "Bukayo Saka",
+      "stance": "consider",
+      "sentiment": "Differential pick with risk due to Champions League minutes",
+      "confidence": 3,
+      "rationale": "Saka is a low ownership differential with good potential but uncertain minutes once Champions League starts.",
+      "supporting_quote": "I get the concerns over the defense, but I'm confident in Califury's minutes and Conz's and Lewis Hall is f like he's nailed and the injury concerns I think are being a bit exaggerated and dip is a punt.",
+      "reasons": [
+        "Low ownership differential",
+        "Good attacking potential",
+        "Could be rotated in Champions League games"
+      ],
+      "risks": [
+        "Minutes may be reduced due to rotation",
+        "Uncertainty about starting role in big games",
+        "Possible loss of value if rotated frequently"
+      ],
+      "time_horizon": "medium-term"
+    },
+    {
+      "player_name": "Riccardo Calafiori",
+      "stance": "hold",
+      "sentiment": "Good attacking upside and set piece threat",
+      "confidence": 4,
+      "rationale": "Calafiori offers attacking threat and set pieces at a good price, making him a valuable pick despite some rotation risk.",
+      "supporting_quote": "Cal Fury against Chelsea at home. I just think he offers so much going forward and I know people are looking at that game saying Rogers, Xiao, Pedro, Palmer such a good front three.",
+      "reasons": [
+        "Attacking potential",
+        "Set piece taker",
+        "Good fixtures",
+        "Affordable price"
+      ],
+      "risks": [
+        "Possible rotation or early sub",
+        "Minutes not guaranteed full 90",
+        "Competition for starting spot"
+      ],
+      "time_horizon": "medium-term"
+    }
+  ],
+  "captaincy": [
+    {
+      "player_name": "Erling Haaland",
+      "mention_type": "captain",
+      "confidence": 5,
+      "expert_percentage": null,
+      "rationale": "Haaland is fit and an obvious captain choice with strong form and fixtures.",
+      "supporting_quote": "Harland was in training. So he is fit. So wild card is getting played. At the moment I'm sat on this team... Harland's obvious captain."
+    },
+    {
+      "player_name": "João Pedro Junqueira de Jesus",
+      "mention_type": "captain",
+      "confidence": 4,
+      "expert_percentage": null,
+      "rationale": "Xiao Pedro is highly owned and a popular captaincy pick for gameweek four.",
+      "supporting_quote": "Xiao Pedro is obviously an amazing captain for Chelsea. He will be the most popular in gameweek four."
+    },
+    {
+      "player_name": "Cole Palmer",
+      "mention_type": "captain",
+      "confidence": 4,
+      "expert_percentage": null,
+      "rationale": "Palmer is preferred over Rogers for captaincy due to penalties and historic points potential.",
+      "supporting_quote": "If I couldn't captain Jiao Pedro, who would I want to go for? Palmer all day. Like I wouldn't even have to think about it."
+    },
+    {
+      "player_name": "Phil Foden",
+      "mention_type": "avoid_captain",
+      "confidence": 3,
+      "expert_percentage": null,
+      "rationale": "Foden is considered a one-week punt but minutes are uncertain, making him a risky captain choice.",
+      "supporting_quote": "I'd be tempted to go in Burma to Churkey or in Burmo to Foden. Just use one of them and then you've still got two free transfers next week."
+    }
+  ],
+  "themes": [
+    "Arsenal defensive rotation and fitness concerns",
+    "Value of cheap defenders with potential starts",
+    "Chelsea midfield and attack options with penalties and captaincy appeal",
+    "Short-term punts versus long-term nailed picks",
+    "Impact of injuries on player selection and transfers",
+    "Fixture swings influencing transfer and wildcard strategies",
+    "Balancing ownership and differential picks",
+    "Uncertainty around minutes for some players due to rotation",
+    "Importance of set pieces and penalties in player value",
+    "Triple Chelsea attack strategy for wildcard"
+  ]
+}

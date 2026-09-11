@@ -1,0 +1,347 @@
+{
+  "recommendations": [
+    {
+      "player_name": "Eliesse Ben Seghir",
+      "stance": "avoid",
+      "sentiment": "Unlikely to start soon",
+      "confidence": 4,
+      "rationale": "Brought in as backup and not expected to be first choice in any position at Manchester City.",
+      "supporting_quote": "Eliesse Ben Seghir feels like he has been brought in to be a backup to Sékou Koïta, Doku when he's available, Cherki, Foden, Erling Haaland. He can play in lots of different positions across that sort of front line and midfield, but I don't expect him to be first choice in any of those positions.",
+      "reasons": [
+        "Backup player at Manchester City",
+        "Multiple players ahead in pecking order",
+        "No expected starts in near term"
+      ],
+      "risks": [
+        "Potential benching",
+        "Limited minutes",
+        "No immediate impact"
+      ],
+      "time_horizon": "short-term"
+    },
+    {
+      "player_name": "Enzo Fernández",
+      "stance": "consider",
+      "sentiment": "Potential future starter but not immediate",
+      "confidence": 3,
+      "rationale": "Should be first choice at some point but not expected to start in gameweek 3.",
+      "supporting_quote": "Enzo Fernández at some point should be first choice for Manchester City, but... I would be looking to bench both these or potentially sell them.",
+      "reasons": [
+        "Expected to become first choice eventually",
+        "Currently not starting",
+        "Low ownership"
+      ],
+      "risks": [
+        "Lack of immediate game time",
+        "Possible benching",
+        "Uncertain short-term role"
+      ],
+      "time_horizon": "medium-term"
+    },
+    {
+      "player_name": "Illiman Ndiaye",
+      "stance": "avoid",
+      "sentiment": "Unlikely to start, bench or sell recommended",
+      "confidence": 4,
+      "rationale": "Not expected to start due to rotation and Champions League schedule; better to bench or sell.",
+      "supporting_quote": "I don't expect Illiman Ndiaye to start, and I would either be looking to bench him, or sell him.",
+      "reasons": [
+        "Unlikely to start",
+        "Rotation risk with Champions League",
+        "Better alternatives available"
+      ],
+      "risks": [
+        "No minutes",
+        "Bench status",
+        "Potential value loss"
+      ],
+      "time_horizon": "short-term"
+    },
+    {
+      "player_name": "William Saliba",
+      "stance": "hold",
+      "sentiment": "Expected to start but with some risk",
+      "confidence": 3,
+      "rationale": "Expected to start at home to Chelsea but with some risk due to recent performance and yellow card.",
+      "supporting_quote": "I do expect him to start at home to Chelsea, but it now does come with a bit of risk.",
+      "reasons": [
+        "Likely starter",
+        "Recent mixed performances",
+        "Yellow card risk"
+      ],
+      "risks": [
+        "Possible rotation",
+        "Performance inconsistency",
+        "Fixture difficulty"
+      ],
+      "time_horizon": "short-term"
+    },
+    {
+      "player_name": "Pascal Groß",
+      "stance": "buy",
+      "sentiment": "Strong pick with good fixtures and form",
+      "confidence": 4,
+      "rationale": "Good attacking positioning and fixtures; recommended upgrade from Illiman Ndiaye.",
+      "supporting_quote": "Getting Pascal Groß in, who I really like... Pascal Groß, just like Saka, with the fixtures of Leeds and Coventry in the next two, is a safe option.",
+      "reasons": [
+        "Good fixtures",
+        "Strong attacking role",
+        "Better option than Illiman Ndiaye"
+      ],
+      "risks": [
+        "Fixture difficulty beyond short term",
+        "Possible rotation"
+      ],
+      "time_horizon": "medium-term"
+    },
+    {
+      "player_name": "Phil Foden",
+      "stance": "buy",
+      "sentiment": "Recommended upgrade and strong pick",
+      "confidence": 5,
+      "rationale": "Expected starter for Manchester City with good fixtures; preferred over some alternatives.",
+      "supporting_quote": "Saliba up to Phil Foden with a couple of transfers... getting Phil Foden in for the Coventry at home fixture.",
+      "reasons": [
+        "Likely starter",
+        "Good fixture",
+        "High upside"
+      ],
+      "risks": [
+        "Rotation risk with Champions League",
+        "Competition for places"
+      ],
+      "time_horizon": "short-term"
+    },
+    {
+      "player_name": "Bruno Fernandes",
+      "stance": "hold",
+      "sentiment": "Good long-term pick but short-term rotation risk",
+      "confidence": 3,
+      "rationale": "Good option long-term with minutes, but short-term fixtures and rotation risk exist.",
+      "supporting_quote": "Bruno Fernandes... long-term, they're probably better than the likes of Cherki and Phil Foden... But the issue is short-term.",
+      "reasons": [
+        "Good minutes",
+        "Long-term value",
+        "Man United fixture difficulty"
+      ],
+      "risks": [
+        "Short-term rotation",
+        "Fixture difficulty"
+      ],
+      "time_horizon": "medium-term"
+    },
+    {
+      "player_name": "Bryan Mbeumo",
+      "stance": "hold",
+      "sentiment": "Good pick but some consider selling short-term",
+      "confidence": 4,
+      "rationale": "Good pick so far; some may sell for short-term moves but not necessary.",
+      "supporting_quote": "Bryan Mbeumo is still a good pick despite the fact lots of people are selling him this week.",
+      "reasons": [
+        "Consistent minutes",
+        "Good form",
+        "Long-term potential"
+      ],
+      "risks": [
+        "Short-term fixture difficulty",
+        "Possible transfer temptation"
+      ],
+      "time_horizon": "medium-term"
+    },
+    {
+      "player_name": "João Pedro Junqueira de Jesus",
+      "stance": "consider",
+      "sentiment": "Good option with open play threat",
+      "confidence": 3,
+      "rationale": "Better long-term option than some alternatives; open play threat is strong.",
+      "supporting_quote": "João Pedro's open play threat is better. It's just whether you think Chelsea get a penalty.",
+      "reasons": [
+        "Good open play threat",
+        "Long-term option",
+        "Decent fixture"
+      ],
+      "risks": [
+        "Penalty reliance",
+        "Fixture difficulty"
+      ],
+      "time_horizon": "medium-term"
+    },
+    {
+      "player_name": "Dominic Calvert-Lewin",
+      "stance": "consider",
+      "sentiment": "Nailed forward with good fixtures",
+      "confidence": 4,
+      "rationale": "Nailed starter with good upcoming fixtures; good option for forward spot.",
+      "supporting_quote": "Calvert-Lewin... a nice pick at a cheap price if you're looking for a forward.",
+      "reasons": [
+        "Nailed starter",
+        "Good fixtures",
+        "Affordable option"
+      ],
+      "risks": [
+        "Fixture difficulty beyond short term",
+        "Injury risk"
+      ],
+      "time_horizon": "medium-term"
+    },
+    {
+      "player_name": "Ezri Konsa Ngoyo",
+      "stance": "hold",
+      "sentiment": "Wait for clarity on Mosquera before buying",
+      "confidence": 3,
+      "rationale": "Uncertainty about Mosquera's availability affects Konsa's starting chances; better to wait.",
+      "supporting_quote": "Unless you have to buy him this week... I would still wait until either Arteta rules out Mosquera for a period of time, which is unlikely, or we see him actually start a game.",
+      "reasons": [
+        "Uncertain starting status",
+        "Dependent on Mosquera injury",
+        "Price drop makes him attractive if starter"
+      ],
+      "risks": [
+        "Mosquera returns",
+        "Bench risk",
+        "Fixture difficulty"
+      ],
+      "time_horizon": "short-term"
+    },
+    {
+      "player_name": "David Raya Martín",
+      "stance": "buy",
+      "sentiment": "Best goalkeeper option despite Chelsea fixture",
+      "confidence": 4,
+      "rationale": "Recommended premium goalkeeper buy with good fixtures following Chelsea game.",
+      "supporting_quote": "If you're looking to buy a goalkeeper, it should be David Raya.",
+      "reasons": [
+        "Good fixtures after Chelsea",
+        "Premium goalkeeper",
+        "Reliable starter"
+      ],
+      "risks": [
+        "Chelsea fixture difficulty",
+        "Possible clean sheet risk"
+      ],
+      "time_horizon": "medium-term"
+    },
+    {
+      "player_name": "Malick Thiaw",
+      "stance": "buy",
+      "sentiment": "Safer defensive option with good fixtures",
+      "confidence": 4,
+      "rationale": "Safer option than Lewis Hall with good fixtures and set-piece threat.",
+      "supporting_quote": "I like him over Lewis Hall. He's a safer option with Lewis Hall's potential injury concerns.",
+      "reasons": [
+        "Good fixture run",
+        "Set-piece threat",
+        "Regular starter"
+      ],
+      "risks": [
+        "Fixture difficulty later",
+        "Injury risk"
+      ],
+      "time_horizon": "medium-term"
+    },
+    {
+      "player_name": "Cole Palmer",
+      "stance": "consider",
+      "sentiment": "Good short-term pick with potential",
+      "confidence": 4,
+      "rationale": "Good option for short-term fixtures; likely to be bought in Gameweek 4.",
+      "supporting_quote": "If you're going to buy him in Gameweek four anyway for Hull at home, it's still worth considering both him and Rodgers.",
+      "reasons": [
+        "Good short-term fixtures",
+        "Potential to start",
+        "Affordable option"
+      ],
+      "risks": [
+        "Rotation risk",
+        "Uncertain minutes"
+      ],
+      "time_horizon": "short-term"
+    },
+    {
+      "player_name": "Rayan Cherki",
+      "stance": "buy",
+      "sentiment": "Preferred short-term pick over Foden",
+      "confidence": 4,
+      "rationale": "Nailed and preferred short-term pick due to positioning and form.",
+      "supporting_quote": "In the short term, I prefer Cherki the most because Foden's best position... is central.",
+      "reasons": [
+        "Nailed starter",
+        "Good attacking positioning",
+        "Better short-term form"
+      ],
+      "risks": [
+        "Rotation risk when Doku returns",
+        "Competition for places"
+      ],
+      "time_horizon": "short-term"
+    },
+    {
+      "player_name": "Yoane Wissa",
+      "stance": "consider",
+      "sentiment": "Good option with strong fixtures",
+      "confidence": 3,
+      "rationale": "Good fixtures for Newcastle and decent option in forward line.",
+      "supporting_quote": "Yoane Wissa next. The upcoming next five or six fixtures for Newcastle look really great.",
+      "reasons": [
+        "Good fixture run",
+        "Regular starter",
+        "Decent attacking threat"
+      ],
+      "risks": [
+        "Competition for places",
+        "Form fluctuations"
+      ],
+      "time_horizon": "medium-term"
+    }
+  ],
+  "captaincy": [
+    {
+      "player_name": "Erling Haaland",
+      "mention_type": "triple_captain",
+      "confidence": 5,
+      "expert_percentage": 70,
+      "rationale": "Top captaincy pick with high chance of return and best fixture; recommended triple captain option.",
+      "supporting_quote": "The only reason I would not be captaining Haaland in Gameweek 3 is if you don't own him... Haaland is number one, 70% chance of return... my plan is to triple captain Haaland."
+    },
+    {
+      "player_name": "Erling Haaland",
+      "mention_type": "captain",
+      "confidence": 5,
+      "rationale": "Best captaincy option if not triple captaining; highest projected points.",
+      "supporting_quote": "If you own Haaland, my recommendation would be to play it now... predicted points captaincy, Haaland just has to be it if you own him."
+    },
+    {
+      "player_name": "Bruno Fernandes",
+      "mention_type": "captain",
+      "confidence": 3,
+      "rationale": "Considered as captaincy option away at Everton but lower projected goals than City.",
+      "supporting_quote": "Then maybe you start to consider captaining someone like Bruno Fernandes this week away at Everton... the fixture ticker has Man United way lower than City for projected goals."
+    },
+    {
+      "player_name": "Harry Maguire",
+      "mention_type": "avoid_captain",
+      "confidence": 4,
+      "rationale": "Not recommended for captaincy due to fixture and form concerns.",
+      "supporting_quote": "Harry Maguire... avoid captain this week."
+    },
+    {
+      "player_name": "Luke Shaw",
+      "mention_type": "avoid_captain",
+      "confidence": 3,
+      "rationale": "Avoid captaincy due to uncertain starting status and fixture difficulty.",
+      "supporting_quote": "Luke Shaw... avoid captain this week."
+    }
+  ],
+  "themes": [
+    "Manchester City midfield rotation and minutes risk",
+    "Triple captain Erling Haaland recommended",
+    "Bench or sell fringe Manchester City players",
+    "Arsenal defensive options with Mosquera uncertainty",
+    "Chelsea players away at Arsenal - benching considerations",
+    "Man United players good long-term but short-term fixture caution",
+    "Importance of fixture analysis for transfers",
+    "Short-term vs long-term squad building strategies",
+    "Goalkeeper and defender picks with fixture focus",
+    "Balancing transfers and wildcard timing"
+  ]
+}

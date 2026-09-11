@@ -1,0 +1,33 @@
+{
+  "source_name": "batch_13",
+  "cache_key": "33076e4f5193bf258b4315af",
+  "source_hash": "ee410fbab9f47639745325453c3305b4a2d2e4098ba85b58850d04ed08ee291f",
+  "model": "gpt-4.1-mini",
+  "prompt_version": "v2",
+  "segment_words": 10,
+  "segment_count": 20,
+  "excluded_segment_ids": [
+    "S001",
+    "S003",
+    "S020"
+  ],
+  "kept_segment_ids": [
+    "S002",
+    "S004",
+    "S005",
+    "S006",
+    "S007",
+    "S008",
+    "S009",
+    "S010",
+    "S011",
+    "S012",
+    "S013",
+    "S014",
+    "S015",
+    "S016",
+    "S017",
+    "S018",
+    "S019"
+  ]
+}

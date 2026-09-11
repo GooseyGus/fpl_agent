@@ -1,0 +1,359 @@
+{
+  "recommendations": [
+    {
+      "player_name": "Christos Tzolis",
+      "stance": "hold",
+      "sentiment": "uncertain start status",
+      "confidence": 4,
+      "rationale": "Unclear if he will start; benching recommended to avoid risk",
+      "supporting_quote": "I will never pretend to know something that I don't know. ... I have absolutely no idea if he starts or not.",
+      "reasons": [
+        "Uncertain starting status",
+        "Preseason and early games show promise",
+        "Could impact if he starts and performs"
+      ],
+      "risks": [
+        "Might not start",
+        "Could be subbed off early",
+        "Unpredictable manager tactics"
+      ],
+      "time_horizon": "short-term"
+    },
+    {
+      "player_name": "Ezri Konsa Ngoyo",
+      "stance": "buy",
+      "sentiment": "good value defensive option",
+      "confidence": 4,
+      "recommendation_strength": "medium",
+      "rationale": "Likely to start as right center back and provide consistent clean sheet points",
+      "supporting_quote": "Ezri Concer probably does start as right center back in gameweek three. ... I think he is a great option to go and get on wild card.",
+      "reasons": [
+        "Signed for good money indicating trust",
+        "Expected to be a regular starter",
+        "Good for consistent six-pointer clean sheets"
+      ],
+      "risks": [
+        "Low attacking threat",
+        "Uncertain if he starts immediately",
+        "No bonus point potential"
+      ],
+      "time_horizon": "medium-term"
+    },
+    {
+      "player_name": "Gabriel dos Santos Magalhães",
+      "stance": "hold",
+      "sentiment": "solid long-term defender",
+      "confidence": 4,
+      "rationale": "Reliable starter with attacking threat and frequent clean sheets",
+      "supporting_quote": "Gabrielle is so fine to just sit there for the whole season as long as he's fit. ... Gabrielle gets Defcon as well quite often for a premium defender.",
+      "reasons": [
+        "Regular starter",
+        "Attacking threat",
+        "Frequent clean sheets and Defcon points"
+      ],
+      "risks": [
+        "Potential for team slumps",
+        "Injury risk",
+        "Fixture difficulty"
+      ],
+      "time_horizon": "long-term"
+    },
+    {
+      "player_name": "Bukayo Saka",
+      "stance": "consider",
+      "sentiment": "high ceiling with flexible squad options",
+      "confidence": 4,
+      "rationale": "High ceiling and allows flexible squad building, but slightly less nailed than Gabriel",
+      "supporting_quote": "What I like about Sacka is ... he does allow for a more flexible squad structure ... Gabrielle is a better long-term pick that you just know will start every game.",
+      "reasons": [
+        "High theoretical ceiling",
+        "Flexible squad structure",
+        "Closer to upgrading to Bruno Fernandes"
+      ],
+      "risks": [
+        "Less nailed on than Gabriel",
+        "Possible rotation",
+        "Injury risk"
+      ],
+      "time_horizon": "medium-term"
+    },
+    {
+      "player_name": "David Raya Martín",
+      "stance": "hold",
+      "sentiment": "solid, reliable goalkeeper",
+      "confidence": 4,
+      "rationale": "Good value keeper playing for best defense, unlikely to need transfer",
+      "supporting_quote": "Ryer is also a very good value goalkeeper considering you never have to transfer him out. Plays for the best defense in the league.",
+      "reasons": [
+        "Plays for best defense",
+        "Cheap and reliable",
+        "No need to transfer frequently"
+      ],
+      "risks": [
+        "Limited attacking returns",
+        "Competition from other cheap keepers",
+        "Possible rotation"
+      ],
+      "time_horizon": "long-term"
+    },
+    {
+      "player_name": "Amar Dedic",
+      "stance": "buy",
+      "sentiment": "promising cheap defender",
+      "confidence": 4,
+      "rationale": "Looks brilliant and highly valued by manager, good short-term option",
+      "supporting_quote": "Dead has looked brilliant ... Yela spoke very positively about him.",
+      "reasons": [
+        "Manager endorsement",
+        "Good early performances",
+        "Cheap option"
+      ],
+      "risks": [
+        "Short-term option only",
+        "Possible rotation when others return",
+        "Injury risk"
+      ],
+      "time_horizon": "short-term"
+    },
+    {
+      "player_name": "Elliot Anderson",
+      "stance": "buy",
+      "sentiment": "better option than Solace",
+      "confidence": 4,
+      "rationale": "Preferred over Solace for gameweek three and beyond, good minutes and potential",
+      "supporting_quote": "Selling Solace to Anderson ... I think I prefer Anderson this week. Anderson's a better option than Solace.",
+      "reasons": [
+        "More nailed on",
+        "Better fixture run",
+        "Good minutes"
+      ],
+      "risks": [
+        "Competition for minutes",
+        "Injury risk",
+        "Possible rotation"
+      ],
+      "time_horizon": "medium-term"
+    },
+    {
+      "player_name": "Yoane Wissa",
+      "stance": "consider",
+      "sentiment": "good option with decent fixtures",
+      "confidence": 3,
+      "rationale": "Liked for wild card but not a must-transfer this week",
+      "supporting_quote": "I really do like Yoan Whissa. If I was on a wild card this week, I probably would have Yoan Whissa in my wild card team.",
+      "reasons": [
+        "Good fixture run",
+        "Decent attacking potential",
+        "Affordable option"
+      ],
+      "risks": [
+        "Not a guaranteed starter",
+        "Competition for minutes",
+        "Uncertain long-term form"
+      ],
+      "time_horizon": "medium-term"
+    },
+    {
+      "player_name": "Dominic Calvert-Lewin",
+      "stance": "hold",
+      "sentiment": "solid option with penalty duties",
+      "confidence": 4,
+      "rationale": "90-minute player on penalties with good fixtures, no urgent need to transfer out",
+      "supporting_quote": "Calbert Lewin is a 90-minute man on penalties. ... I still think Calbert Lewin is a perfectly fine FPL player.",
+      "reasons": [
+        "Penalty taker",
+        "Good minutes",
+        "Decent fixtures"
+      ],
+      "risks": [
+        "Inconsistent form",
+        "Injury risk",
+        "Competition for place"
+      ],
+      "time_horizon": "medium-term"
+    },
+    {
+      "player_name": "Igor Thiago Nascimento Rodrigues",
+      "stance": "hold",
+      "sentiment": "potential breakout soon",
+      "confidence": 4,
+      "rationale": "Disappointing start but expected to have a big scoring run soon; good captaincy option",
+      "supporting_quote": "I have a bit of a feeling that Thiago is going to go monstrous in one of the next two or three weeks. ... I think he's a brilliant captaincy option this week if you didn't want to go Erning Harland.",
+      "reasons": [
+        "High chance of scoring soon",
+        "Good fixture run",
+        "Penalty taker"
+      ],
+      "risks": [
+        "Slow start",
+        "Inconsistent minutes",
+        "Possible rotation"
+      ],
+      "time_horizon": "short-term"
+    },
+    {
+      "player_name": "Joe Rodon",
+      "stance": "sell",
+      "sentiment": "injured long-term",
+      "confidence": 5,
+      "rationale": "Out for 8-10 weeks with serious hamstring injury",
+      "supporting_quote": "Joe Roodon ... is a cell. He's out for eight to 10 weeks with a serious hamstring injury.",
+      "reasons": [
+        "Long-term injury",
+        "Unavailable for several weeks",
+        "No immediate return"
+      ],
+      "risks": [
+        "Potential early return unlikely",
+        "Loss of minutes",
+        "No points contribution"
+      ],
+      "time_horizon": "medium-term"
+    },
+    {
+      "player_name": "Kevin Schade",
+      "stance": "consider",
+      "sentiment": "interesting option for gameweek three",
+      "confidence": 3,
+      "rationale": "Calling for attention as a potential pick for gameweek three",
+      "supporting_quote": "Sharda is calling my name a little bit for gameweek three.",
+      "reasons": [
+        "Good fixtures",
+        "Potential minutes",
+        "Affordable option"
+      ],
+      "risks": [
+        "Uncertain starting status",
+        "Possible rotation",
+        "Injury risk"
+      ],
+      "time_horizon": "short-term"
+    },
+    {
+      "player_name": "Harry Maguire",
+      "stance": "consider",
+      "sentiment": "decent option with potential for Defcon",
+      "confidence": 3,
+      "rationale": "Could get Defcon points and is good in the air against weaker attacks",
+      "supporting_quote": "Maguire is not a bad option this week. ... He could get Defcon gone.",
+      "reasons": [
+        "Good aerial threat",
+        "Potential clean sheet",
+        "Decent fixture"
+      ],
+      "risks": [
+        "Inconsistent form",
+        "Injury risk",
+        "Team defensive issues"
+      ],
+      "time_horizon": "short-term"
+    },
+    {
+      "player_name": "Riccardo Calafiori",
+      "stance": "buy",
+      "sentiment": "strong clean sheet and attacking potential",
+      "confidence": 4,
+      "rationale": "Good clean sheet odds and attacking threat, should not be benched",
+      "supporting_quote": "I would not be benching Califury ... not only are they good because of the clean sheet odds, but they've also got attacking thriller.",
+      "reasons": [
+        "High clean sheet probability",
+        "Attacking threat",
+        "Regular starter"
+      ],
+      "risks": [
+        "Possible rotation",
+        "Injury risk",
+        "Fixture difficulty"
+      ],
+      "time_horizon": "short-term"
+    },
+    {
+      "player_name": "Benjamin White",
+      "stance": "buy",
+      "sentiment": "strong clean sheet and attacking potential",
+      "confidence": 4,
+      "rationale": "Good clean sheet odds and attacking threat, should not be benched",
+      "supporting_quote": "I would not be benching Ben White ... not only are they good because of the clean sheet odds, but they've also got attacking thriller.",
+      "reasons": [
+        "High clean sheet probability",
+        "Attacking threat",
+        "Regular starter"
+      ],
+      "risks": [
+        "Possible rotation",
+        "Injury risk",
+        "Fixture difficulty"
+      ],
+      "time_horizon": "short-term"
+    },
+    {
+      "player_name": "Sovereign",
+      "stance": "buy",
+      "sentiment": "steady and reliable with good bonus potential",
+      "confidence": 4,
+      "rationale": "Consistent minutes, good delivery, penalty taker, and high baseline bonus",
+      "supporting_quote": "Sober is really decent for Defcon ... When he gets an attacking return, it almost always comes with bonus.",
+      "reasons": [
+        "Consistent starter",
+        "Penalty taker",
+        "High bonus point potential"
+      ],
+      "risks": [
+        "Slightly uninspiring ceiling",
+        "Some weeks with no returns",
+        "Position changes may affect attacking threat"
+      ],
+      "time_horizon": "medium-term"
+    }
+  ],
+  "captaincy": [
+    {
+      "player_name": "Erling Haaland",
+      "mention_type": "triple_captain",
+      "confidence": 5,
+      "expert_percentage": 95,
+      "rationale": "Best triple captain option this week due to fixture, fitness, and team form",
+      "supporting_quote": "I am 95% sure I'll be playing on Erling Harland. ... City are purring at the moment in attack. ... This feels like a really good opportunity to jump on a triple captain option against Coventry at home."
+    },
+    {
+      "player_name": "Igor Thiago Nascimento Rodrigues",
+      "mention_type": "captain",
+      "confidence": 4,
+      "rationale": "Brilliant captaincy option if not going with Haaland due to good fixtures and potential breakout",
+      "supporting_quote": "I think he's a brilliant captaincy option this week if you didn't want to go Erning Harland."
+    },
+    {
+      "player_name": "Cole Palmer",
+      "mention_type": "captain",
+      "confidence": 3,
+      "rationale": "Good option for gameweek four if not triple captaining Haaland this week",
+      "supporting_quote": "If I wasn't going on Erling Harland this week I would be looking at Cole Palmer Jao Pedro in gameweek four."
+    },
+    {
+      "player_name": "João Pedro Junqueira de Jesus",
+      "mention_type": "captain",
+      "confidence": 3,
+      "rationale": "Alternative captaincy option for gameweek four",
+      "supporting_quote": "If I wasn't going on Erling Harland this week I would be looking at Cole Palmer Jao Pedro in gameweek four."
+    },
+    {
+      "player_name": "Bukayo Saka",
+      "mention_type": "captain",
+      "confidence": 3,
+      "rationale": "Potential captaincy option in gameweek 10 with good fixture",
+      "supporting_quote": "You've got Saka in gameweight 10 against Hull at home."
+    }
+  ],
+  "themes": [
+    "Uncertainty around Arsenal starting lineups especially for new signings",
+    "Value in cheap defenders with consistent starts and clean sheet potential",
+    "Man City midfielders have strong attacking potential but rotation risk",
+    "Triple captain on Erling Haaland favored due to fixture and fitness",
+    "Bench or sell players with uncertain minutes or injury concerns",
+    "Flexible squad building with players like Bukayo Saka",
+    "Importance of clean sheet odds in defender selection",
+    "Caution advised on Chelsea attackers due to Arsenal's strong defense",
+    "Wild card planning for gameweek four with major team changes",
+    "Balancing short-term punts with long-term holds in transfers"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "source_name": "batch_11",
+  "cache_key": "19b42884e3912fc0209eb1dd",
+  "source_hash": "843f319b42df4c20b7b87f6903c4c05369479ccaf5d42e9e040f65b46376664f",
+  "model": "gpt-4.1-mini",
+  "prompt_version": "v2",
+  "segment_words": 10,
+  "segment_count": 3,
+  "excluded_segment_ids": [],
+  "kept_segment_ids": [
+    "S001",
+    "S002",
+    "S003"
+  ]
+}

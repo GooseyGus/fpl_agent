@@ -1,0 +1,599 @@
+{
+  "sources": [
+    "batch_01",
+    "batch_02",
+    "batch_03",
+    "batch_04"
+  ],
+  "results_by_source": {
+    "batch_01": {
+      "recommendations": [
+        {
+          "source": "batch_01",
+          "player_name": "Mbeumo",
+          "stance": "hold",
+          "sentiment": "positive",
+          "recommendation_strength": 3,
+          "confidence": 4,
+          "rationale": "Despite many managers selling Mbeumo, the article argues he has a good fixture and will thrive against Man City due to their high line and Man United's counterattacks.",
+          "supporting_quote": "On paper, this is a good matchup, and also Mbeumo plays Man City in GW4, which is a difficult fixture on paper, but that is actually a fixture that Mbeumo will thrive on, considering Man City’s high line and Man United’s counterattacks.",
+          "reasons": [
+            {
+              "category": "fixture",
+              "sentiment": "positive",
+              "text": "Good matchup in upcoming gameweek"
+            },
+            {
+              "category": "playing_style",
+              "sentiment": "positive",
+              "text": "Thrives against teams with high defensive line"
+            }
+          ],
+          "risks": [
+            {
+              "category": "fixture",
+              "sentiment": "negative",
+              "text": "Man City is a difficult fixture on paper"
+            }
+          ],
+          "time_horizon": "short-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_01",
+          "player_name": "Konsa",
+          "stance": "consider",
+          "sentiment": "neutral",
+          "recommendation_strength": 3,
+          "confidence": 3,
+          "rationale": "Konsa is planned to be brought in for Ballard but the transfer is delayed pending confirmation of Mosquera's injury status.",
+          "supporting_quote": "My Transfer plan for this week is getting in Konsa/De Cuyp for Ballard. According to Sam Blitz– “Arsenal had an open training session for Sky Sports cameras this morning. No Christian Mosquera after he came off vs Aston Villa with his muscular issue. No Bruno Guimaraes too”. I would, however, wait for Arteta’s press conference before making the moves to confirm that Mosquera is ruled out for a while.",
+          "reasons": [
+            {
+              "category": "injury_news",
+              "sentiment": "neutral",
+              "text": "Mosquera's injury status affects Konsa's start"
+            }
+          ],
+          "risks": [
+            {
+              "category": "starting_status",
+              "sentiment": "negative",
+              "text": "Konsa might not start immediately"
+            }
+          ],
+          "time_horizon": "short-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_01",
+          "player_name": "De Cuyper",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 4,
+          "confidence": 4,
+          "rationale": "De Cuyper is brought in as a short-term pick covering good fixtures and playing as a left wing-back, providing attacking potential.",
+          "supporting_quote": "I have done Ballard to De Cuyper with one of my Free Transfers and have decided to roll the other transfer. De Cuyper is playing as a LW(Being listed as a Defender) for Brighton. With no positive news on Mitoma/Minteh yet- I have gone for De Cuyper as a short term pick to cover GW3 vs LEE(H) and GW4 vs COV(A).",
+          "reasons": [
+            {
+              "category": "fixture",
+              "sentiment": "positive",
+              "text": "Good fixtures in GW3 and GW4"
+            },
+            {
+              "category": "position",
+              "sentiment": "positive",
+              "text": "Listed as defender but plays as LW, increasing attacking returns"
+            }
+          ],
+          "risks": [
+            {
+              "category": "injury_news",
+              "sentiment": "neutral",
+              "text": "No positive news on Mitoma/Minteh yet"
+            }
+          ],
+          "time_horizon": "short-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_01",
+          "player_name": "Haaland",
+          "stance": "hold",
+          "sentiment": "positive",
+          "recommendation_strength": 5,
+          "confidence": 5,
+          "rationale": "Haaland is locked in as the Triple Captain for GW3 due to favorable fixture and expected full minutes.",
+          "supporting_quote": "Haaland is locked in as the Triple Captain for me in GW3. And I am not overthinking this. City have only Haaland as the Striker in their main team, and he should at least play 75-80 minutes against Coventry.",
+          "reasons": [
+            {
+              "category": "fixture",
+              "sentiment": "positive",
+              "text": "Favorable fixture against promoted Coventry"
+            },
+            {
+              "category": "minutes",
+              "sentiment": "positive",
+              "text": "Expected to play 75-80 minutes"
+            }
+          ],
+          "risks": [
+            {
+              "category": "fixture_congestion",
+              "sentiment": "neutral",
+              "text": "Upcoming European and cup games could affect minutes but not expected"
+            }
+          ],
+          "time_horizon": "immediate",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_01",
+          "player_name": "Tzolis",
+          "stance": "sell",
+          "sentiment": "negative",
+          "recommendation_strength": 4,
+          "confidence": 4,
+          "rationale": "Tzolis is likely to be removed due to minutes risk and being subbed off at half-time.",
+          "supporting_quote": "Tzolis is very likely leaving my team not because he blanked, but because he was subbed off at half-time.",
+          "reasons": [
+            {
+              "category": "minutes",
+              "sentiment": "negative",
+              "text": "Subbed off at half-time indicating minutes risk"
+            }
+          ],
+          "risks": [
+            {
+              "category": "performance",
+              "sentiment": "negative",
+              "text": "Difficult game vs Villa in GW2"
+            }
+          ],
+          "time_horizon": "short-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_01",
+          "player_name": "Anderson",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 3,
+          "confidence": 3,
+          "rationale": "Recommended as a long-term pick for minutes and consistent defensive contributions with occasional attacking returns.",
+          "supporting_quote": "The FFHUB AI Tool recommends doing Tzolis to Anderson for the fixture run for Man City starting from GW3 with COV(H). For a long term pick, Anderson should be good for minutes back while consistently hitting DEFCON and getting the odd attacking returns here and there.",
+          "reasons": [
+            {
+              "category": "minutes",
+              "sentiment": "positive",
+              "text": "Expected to get consistent minutes"
+            },
+            {
+              "category": "defensive_contributions",
+              "sentiment": "positive",
+              "text": "Consistently hitting DEFCON"
+            }
+          ],
+          "risks": [],
+          "time_horizon": "long-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_01",
+          "player_name": "Foden",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 4,
+          "confidence": 4,
+          "rationale": "Foden is brought in for his attacking potential and good recent form with assists and points.",
+          "supporting_quote": "The transfers for GW3 planned(which I am very likely to do) are Foden and Gomez coming in for Tzolis and Le Fee. I will also have 0.4 million in the bank after making these moves. Foden got 2 assists and a 9-pointer in GW2.",
+          "reasons": [
+            {
+              "category": "form",
+              "sentiment": "positive",
+              "text": "Good recent form with assists and points"
+            },
+            {
+              "category": "fixture",
+              "sentiment": "positive",
+              "text": "Good fixtures in upcoming gameweeks"
+            }
+          ],
+          "risks": [
+            {
+              "category": "minutes",
+              "sentiment": "neutral",
+              "text": "Potential rotation risk due to fixture congestion"
+            }
+          ],
+          "time_horizon": "short-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_01",
+          "player_name": "Gomez",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 4,
+          "confidence": 4,
+          "rationale": "Gomez is recommended due to strong underlying attacking stats and assists in first two games.",
+          "supporting_quote": "Gomez(5.0) comes into the team having 2 assists over the first 2 games. But the impressive part is the underlying numbers: 8 Shots, 7 Shots inside the box(3rd among MIDs), 4 Big Chance Involvements, and 1.21 xGI.",
+          "reasons": [
+            {
+              "category": "underlying_stats",
+              "sentiment": "positive",
+              "text": "Strong attacking stats and chance involvements"
+            },
+            {
+              "category": "form",
+              "sentiment": "positive",
+              "text": "Two assists in first two games"
+            }
+          ],
+          "risks": [],
+          "time_horizon": "short-term",
+          "timestamp": ""
+        }
+      ],
+      "captaincy": [
+        {
+          "source": "batch_01",
+          "player_name": "Haaland",
+          "mention_type": "triple_captain",
+          "confidence": 5,
+          "expert_percentage": null,
+          "rationale": "Haaland is locked in as the Triple Captain for GW3 due to favorable fixture and expected full minutes.",
+          "supporting_quote": "Haaland is locked in as the Triple Captain for me in GW3. And I am not overthinking this.",
+          "timestamp": ""
+        }
+      ],
+      "themes": [
+        "Triple Captain on Haaland",
+        "Hold Mbeumo despite many selling",
+        "Transfer plans involving Konsa, De Cuyper, Foden, Gomez",
+        "Free Hit planned for GW4",
+        "Minutes risk concerns for Tzolis"
+      ]
+    },
+    "batch_02": {
+      "recommendations": [],
+      "captaincy": [],
+      "themes": [
+        "Positive GW2 performance led by Bruno Fernandes",
+        "Injury doubts for Sarr",
+        "Uncertainty around Ndiaye's minutes due to Man City move",
+        "Cautious approach to transfers due to bench strength"
+      ]
+    },
+    "batch_03": {
+      "recommendations": [
+        {
+          "source": "batch_03",
+          "player_name": "Palmer",
+          "stance": "consider",
+          "sentiment": "positive",
+          "recommendation_strength": 3,
+          "confidence": 3,
+          "rationale": "Palmer is seen as a player who will come back to his best this season and passes the eye test so far.",
+          "supporting_quote": "Palmer passes the eye test so far and I think he’s going to come back to his best this season.",
+          "reasons": [
+            {
+              "category": "form",
+              "sentiment": "positive",
+              "text": "Good early season form"
+            }
+          ],
+          "risks": [],
+          "time_horizon": "medium-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_03",
+          "player_name": "MGW",
+          "stance": "consider",
+          "sentiment": "positive",
+          "recommendation_strength": 3,
+          "confidence": 3,
+          "rationale": "MGW is expected to shine under Glasner and is included in the team.",
+          "supporting_quote": "MGW is another player I feel will shine under Glasner, so he’s in.",
+          "reasons": [
+            {
+              "category": "manager_trust",
+              "sentiment": "positive",
+              "text": "Expected to perform well under current manager"
+            }
+          ],
+          "risks": [],
+          "time_horizon": "medium-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_03",
+          "player_name": "Konsa",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 4,
+          "confidence": 4,
+          "rationale": "Konsa is a great price and having at least two Arsenal defenders is a must.",
+          "supporting_quote": "Having at least two Arsenal defenders is a must, Konsa is a great price.",
+          "reasons": [
+            {
+              "category": "price",
+              "sentiment": "positive",
+              "text": "Affordable defender option"
+            },
+            {
+              "category": "team_structure",
+              "sentiment": "positive",
+              "text": "Arsenal defenders are essential"
+            }
+          ],
+          "risks": [],
+          "time_horizon": "medium-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_03",
+          "player_name": "Szoboszlai",
+          "stance": "hold",
+          "sentiment": "neutral",
+          "recommendation_strength": 3,
+          "confidence": 3,
+          "rationale": "Szoboszlai is considered a solid pick in the team.",
+          "supporting_quote": "Szoboszlai is a solid pick.",
+          "reasons": [
+            {
+              "category": "team_structure",
+              "sentiment": "neutral",
+              "text": "Part of the planned team structure"
+            }
+          ],
+          "risks": [],
+          "time_horizon": "medium-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_03",
+          "player_name": "Sangare",
+          "stance": "consider",
+          "sentiment": "positive",
+          "recommendation_strength": 3,
+          "confidence": 3,
+          "rationale": "Sangare at Brentford offers good value.",
+          "supporting_quote": "Sangare at Brentford offers good value.",
+          "reasons": [
+            {
+              "category": "value",
+              "sentiment": "positive",
+              "text": "Good value pick"
+            }
+          ],
+          "risks": [],
+          "time_horizon": "medium-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_03",
+          "player_name": "Haaland",
+          "stance": "hold",
+          "sentiment": "positive",
+          "recommendation_strength": 5,
+          "confidence": 5,
+          "rationale": "Haaland takes the armband for GW3 against Coventry.",
+          "supporting_quote": "Haaland takes the armband this week for the home game against Coventry.",
+          "reasons": [
+            {
+              "category": "fixture",
+              "sentiment": "positive",
+              "text": "Favorable fixture"
+            }
+          ],
+          "risks": [],
+          "time_horizon": "immediate",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_03",
+          "player_name": "Gibbs-White",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 4,
+          "confidence": 4,
+          "rationale": "Gibbs-White scored 13 points and is coming back into the starting XI for GW3.",
+          "supporting_quote": "Gibbs-White remains available and comes straight back into my starting XI for GW3.",
+          "reasons": [
+            {
+              "category": "form",
+              "sentiment": "positive",
+              "text": "Strong points return"
+            }
+          ],
+          "risks": [
+            {
+              "category": "injury",
+              "sentiment": "neutral",
+              "text": "Ankle caution previously"
+            }
+          ],
+          "time_horizon": "immediate",
+          "timestamp": ""
+        }
+      ],
+      "captaincy": [
+        {
+          "source": "batch_03",
+          "player_name": "Haaland",
+          "mention_type": "captain",
+          "confidence": 5,
+          "expert_percentage": null,
+          "rationale": "Haaland is chosen as captain for GW3 due to fixture and form.",
+          "supporting_quote": "Haaland takes the armband this week for the home game against Coventry.",
+          "timestamp": ""
+        }
+      ],
+      "themes": [
+        "Wildcard activated for GW3",
+        "Haaland captaincy for GW3",
+        "Focus on Arsenal defenders",
+        "Gibbs-White returns to starting XI",
+        "Disappointment from GW2 decisions"
+      ]
+    },
+    "batch_04": {
+      "recommendations": [
+        {
+          "source": "batch_04",
+          "player_name": "Cherki",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 4,
+          "confidence": 4,
+          "rationale": "Cherki is a top transferred player and part of the Algorithm’s optimal Free Hit team.",
+          "supporting_quote": "1️⃣ Cherki — 1,635,311 transfers in",
+          "reasons": [
+            {
+              "category": "popularity",
+              "sentiment": "positive",
+              "text": "High number of transfers in"
+            },
+            {
+              "category": "algorithm_selection",
+              "sentiment": "positive",
+              "text": "Selected in optimal Free Hit team"
+            }
+          ],
+          "risks": [],
+          "time_horizon": "immediate",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_04",
+          "player_name": "Wissa",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 3,
+          "confidence": 3,
+          "rationale": "Wissa is a popular pick with many transfers in and is highlighted as a top differential.",
+          "supporting_quote": "2️⃣ Wissa — 968,323",
+          "reasons": [
+            {
+              "category": "popularity",
+              "sentiment": "positive",
+              "text": "High number of transfers in"
+            },
+            {
+              "category": "differential",
+              "sentiment": "positive",
+              "text": "Top differential pick"
+            }
+          ],
+          "risks": [],
+          "time_horizon": "immediate",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_04",
+          "player_name": "De Cuyper",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 4,
+          "confidence": 4,
+          "rationale": "De Cuyper is a popular transfer and has reached DEFCON threshold in opening matches.",
+          "supporting_quote": "3️⃣ De Cuyper — 744,024",
+          "reasons": [
+            {
+              "category": "popularity",
+              "sentiment": "positive",
+              "text": "High number of transfers in"
+            },
+            {
+              "category": "defensive_contributions",
+              "sentiment": "positive",
+              "text": "Reached DEFCON threshold in opening matches"
+            }
+          ],
+          "risks": [],
+          "time_horizon": "immediate",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_04",
+          "player_name": "Elanga",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 3,
+          "confidence": 3,
+          "rationale": "Elanga is a popular transfer and part of the Algorithm’s optimal Free Hit team.",
+          "supporting_quote": "4️⃣ Elanga — 716,964",
+          "reasons": [
+            {
+              "category": "popularity",
+              "sentiment": "positive",
+              "text": "High number of transfers in"
+            },
+            {
+              "category": "algorithm_selection",
+              "sentiment": "positive",
+              "text": "Selected in optimal Free Hit team"
+            }
+          ],
+          "risks": [],
+          "time_horizon": "immediate",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_04",
+          "player_name": "Haaland",
+          "stance": "hold",
+          "sentiment": "positive",
+          "recommendation_strength": 5,
+          "confidence": 5,
+          "rationale": "Haaland leads projections and is recommended as captain and triple captain against Coventry.",
+          "supporting_quote": "Erling Haaland leads the projections ahead of Manchester City's home meeting with newly promoted Coventry.",
+          "reasons": [
+            {
+              "category": "projected_points",
+              "sentiment": "positive",
+              "text": "Highest projected points (7.8)"
+            },
+            {
+              "category": "fixture",
+              "sentiment": "positive",
+              "text": "Favorable fixture against promoted Coventry"
+            }
+          ],
+          "risks": [
+            {
+              "category": "minutes_risk",
+              "sentiment": "neutral",
+              "text": "Potential minutes risk due to upcoming European games"
+            }
+          ],
+          "time_horizon": "immediate",
+          "timestamp": ""
+        }
+      ],
+      "captaincy": [
+        {
+          "source": "batch_04",
+          "player_name": "Haaland",
+          "mention_type": "triple_captain",
+          "confidence": 5,
+          "expert_percentage": null,
+          "rationale": "Haaland is the preferred triple captain choice for GW3 due to fixture and form.",
+          "supporting_quote": "Haaland gets the armband against Coventry. 🧢",
+          "timestamp": ""
+        }
+      ],
+      "themes": [
+        "Chip usage in GW3",
+        "Free Hit activated by top managers",
+        "Wildcard plans after press conferences",
+        "Haaland as top captain and triple captain pick",
+        "Liverpool midfield double-up",
+        "Man City triple-up targeting Coventry",
+        "Injury updates on key players"
+      ]
+    }
+  }
+}

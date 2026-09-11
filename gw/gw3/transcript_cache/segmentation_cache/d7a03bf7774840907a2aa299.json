@@ -1,0 +1,11 @@
+{
+  "exceptions": {
+    "0": "INTRO",
+    "29": "ADVERTISEMENT",
+    "34": "ADVERTISEMENT",
+    "35": "ADVERTISEMENT",
+    "92": "OTHER",
+    "136": "OTHER",
+    "137": "OTHER"
+  }
+}

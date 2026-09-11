@@ -1,0 +1,1506 @@
+{
+  "mentions": [
+    {
+      "mention_id": "cxys-ZPdsXc|00:17|triple_captain|erlinghaaland",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "00:17",
+      "raw_name": "Erling Haaland",
+      "mention_type": "triple_captain",
+      "resolution_status": "resolved",
+      "selected_player_id": 411,
+      "selected_player_name": "Erling Haaland",
+      "confidence": 1.0,
+      "ranked_candidates": [
+        {
+          "player_id": 411,
+          "player_name": "Erling Haaland",
+          "confidence": 1.0
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "erlingharland",
+          "canonical_player_id": 411,
+          "canonical_player_name": "Erling Haaland",
+          "confidence": 0.9,
+          "reason": "Common ASR alias from alias map"
+        },
+        {
+          "alias": "haland",
+          "canonical_player_id": 411,
+          "canonical_player_name": "Erling Haaland",
+          "confidence": 0.9,
+          "reason": "Common ASR alias from alias map"
+        },
+        {
+          "alias": "harland",
+          "canonical_player_id": 411,
+          "canonical_player_name": "Erling Haaland",
+          "confidence": 0.8,
+          "reason": "Phonetic variant from alias map"
+        },
+        {
+          "alias": "erningharland",
+          "canonical_player_id": 411,
+          "canonical_player_name": "Erling Haaland",
+          "confidence": 0.7,
+          "reason": "Phonetic variant from alias map"
+        },
+        {
+          "alias": "holland",
+          "canonical_player_id": 411,
+          "canonical_player_name": "Erling Haaland",
+          "confidence": 0.7,
+          "reason": "Phonetic variant from alias map"
+        }
+      ],
+      "reason": "Unique supported canonical match for 'Erling Haaland' resolves to Erling Haaland (Man City, position 4). Nearby context mentions arsenal, chelsea, man city."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|01:14|recommendation|eliessebenseghir",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "01:14",
+      "raw_name": "Eliesse Ben Seghir",
+      "mention_type": "recommendation",
+      "resolution_status": "unresolved",
+      "selected_player_id": null,
+      "selected_player_name": null,
+      "confidence": 0.0,
+      "ranked_candidates": [],
+      "suggested_aliases": [],
+      "reason": "No supported canonical candidate found for 'Eliesse Ben Seghir'. Nearby context mentions arsenal, chelsea, man city."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|01:14|recommendation|enzofernndez",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "01:14",
+      "raw_name": "Enzo Fernández",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 155,
+      "selected_player_name": "Enzo Fernández",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 155,
+          "player_name": "Enzo Fernández",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "enzolefay",
+          "canonical_player_id": 155,
+          "canonical_player_name": "Enzo Fernández",
+          "confidence": 0.9,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "lefay",
+          "canonical_player_id": 155,
+          "canonical_player_name": "Enzo Fernández",
+          "confidence": 0.8,
+          "reason": "Alias from alias map"
+        }
+      ],
+      "reason": "Unique supported canonical match for 'Enzo Fernández' resolves to Enzo Fernández (Man City, position 3). Nearby context mentions arsenal, chelsea, man city."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|01:14|recommendation|solanke",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "01:14",
+      "raw_name": "Solanke",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 526,
+      "selected_player_name": "Dominic Solanke-Mitchell",
+      "confidence": 0.99,
+      "ranked_candidates": [
+        {
+          "player_id": 526,
+          "player_name": "Dominic Solanke-Mitchell",
+          "confidence": 0.99
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "solanke",
+          "canonical_player_id": 526,
+          "canonical_player_name": "Dominic Solanke-Mitchell",
+          "confidence": 1.0,
+          "reason": "Exact canonical name"
+        },
+        {
+          "alias": "solis",
+          "canonical_player_id": 557,
+          "canonical_player_name": "Christos Tzolis",
+          "confidence": 0.3,
+          "reason": "Phonetic similarity but different player, included for caution"
+        }
+      ],
+      "reason": "Alias 'Solanke' maps to Dominic Solanke-Mitchell. Nearby context mentions arsenal, chelsea, man city."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|02:10|recommendation|illimanndiaye",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "02:10",
+      "raw_name": "Illiman Ndiaye",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 237,
+      "selected_player_name": "Iliman Ndiaye",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 237,
+          "player_name": "Iliman Ndiaye",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "india",
+          "canonical_player_id": 237,
+          "canonical_player_name": "Iliman Ndiaye",
+          "confidence": 0.8,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "joi",
+          "canonical_player_id": 237,
+          "canonical_player_name": "Iliman Ndiaye",
+          "confidence": 0.7,
+          "reason": "Alias from alias map"
+        }
+      ],
+      "reason": "Unique supported canonical match for 'Illiman Ndiaye' resolves to Iliman Ndiaye (Man City, position 3). Nearby context mentions arsenal, chelsea, man city."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|02:10|recommendation|saliba",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "02:10",
+      "raw_name": "Saliba",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 6,
+      "selected_player_name": "William Saliba",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 6,
+          "player_name": "William Saliba",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "saliba",
+          "canonical_player_id": 6,
+          "canonical_player_name": "William Saliba",
+          "confidence": 1,
+          "reason": "Transcript surface form 'Saliba' maps to William Saliba."
+        }
+      ],
+      "reason": "Unique supported canonical match for 'Saliba' resolves to William Saliba (Arsenal, position 2). Nearby context mentions arsenal, chelsea, man city."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|02:45|recommendation|dominiccalvertlewin",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "02:45",
+      "raw_name": "Dominic Calvert-Lewin",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 346,
+      "selected_player_name": "Dominic Calvert-Lewin",
+      "confidence": 0.88,
+      "ranked_candidates": [
+        {
+          "player_id": 346,
+          "player_name": "Dominic Calvert-Lewin",
+          "confidence": 0.88
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "calvertlewin",
+          "canonical_player_id": 346,
+          "canonical_player_name": "Dominic Calvert-Lewin",
+          "confidence": 1.0,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "calberttlewen",
+          "canonical_player_id": 346,
+          "canonical_player_name": "Dominic Calvert-Lewin",
+          "confidence": 0.9,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "calberttlewin",
+          "canonical_player_id": 346,
+          "canonical_player_name": "Dominic Calvert-Lewin",
+          "confidence": 0.9,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "talbertleuen",
+          "canonical_player_id": 346,
+          "canonical_player_name": "Dominic Calvert-Lewin",
+          "confidence": 0.7,
+          "reason": "Alias from alias map"
+        }
+      ],
+      "reason": "Unique supported canonical match for 'Dominic Calvert-Lewin' resolves to Dominic Calvert-Lewin (Leeds, position 4). Nearby context mentions chelsea."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|02:45|recommendation|joopedro",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "02:45",
+      "raw_name": "João Pedro",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 165,
+      "selected_player_name": "João Pedro Junqueira de Jesus",
+      "confidence": 1.0,
+      "ranked_candidates": [
+        {
+          "player_id": 165,
+          "player_name": "João Pedro Junqueira de Jesus",
+          "confidence": 1.0
+        },
+        {
+          "player_id": 119,
+          "player_name": "João Pedro Loureiro da Costa",
+          "confidence": 0.64
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "japedro",
+          "canonical_player_id": 165,
+          "canonical_player_name": "João Pedro Junqueira de Jesus",
+          "confidence": 0.9,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "jiaopedro",
+          "canonical_player_id": 165,
+          "canonical_player_name": "João Pedro Junqueira de Jesus",
+          "confidence": 0.8,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "xiaopedro",
+          "canonical_player_id": 165,
+          "canonical_player_name": "João Pedro Junqueira de Jesus",
+          "confidence": 0.8,
+          "reason": "Alias from alias map"
+        }
+      ],
+      "reason": "Best supported canonical candidate for 'João Pedro' is João Pedro Junqueira de Jesus. Nearby context mentions chelsea."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|03:03|recommendation|pascalgro",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "03:03",
+      "raw_name": "Pascal Groß",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 124,
+      "selected_player_name": "Pascal Groß",
+      "confidence": 0.98,
+      "ranked_candidates": [
+        {
+          "player_id": 124,
+          "player_name": "Pascal Groß",
+          "confidence": 0.98
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "gross",
+          "canonical_player_id": 124,
+          "canonical_player_name": "Pascal Groß",
+          "confidence": 0.9,
+          "reason": "Alias from alias map"
+        }
+      ],
+      "reason": "Unique supported canonical match for 'Pascal Groß' resolves to Pascal Groß (Brighton, position 3). Nearby context mentions everton, fulham, man utd."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|03:03|recommendation|philfoden",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "03:03",
+      "raw_name": "Phil Foden",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 398,
+      "selected_player_name": "Phil Foden",
+      "confidence": 0.98,
+      "ranked_candidates": [
+        {
+          "player_id": 398,
+          "player_name": "Phil Foden",
+          "confidence": 0.98
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "fodm",
+          "canonical_player_id": 398,
+          "canonical_player_name": "Phil Foden",
+          "confidence": 0.9,
+          "reason": "Alias from alias map"
+        }
+      ],
+      "reason": "Unique supported canonical match for 'Phil Foden' resolves to Phil Foden (Man City, position 3). Nearby context mentions everton, fulham, man utd."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|03:40|recommendation|brunofernandes",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "03:40",
+      "raw_name": "Bruno Fernandes",
+      "mention_type": "recommendation",
+      "resolution_status": "unresolved",
+      "selected_player_id": null,
+      "selected_player_name": null,
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 426,
+          "player_name": "Bruno Borges Fernandes",
+          "confidence": 1
+        },
+        {
+          "player_id": 525,
+          "player_name": "Mateus Fernandes",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "brunofernandes",
+          "canonical_player_id": 426,
+          "canonical_player_name": "Bruno Borges Fernandes",
+          "confidence": 0.9,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "brunofernandez",
+          "canonical_player_id": 426,
+          "canonical_player_name": "Bruno Borges Fernandes",
+          "confidence": 0.9,
+          "reason": "Alias from alias map"
+        }
+      ],
+      "reason": "No alias match for 'Bruno Fernandes' and multiple plausible canonical candidates remain. Nearby context mentions everton, fulham, leeds, man utd, newcastle, spurs."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|03:40|recommendation|bryanmbeumo",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "03:40",
+      "raw_name": "Bryan Mbeumo",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 427,
+      "selected_player_name": "Bryan Mbeumo",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 427,
+          "player_name": "Bryan Mbeumo",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "beumo",
+          "canonical_player_id": 427,
+          "canonical_player_name": "Bryan Mbeumo",
+          "confidence": 0.9,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "brianbumo",
+          "canonical_player_id": 427,
+          "canonical_player_name": "Bryan Mbeumo",
+          "confidence": 0.8,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "brianburmo",
+          "canonical_player_id": 427,
+          "canonical_player_name": "Bryan Mbeumo",
+          "confidence": 0.8,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "bumo",
+          "canonical_player_id": 427,
+          "canonical_player_name": "Bryan Mbeumo",
+          "confidence": 0.8,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "mbuemo",
+          "canonical_player_id": 427,
+          "canonical_player_name": "Bryan Mbeumo",
+          "confidence": 0.7,
+          "reason": "Alias from alias map"
+        }
+      ],
+      "reason": "Unique supported canonical match for 'Bryan Mbeumo' resolves to Bryan Mbeumo (Man Utd, position 3). Nearby context mentions everton, fulham, leeds, man utd, newcastle, spurs."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|03:40|recommendation|harrymaguire",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "03:40",
+      "raw_name": "Harry Maguire",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 418,
+      "selected_player_name": "Harry Maguire",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 418,
+          "player_name": "Harry Maguire",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "harrymaguire",
+          "canonical_player_id": 418,
+          "canonical_player_name": "Harry Maguire",
+          "confidence": 1,
+          "reason": "Transcript surface form 'Harry Maguire' maps to Harry Maguire."
+        }
+      ],
+      "reason": "Unique supported canonical match for 'Harry Maguire' resolves to Harry Maguire (Man Utd, position 2). Nearby context mentions everton, fulham, leeds, man utd, newcastle, spurs."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|03:40|recommendation|lukeshaw",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "03:40",
+      "raw_name": "Luke Shaw",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 423,
+      "selected_player_name": "Luke Shaw",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 423,
+          "player_name": "Luke Shaw",
+          "confidence": 1
+        },
+        {
+          "player_id": 567,
+          "player_name": "Lukás Hornícek",
+          "confidence": 0.88
+        },
+        {
+          "player_id": 163,
+          "player_name": "Dário Luís Essugo",
+          "confidence": 0.74
+        },
+        {
+          "player_id": 571,
+          "player_name": "Florentino Ibrain Morris Luís",
+          "confidence": 0.74
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "lukeshaw",
+          "canonical_player_id": 423,
+          "canonical_player_name": "Luke Shaw",
+          "confidence": 1,
+          "reason": "Transcript surface form 'Luke Shaw' maps to Luke Shaw."
+        }
+      ],
+      "reason": "Best supported canonical candidate for 'Luke Shaw' is Luke Shaw. Nearby context mentions everton, fulham, leeds, man utd, newcastle, spurs."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|04:52|recommendation|cherki",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "04:52",
+      "raw_name": "Cherki",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 399,
+      "selected_player_name": "Rayan Cherki",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 399,
+          "player_name": "Rayan Cherki",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "churkey",
+          "canonical_player_id": 399,
+          "canonical_player_name": "Rayan Cherki",
+          "confidence": 0.9,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "rayanchery",
+          "canonical_player_id": 399,
+          "canonical_player_name": "Rayan Cherki",
+          "confidence": 0.8,
+          "reason": "Alias from alias map"
+        }
+      ],
+      "reason": "Unique supported canonical match for 'Cherki' resolves to Rayan Cherki (Man City, position 3). Nearby context mentions everton, fulham, man city, man utd."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|04:52|recommendation|philfoden",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "04:52",
+      "raw_name": "Phil Foden",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 398,
+      "selected_player_name": "Phil Foden",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 398,
+          "player_name": "Phil Foden",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "fodm",
+          "canonical_player_id": 398,
+          "canonical_player_name": "Phil Foden",
+          "confidence": 0.9,
+          "reason": "Alias from alias map"
+        }
+      ],
+      "reason": "Unique supported canonical match for 'Phil Foden' resolves to Phil Foden (Man City, position 3). Nearby context mentions everton, fulham, man city, man utd."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|07:54|recommendation|ezrikonsa",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "07:54",
+      "raw_name": "Ezri Konsa",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 31,
+      "selected_player_name": "Ezri Konsa Ngoyo",
+      "confidence": 0.88,
+      "ranked_candidates": [
+        {
+          "player_id": 31,
+          "player_name": "Ezri Konsa Ngoyo",
+          "confidence": 0.88
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "consa",
+          "canonical_player_id": 31,
+          "canonical_player_name": "Ezri Konsa Ngoyo",
+          "confidence": 0.9,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "konsa",
+          "canonical_player_id": 31,
+          "canonical_player_name": "Ezri Konsa Ngoyo",
+          "confidence": 0.9,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "concert",
+          "canonical_player_id": 31,
+          "canonical_player_name": "Ezri Konsa Ngoyo",
+          "confidence": 0.7,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "ezriconor",
+          "canonical_player_id": 31,
+          "canonical_player_name": "Ezri Konsa Ngoyo",
+          "confidence": 0.7,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "gonza",
+          "canonical_player_id": 31,
+          "canonical_player_name": "Ezri Konsa Ngoyo",
+          "confidence": 0.6,
+          "reason": "Alias from alias map"
+        }
+      ],
+      "reason": "Unique supported canonical match for 'Ezri Konsa' resolves to Ezri Konsa Ngoyo (Arsenal, position 2). Nearby context mentions arsenal, aston villa, chelsea."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|09:23|recommendation|davidraya",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "09:23",
+      "raw_name": "David Raya",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 1,
+      "selected_player_name": "David Raya Martín",
+      "confidence": 1.0,
+      "ranked_candidates": [
+        {
+          "player_id": 1,
+          "player_name": "David Raya Martín",
+          "confidence": 1.0
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "raya",
+          "canonical_player_id": 1,
+          "canonical_player_name": "David Raya Martín",
+          "confidence": 0.9,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "rya",
+          "canonical_player_id": 1,
+          "canonical_player_name": "David Raya Martín",
+          "confidence": 0.8,
+          "reason": "Alias from alias map"
+        }
+      ],
+      "reason": "Unique supported canonical match for 'David Raya' resolves to David Raya Martín (Arsenal, position 1). Nearby context mentions arsenal, chelsea, leeds, spurs."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|10:15|recommendation|malickthiaw",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "10:15",
+      "raw_name": "Malick Thiaw",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 445,
+      "selected_player_name": "Malick Thiaw",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 445,
+          "player_name": "Malick Thiaw",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "chaw",
+          "canonical_player_id": 445,
+          "canonical_player_name": "Malick Thiaw",
+          "confidence": 0.9,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "chia",
+          "canonical_player_id": 445,
+          "canonical_player_name": "Malick Thiaw",
+          "confidence": 0.8,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "theo",
+          "canonical_player_id": 445,
+          "canonical_player_name": "Malick Thiaw",
+          "confidence": 0.7,
+          "reason": "Alias from alias map"
+        }
+      ],
+      "reason": "Unique supported canonical match for 'Malick Thiaw' resolves to Malick Thiaw (Newcastle, position 2). Nearby context mentions arsenal, bournemouth, brighton, leeds."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|11:24|recommendation|bukayosaka",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "11:24",
+      "raw_name": "Bukayo Saka",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 12,
+      "selected_player_name": "Bukayo Saka",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 12,
+          "player_name": "Bukayo Saka",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "saka",
+          "canonical_player_id": 12,
+          "canonical_player_name": "Bukayo Saka",
+          "confidence": 0.9,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "sacka",
+          "canonical_player_id": 12,
+          "canonical_player_name": "Bukayo Saka",
+          "confidence": 0.8,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "gabby",
+          "canonical_player_id": 4,
+          "canonical_player_name": "Gabriel dos Santos Magalhães",
+          "confidence": 0.3,
+          "reason": "Phonetic similarity but different player, included for caution"
+        },
+        {
+          "alias": "gabrielle",
+          "canonical_player_id": 4,
+          "canonical_player_name": "Gabriel dos Santos Magalhães",
+          "confidence": 0.3,
+          "reason": "Phonetic similarity but different player, included for caution"
+        }
+      ],
+      "reason": "Unique supported canonical match for 'Bukayo Saka' resolves to Bukayo Saka (Arsenal, position 3). Nearby context mentions aston villa, ipswich town, leeds, man city, spurs."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|11:24|recommendation|dominikszoboszlai",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "11:24",
+      "raw_name": "Dominik Szoboszlai",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 368,
+      "selected_player_name": "Dominik Szoboszlai",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 368,
+          "player_name": "Dominik Szoboszlai",
+          "confidence": 1
+        },
+        {
+          "player_id": 163,
+          "player_name": "Dário Luís Essugo",
+          "confidence": 0.88
+        },
+        {
+          "player_id": 487,
+          "player_name": "Nicolás Domínguez",
+          "confidence": 0.88
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "bosa",
+          "canonical_player_id": 368,
+          "canonical_player_name": "Dominik Szoboszlai",
+          "confidence": 0.9,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "boslight",
+          "canonical_player_id": 368,
+          "canonical_player_name": "Dominik Szoboszlai",
+          "confidence": 0.9,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "sabosi",
+          "canonical_player_id": 368,
+          "canonical_player_name": "Dominik Szoboszlai",
+          "confidence": 0.8,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "solly",
+          "canonical_player_id": 368,
+          "canonical_player_name": "Dominik Szoboszlai",
+          "confidence": 0.7,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "sosa",
+          "canonical_player_id": 368,
+          "canonical_player_name": "Dominik Szoboszlai",
+          "confidence": 0.7,
+          "reason": "Alias from alias map"
+        }
+      ],
+      "reason": "Best supported canonical candidate for 'Dominik Szoboszlai' is Dominik Szoboszlai. Nearby context mentions aston villa, ipswich town, leeds, man city, spurs."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|11:24|recommendation|pascalgro",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "11:24",
+      "raw_name": "Pascal Groß",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 124,
+      "selected_player_name": "Pascal Groß",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 124,
+          "player_name": "Pascal Groß",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "gross",
+          "canonical_player_id": 124,
+          "canonical_player_name": "Pascal Groß",
+          "confidence": 0.9,
+          "reason": "Alias from alias map"
+        }
+      ],
+      "reason": "Unique supported canonical match for 'Pascal Groß' resolves to Pascal Groß (Brighton, position 3). Nearby context mentions aston villa, ipswich town, leeds, man city, spurs."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|12:17|recommendation|elanga",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "12:17",
+      "raw_name": "Elanga",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 454,
+      "selected_player_name": "Anthony Elanga",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 454,
+          "player_name": "Anthony Elanga",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "elanga",
+          "canonical_player_id": 454,
+          "canonical_player_name": "Anthony Elanga",
+          "confidence": 1.0,
+          "reason": "Exact canonical name"
+        }
+      ],
+      "reason": "Alias 'Elanga' maps to Anthony Elanga. Nearby context mentions hull city, newcastle, sunderland."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|12:34|recommendation|colepalmer",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "12:34",
+      "raw_name": "Cole Palmer",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 154,
+      "selected_player_name": "Cole Palmer",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 154,
+          "player_name": "Cole Palmer",
+          "confidence": 1
+        },
+        {
+          "player_id": 301,
+          "player_name": "Alex Palmer",
+          "confidence": 0.74
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "palmer",
+          "canonical_player_id": 154,
+          "canonical_player_name": "Cole Palmer",
+          "confidence": 0.9,
+          "reason": "Alias from alias map"
+        }
+      ],
+      "reason": "Best supported canonical candidate for 'Cole Palmer' is Cole Palmer. Nearby context mentions hull city, newcastle."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|13:10|recommendation|alexanderisak",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "13:10",
+      "raw_name": "Alexander Isak",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 379,
+      "selected_player_name": "Alexander Isak",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 379,
+          "player_name": "Alexander Isak",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "isac",
+          "canonical_player_id": 379,
+          "canonical_player_name": "Alexander Isak",
+          "confidence": 0.9,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "issaac",
+          "canonical_player_id": 379,
+          "canonical_player_name": "Alexander Isak",
+          "confidence": 0.8,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "issac",
+          "canonical_player_id": 379,
+          "canonical_player_name": "Alexander Isak",
+          "confidence": 0.8,
+          "reason": "Alias from alias map"
+        }
+      ],
+      "reason": "Unique supported canonical match for 'Alexander Isak' resolves to Alexander Isak (Liverpool, position 4). Nearby context mentions bournemouth, everton, fulham, ipswich town, newcastle."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|13:10|recommendation|joopedro",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "13:10",
+      "raw_name": "João Pedro",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 165,
+      "selected_player_name": "João Pedro Junqueira de Jesus",
+      "confidence": 0.92,
+      "ranked_candidates": [
+        {
+          "player_id": 165,
+          "player_name": "João Pedro Junqueira de Jesus",
+          "confidence": 0.92
+        },
+        {
+          "player_id": 119,
+          "player_name": "João Pedro Loureiro da Costa",
+          "confidence": 0.74
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "japedro",
+          "canonical_player_id": 165,
+          "canonical_player_name": "João Pedro Junqueira de Jesus",
+          "confidence": 0.9,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "jiaopedro",
+          "canonical_player_id": 165,
+          "canonical_player_name": "João Pedro Junqueira de Jesus",
+          "confidence": 0.8,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "xiaopedro",
+          "canonical_player_id": 165,
+          "canonical_player_name": "João Pedro Junqueira de Jesus",
+          "confidence": 0.8,
+          "reason": "Alias from alias map"
+        }
+      ],
+      "reason": "Best supported canonical candidate for 'João Pedro' is João Pedro Junqueira de Jesus. Nearby context mentions bournemouth, everton, fulham, ipswich town, newcastle."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|13:28|recommendation|gonalo",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "13:28",
+      "raw_name": "Gonçalo",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 569,
+      "selected_player_name": "Gonzalo García",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 569,
+          "player_name": "Gonzalo García",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "gonza",
+          "canonical_player_id": 31,
+          "canonical_player_name": "Ezri Konsa Ngoyo",
+          "confidence": 0.6,
+          "reason": "Alias from alias map"
+        }
+      ],
+      "reason": "Unique supported canonical match for 'Gonçalo' resolves to Gonzalo García (Fulham, position 4). Nearby context mentions arsenal, bournemouth, chelsea, everton, fulham, ipswich town, newcastle, spurs."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|13:46|recommendation|mamadousakho",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "13:46",
+      "raw_name": "Mamadou Sakho",
+      "mention_type": "recommendation",
+      "resolution_status": "unresolved",
+      "selected_player_id": null,
+      "selected_player_name": null,
+      "confidence": 0.0,
+      "ranked_candidates": [],
+      "suggested_aliases": [],
+      "reason": "No supported canonical candidate found for 'Mamadou Sakho'. Nearby context mentions arsenal, chelsea, everton, fulham, spurs."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|14:22|recommendation|colepalmer",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "14:22",
+      "raw_name": "Cole Palmer",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 154,
+      "selected_player_name": "Cole Palmer",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 154,
+          "player_name": "Cole Palmer",
+          "confidence": 1
+        },
+        {
+          "player_id": 301,
+          "player_name": "Alex Palmer",
+          "confidence": 0.74
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "palmer",
+          "canonical_player_id": 154,
+          "canonical_player_name": "Cole Palmer",
+          "confidence": 0.9,
+          "reason": "Alias from alias map"
+        }
+      ],
+      "reason": "Best supported canonical candidate for 'Cole Palmer' is Cole Palmer. Nearby context mentions arsenal, chelsea, spurs."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|14:22|recommendation|joopedro",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "14:22",
+      "raw_name": "João Pedro",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 165,
+      "selected_player_name": "João Pedro Junqueira de Jesus",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 165,
+          "player_name": "João Pedro Junqueira de Jesus",
+          "confidence": 1
+        },
+        {
+          "player_id": 119,
+          "player_name": "João Pedro Loureiro da Costa",
+          "confidence": 0.82
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "japedro",
+          "canonical_player_id": 165,
+          "canonical_player_name": "João Pedro Junqueira de Jesus",
+          "confidence": 0.9,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "jiaopedro",
+          "canonical_player_id": 165,
+          "canonical_player_name": "João Pedro Junqueira de Jesus",
+          "confidence": 0.8,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "xiaopedro",
+          "canonical_player_id": 165,
+          "canonical_player_name": "João Pedro Junqueira de Jesus",
+          "confidence": 0.8,
+          "reason": "Alias from alias map"
+        }
+      ],
+      "reason": "Best supported canonical candidate for 'João Pedro' is João Pedro Junqueira de Jesus. Nearby context mentions arsenal, chelsea, spurs."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|14:39|avoid_captain|harrymaguire",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "14:39",
+      "raw_name": "Harry Maguire",
+      "mention_type": "avoid_captain",
+      "resolution_status": "resolved",
+      "selected_player_id": 418,
+      "selected_player_name": "Harry Maguire",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 418,
+          "player_name": "Harry Maguire",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "harrymaguire",
+          "canonical_player_id": 418,
+          "canonical_player_name": "Harry Maguire",
+          "confidence": 1,
+          "reason": "Transcript surface form 'Harry Maguire' maps to Harry Maguire."
+        }
+      ],
+      "reason": "Unique supported canonical match for 'Harry Maguire' resolves to Harry Maguire (Man Utd, position 2). Nearby context mentions arsenal, chelsea."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|14:39|avoid_captain|lukeshaw",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "14:39",
+      "raw_name": "Luke Shaw",
+      "mention_type": "avoid_captain",
+      "resolution_status": "unresolved",
+      "selected_player_id": null,
+      "selected_player_name": null,
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 163,
+          "player_name": "Dário Luís Essugo",
+          "confidence": 1
+        },
+        {
+          "player_id": 423,
+          "player_name": "Luke Shaw",
+          "confidence": 1
+        },
+        {
+          "player_id": 571,
+          "player_name": "Florentino Ibrain Morris Luís",
+          "confidence": 0.88
+        },
+        {
+          "player_id": 567,
+          "player_name": "Lukás Hornícek",
+          "confidence": 0.74
+        }
+      ],
+      "suggested_aliases": [],
+      "reason": "No alias match for 'Luke Shaw' and multiple plausible canonical candidates remain. Nearby context mentions arsenal, chelsea."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|15:34|recommendation|davidraya",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "15:34",
+      "raw_name": "David Raya",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 1,
+      "selected_player_name": "David Raya Martín",
+      "confidence": 0.88,
+      "ranked_candidates": [
+        {
+          "player_id": 1,
+          "player_name": "David Raya Martín",
+          "confidence": 0.88
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "raya",
+          "canonical_player_id": 1,
+          "canonical_player_name": "David Raya Martín",
+          "confidence": 0.9,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "rya",
+          "canonical_player_id": 1,
+          "canonical_player_name": "David Raya Martín",
+          "confidence": 0.8,
+          "reason": "Alias from alias map"
+        }
+      ],
+      "reason": "Unique supported canonical match for 'David Raya' resolves to David Raya Martín (Arsenal, position 1). Nearby context mentions arsenal, aston villa, chelsea, newcastle."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|16:09|recommendation|bryanmbeumo",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "16:09",
+      "raw_name": "Bryan Mbeumo",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 427,
+      "selected_player_name": "Bryan Mbeumo",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 427,
+          "player_name": "Bryan Mbeumo",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "beumo",
+          "canonical_player_id": 427,
+          "canonical_player_name": "Bryan Mbeumo",
+          "confidence": 0.9,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "brianbumo",
+          "canonical_player_id": 427,
+          "canonical_player_name": "Bryan Mbeumo",
+          "confidence": 0.8,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "brianburmo",
+          "canonical_player_id": 427,
+          "canonical_player_name": "Bryan Mbeumo",
+          "confidence": 0.8,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "bumo",
+          "canonical_player_id": 427,
+          "canonical_player_name": "Bryan Mbeumo",
+          "confidence": 0.8,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "mbuemo",
+          "canonical_player_id": 427,
+          "canonical_player_name": "Bryan Mbeumo",
+          "confidence": 0.7,
+          "reason": "Alias from alias map"
+        }
+      ],
+      "reason": "Unique supported canonical match for 'Bryan Mbeumo' resolves to Bryan Mbeumo (Man Utd, position 3). Nearby context mentions arsenal, brighton, chelsea, everton, man city."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|16:09|recommendation|florianwirtz",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "16:09",
+      "raw_name": "Florian Wirtz",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 366,
+      "selected_player_name": "Florian Wirtz",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 366,
+          "player_name": "Florian Wirtz",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "verts",
+          "canonical_player_id": 366,
+          "canonical_player_name": "Florian Wirtz",
+          "confidence": 0.9,
+          "reason": "Alias from alias map"
+        }
+      ],
+      "reason": "Unique supported canonical match for 'Florian Wirtz' resolves to Florian Wirtz (Liverpool, position 3). Nearby context mentions arsenal, brighton, chelsea, everton, man city."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|16:09|recommendation|kevinschade",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "16:09",
+      "raw_name": "Kevin Schade",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 94,
+      "selected_player_name": "Kevin Schade",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 94,
+          "player_name": "Kevin Schade",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "kevinsharda",
+          "canonical_player_id": 94,
+          "canonical_player_name": "Kevin Schade",
+          "confidence": 0.9,
+          "reason": "Alias from alias map"
+        }
+      ],
+      "reason": "Unique supported canonical match for 'Kevin Schade' resolves to Kevin Schade (Brentford, position 3). Nearby context mentions arsenal, brighton, chelsea, everton, man city."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|16:27|recommendation|calvertlewin",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "16:27",
+      "raw_name": "Calvert-Lewin",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 346,
+      "selected_player_name": "Dominic Calvert-Lewin",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 346,
+          "player_name": "Dominic Calvert-Lewin",
+          "confidence": 1
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "calvertlewin",
+          "canonical_player_id": 346,
+          "canonical_player_name": "Dominic Calvert-Lewin",
+          "confidence": 1.0,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "calberttlewen",
+          "canonical_player_id": 346,
+          "canonical_player_name": "Dominic Calvert-Lewin",
+          "confidence": 0.9,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "calberttlewin",
+          "canonical_player_id": 346,
+          "canonical_player_name": "Dominic Calvert-Lewin",
+          "confidence": 0.9,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "talbertleuen",
+          "canonical_player_id": 346,
+          "canonical_player_name": "Dominic Calvert-Lewin",
+          "confidence": 0.7,
+          "reason": "Alias from alias map"
+        }
+      ],
+      "reason": "Alias 'Calvert-Lewin' maps to Dominic Calvert-Lewin. Nearby context mentions brighton, chelsea, everton, man city, sunderland."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|16:27|recommendation|decuyper",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "16:27",
+      "raw_name": "De Cuyper",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 115,
+      "selected_player_name": "Maxim De Cuyper",
+      "confidence": 1,
+      "ranked_candidates": [
+        {
+          "player_id": 115,
+          "player_name": "Maxim De Cuyper",
+          "confidence": 1
+        },
+        {
+          "player_id": 458,
+          "player_name": "Joelinton Cássio Apolinário de Lira",
+          "confidence": 0.8
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "diper",
+          "canonical_player_id": 115,
+          "canonical_player_name": "Maxim De Cuyper",
+          "confidence": 0.9,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "dkyper",
+          "canonical_player_id": 115,
+          "canonical_player_name": "Maxim De Cuyper",
+          "confidence": 0.9,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "kyper",
+          "canonical_player_id": 115,
+          "canonical_player_name": "Maxim De Cuyper",
+          "confidence": 0.9,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "kyifer",
+          "canonical_player_id": 115,
+          "canonical_player_name": "Maxim De Cuyper",
+          "confidence": 0.8,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "kypo",
+          "canonical_player_id": 115,
+          "canonical_player_name": "Maxim De Cuyper",
+          "confidence": 0.8,
+          "reason": "Alias from alias map"
+        }
+      ],
+      "reason": "Best supported canonical candidate for 'De Cuyper' is Maxim De Cuyper. Nearby context mentions brighton, chelsea, everton, man city, sunderland."
+    },
+    {
+      "mention_id": "cxys-ZPdsXc|16:27|recommendation|yoanewissa",
+      "source": "cxys-ZPdsXc",
+      "timestamp": "16:27",
+      "raw_name": "Yoane Wissa",
+      "mention_type": "recommendation",
+      "resolution_status": "resolved",
+      "selected_player_id": 464,
+      "selected_player_name": "Yoane Wissa",
+      "confidence": 1.0,
+      "ranked_candidates": [
+        {
+          "player_id": 464,
+          "player_name": "Yoane Wissa",
+          "confidence": 1.0
+        }
+      ],
+      "suggested_aliases": [
+        {
+          "alias": "wissa",
+          "canonical_player_id": 464,
+          "canonical_player_name": "Yoane Wissa",
+          "confidence": 0.9,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "vissa",
+          "canonical_player_id": 464,
+          "canonical_player_name": "Yoane Wissa",
+          "confidence": 0.8,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "rissa",
+          "canonical_player_id": 464,
+          "canonical_player_name": "Yoane Wissa",
+          "confidence": 0.7,
+          "reason": "Alias from alias map"
+        },
+        {
+          "alias": "smano",
+          "canonical_player_id": 397,
+          "canonical_player_name": "Antoine Semenyo",
+          "confidence": 0.3,
+          "reason": "Phonetic similarity but different player, included for caution"
+        }
+      ],
+      "reason": "Unique supported canonical match for 'Yoane Wissa' resolves to Yoane Wissa (Newcastle, position 4). Nearby context mentions brighton, chelsea, everton, man city, sunderland."
+    }
+  ]
+}

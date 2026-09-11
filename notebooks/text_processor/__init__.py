@@ -1,0 +1,1 @@
+"""Text ingestion helpers for FPL article and transcript collection."""

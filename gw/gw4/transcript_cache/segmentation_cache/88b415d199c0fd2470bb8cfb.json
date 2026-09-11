@@ -1,0 +1,88 @@
+{
+  "sections": [
+    {
+      "start_index": 0,
+      "end_index": 8,
+      "type": "INTRO",
+      "topic": "Introduction and Wildcard Review"
+    },
+    {
+      "start_index": 9,
+      "end_index": 16,
+      "type": "FPL_ANALYSIS",
+      "topic": "Defensive Options and Injuries"
+    },
+    {
+      "start_index": 17,
+      "end_index": 21,
+      "type": "FPL_ANALYSIS",
+      "topic": "Midfield and Forward Picks Overview"
+    },
+    {
+      "start_index": 22,
+      "end_index": 33,
+      "type": "FPL_ANALYSIS",
+      "topic": "Fixture Analysis and Team Strategy"
+    },
+    {
+      "start_index": 34,
+      "end_index": 36,
+      "type": "ADVERTISEMENT",
+      "topic": "Channel Promotion"
+    },
+    {
+      "start_index": 37,
+      "end_index": 43,
+      "type": "FPL_ANALYSIS",
+      "topic": "Arsenal Defense and Goalkeeper Strategy"
+    },
+    {
+      "start_index": 44,
+      "end_index": 49,
+      "type": "FPL_ANALYSIS",
+      "topic": "Midfield and Chelsea Attacking Options"
+    },
+    {
+      "start_index": 50,
+      "end_index": 53,
+      "type": "FPL_ANALYSIS",
+      "topic": "Attacking Player Evaluation and Ownership"
+    },
+    {
+      "start_index": 54,
+      "end_index": 55,
+      "type": "FPL_ANALYSIS",
+      "topic": "Manchester City Rotation and Player Minutes"
+    },
+    {
+      "start_index": 56,
+      "end_index": 66,
+      "type": "FPL_ANALYSIS",
+      "topic": "Captaincy Strategy and Triple Captain Chip"
+    },
+    {
+      "start_index": 67,
+      "end_index": 79,
+      "type": "FPL_ANALYSIS",
+      "topic": "Midfield and Forward Captaincy and Long-Term Planning"
+    },
+    {
+      "start_index": 80,
+      "end_index": 90,
+      "type": "FPL_ANALYSIS",
+      "topic": "Transfer Plans and Team Optimization"
+    },
+    {
+      "start_index": 91,
+      "end_index": 104,
+      "type": "FPL_ANALYSIS",
+      "topic": "Future Fixtures and Potential Team Changes"
+    },
+    {
+      "start_index": 105,
+      "end_index": 106,
+      "type": "BANTER",
+      "topic": "Closing Remarks and Farewell"
+    }
+  ]
+}

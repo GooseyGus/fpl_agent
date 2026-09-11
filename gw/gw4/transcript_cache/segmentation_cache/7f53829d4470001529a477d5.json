@@ -1,0 +1,28 @@
+{
+  "sections": [
+    {
+      "start_index": 0,
+      "end_index": 3,
+      "type": "FPL_ANALYSIS",
+      "topic": "Wildcard and Arsenal assets"
+    },
+    {
+      "start_index": 4,
+      "end_index": 5,
+      "type": "ADVERTISEMENT",
+      "topic": "Fantasy Football Hub promotion"
+    },
+    {
+      "start_index": 6,
+      "end_index": 15,
+      "type": "FPL_ANALYSIS",
+      "topic": "Transfer plans and triple captain strategy"
+    },
+    {
+      "start_index": 16,
+      "end_index": 16,
+      "type": "OTHER",
+      "topic": "Closing remarks and data source"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "sections": [
+    {
+      "start_index": 0,
+      "end_index": 4,
+      "type": "INTRO",
+      "topic": "Introduction and channel promotion"
+    },
+    {
+      "start_index": 5,
+      "end_index": 8,
+      "type": "FPL_ANALYSIS",
+      "topic": "Aston Villa injury and team news"
+    },
+    {
+      "start_index": 9,
+      "end_index": 12,
+      "type": "FPL_ANALYSIS",
+      "topic": "Bournemouth and Brentford injury updates"
+    },
+    {
+      "start_index": 13,
+      "end_index": 16,
+      "type": "FPL_ANALYSIS",
+      "topic": "Chelsea and Hull injury news"
+    },
+    {
+      "start_index": 17,
+      "end_index": 21,
+      "type": "FPL_ANALYSIS",
+      "topic": "Crystal Palace and Ipswich injury updates"
+    },
+    {
+      "start_index": 22,
+      "end_index": 27,
+      "type": "FPL_ANALYSIS",
+      "topic": "Liverpool injury and starting lineup considerations"
+    },
+    {
+      "start_index": 28,
+      "end_index": 32,
+      "type": "FPL_ANALYSIS",
+      "topic": "Fulham injury and squad dynamics"
+    },
+    {
+      "start_index": 33,
+      "end_index": 37,
+      "type": "FPL_ANALYSIS",
+      "topic": "Tottenham injury and player availability"
+    },
+    {
+      "start_index": 38,
+      "end_index": 39,
+      "type": "FPL_ANALYSIS",
+      "topic": "Everton injury and player fitness"
+    },
+    {
+      "start_index": 40,
+      "end_index": 49,
+      "type": "FPL_ANALYSIS",
+      "topic": "Sunderland and Arsenal injury and squad updates"
+    },
+    {
+      "start_index": 50,
+      "end_index": 57,
+      "type": "FPL_ANALYSIS",
+      "topic": "Coventry and Brighton injury news and player roles"
+    },
+    {
+      "start_index": 58,
+      "end_index": 71,
+      "type": "FPL_ANALYSIS",
+      "topic": "Manchester United and Manchester City injury and lineup analysis"
+    },
+    {
+      "start_index": 72,
+      "end_index": 80,
+      "type": "FPL_ANALYSIS",
+      "topic": "Leeds and Newcastle injury updates and manager press approach"
+    },
+    {
+      "start_index": 81,
+      "end_index": 84,
+      "type": "FPL_ANALYSIS",
+      "topic": "Summary of injury news across multiple teams"
+    },
+    {
+      "start_index": 85,
+      "end_index": 85,
+      "type": "OTHER",
+      "topic": "Closing remarks and sign off"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "sections": [
+    {
+      "start_index": 0,
+      "end_index": 2,
+      "type": "INTRO",
+      "topic": "Introduction and greetings"
+    },
+    {
+      "start_index": 3,
+      "end_index": 6,
+      "type": "FPL_ANALYSIS",
+      "topic": "Wild card usage and previous gameweek performance"
+    },
+    {
+      "start_index": 7,
+      "end_index": 11,
+      "type": "FPL_ANALYSIS",
+      "topic": "Current team review and wild card strategy"
+    },
+    {
+      "start_index": 12,
+      "end_index": 16,
+      "type": "FPL_ANALYSIS",
+      "topic": "Short-term transfers vs wild card timing"
+    },
+    {
+      "start_index": 17,
+      "end_index": 21,
+      "type": "FPL_ANALYSIS",
+      "topic": "Price changes and wild card timing considerations"
+    },
+    {
+      "start_index": 22,
+      "end_index": 29,
+      "type": "FPL_ANALYSIS",
+      "topic": "Key player retention and captaincy choices"
+    },
+    {
+      "start_index": 30,
+      "end_index": 33,
+      "type": "FPL_ANALYSIS",
+      "topic": "Striker and goalkeeper options debate"
+    },
+    {
+      "start_index": 34,
+      "end_index": 41,
+      "type": "FPL_ANALYSIS",
+      "topic": "Arsenal triple-up and midfield options (Saka, Odegaard, Palmer)"
+    },
+    {
+      "start_index": 42,
+      "end_index": 50,
+      "type": "FPL_ANALYSIS",
+      "topic": "Midfield and defensive structure including Rogers and Egan"
+    },
+    {
+      "start_index": 51,
+      "end_index": 58,
+      "type": "FPL_ANALYSIS",
+      "topic": "Defensive picks including Lewis Hall and risk assessment"
+    },
+    {
+      "start_index": 59,
+      "end_index": 74,
+      "type": "FPL_ANALYSIS",
+      "topic": "Midfield enablers and budget considerations (Gomez, Slater, Barry, Whittaker)"
+    },
+    {
+      "start_index": 75,
+      "end_index": 78,
+      "type": "FPL_ANALYSIS",
+      "topic": "Overall team structure and captaincy decision"
+    },
+    {
+      "start_index": 79,
+      "end_index": 81,
+      "type": "FPL_ANALYSIS",
+      "topic": "Alternative wild card team build suggestions"
+    },
+    {
+      "start_index": 82,
+      "end_index": 87,
+      "type": "FPL_ANALYSIS",
+      "topic": "Importance of squad depth and benching headaches"
+    },
+    {
+      "start_index": 88,
+      "end_index": 91,
+      "type": "BANTER",
+      "topic": "Benching mistakes and humorous recollections"
+    },
+    {
+      "start_index": 92,
+      "end_index": 94,
+      "type": "FPL_ANALYSIS",
+      "topic": "Wild card team comparison and competitive banter"
+    },
+    {
+      "start_index": 95,
+      "end_index": 101,
+      "type": "FPL_ANALYSIS",
+      "topic": "AI recommended wild card team review and comparison"
+    },
+    {
+      "start_index": 102,
+      "end_index": 104,
+      "type": "FPL_ANALYSIS",
+      "topic": "Wild card difficulty and player pool limitations"
+    },
+    {
+      "start_index": 105,
+      "end_index": 106,
+      "type": "ADVERTISEMENT",
+      "topic": "Fantasy Football Hub promotion and outro"
+    }
+  ]
+}

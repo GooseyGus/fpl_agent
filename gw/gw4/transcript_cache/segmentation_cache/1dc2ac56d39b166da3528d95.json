@@ -1,0 +1,40 @@
+{
+  "sections": [
+    {
+      "start_index": 0,
+      "end_index": 3,
+      "type": "INTRO",
+      "topic": "Introduction and channel update"
+    },
+    {
+      "start_index": 4,
+      "end_index": 10,
+      "type": "FPL_ANALYSIS",
+      "topic": "Gameweek 3 review and free hit performance"
+    },
+    {
+      "start_index": 11,
+      "end_index": 18,
+      "type": "FPL_ANALYSIS",
+      "topic": "Wildcard defense selection and rationale"
+    },
+    {
+      "start_index": 19,
+      "end_index": 27,
+      "type": "FPL_ANALYSIS",
+      "topic": "Wildcard midfield selection and player analysis"
+    },
+    {
+      "start_index": 28,
+      "end_index": 31,
+      "type": "FPL_ANALYSIS",
+      "topic": "Wildcard forwards and squad strategy"
+    },
+    {
+      "start_index": 32,
+      "end_index": 33,
+      "type": "OTHER",
+      "topic": "Video outro and call to action"
+    }
+  ]
+}

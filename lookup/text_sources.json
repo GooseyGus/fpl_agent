@@ -1,0 +1,118 @@
+{
+  "websites": [
+    {
+      "id": "fantasy-football-scout",
+      "name": "Fantasy Football Scout",
+      "base_url": "https://www.fantasyfootballscout.co.uk/",
+      "rss_url": "https://www.fantasyfootballscout.co.uk/feed/",
+      "notes": "Strong free RSS source for day-to-day FPL content."
+    },
+    {
+      "id": "fplhints",
+      "name": "FPL Hints",
+      "base_url": "https://www.fplhints.com/blog",
+      "rss_url": "https://www.fplhints.com/blog-feed.xml",
+      "sitemap_urls": [
+        "https://www.fplhints.com/blog-posts-sitemap.xml"
+      ],
+      "allowed_url_prefixes": [
+        "https://www.fplhints.com/post/"
+      ],
+      "max_metadata_fetches": 25,
+      "notes": "RSS feed available from the blog."
+    },
+    {
+      "id": "fantasy-football-hub",
+      "name": "Fantasy Football Hub",
+      "base_url": "https://www.fantasyfootballhub.co.uk/",
+      "rss_url": "https://www.fantasyfootballhub.co.uk/feed",
+      "notes": "Check paywalled content boundaries; headlines and some articles are public."
+    },
+    {
+      "id": "racing-post-fpl-tips",
+      "name": "Racing Post FPL Tips",
+      "base_url": "https://www.racingpost.com/sport/football-tips/premier-league/fpl-tips/",
+      "rss_url": null,
+      "sitemap_urls": [
+        "https://www.racingpost.com/sitemap.xml"
+      ],
+      "allowed_url_prefixes": [
+        "https://www.racingpost.com/sport/football-tips/premier-league/fpl-tips/"
+      ],
+      "max_metadata_fetches": 20,
+      "notes": "Uses Racing Post sitemap discovery filtered to the FPL tips section."
+    },
+    {
+      "id": "all-about-fpl",
+      "name": "AllAboutFPL",
+      "base_url": "https://allaboutfpl.com/",
+      "rss_url": "https://allaboutfpl.com/feed/",
+      "sitemap_urls": [
+        "https://allaboutfpl.com/sitemap.xml"
+      ],
+      "max_metadata_fetches": 25,
+      "notes": "WordPress-style site, likely good RSS candidate."
+    },
+    {
+      "id": "ff247",
+      "name": "FF247",
+      "base_url": "https://www.fantasyfootball247.co.uk/",
+      "rss_url": "https://www.fantasyfootball247.co.uk/feed/",
+      "sitemap_urls": [
+        "https://www.fantasyfootball247.co.uk/wp-sitemap.xml"
+      ],
+      "max_metadata_fetches": 25,
+      "notes": "WordPress-style site, likely good RSS candidate."
+    },
+    {
+      "id": "fantasyfootballfix",
+      "name": "Fantasy Football Fix",
+      "base_url": "https://www.fantasyfootballfix.com",
+      "rss_url": null,
+      "sitemap_urls": [
+        "https://www.fantasyfootballfix.com/sitemap.xml"
+      ],
+      "allowed_url_prefixes": [
+        "https://www.fantasyfootballfix.com/blog-index/"
+      ],
+      "max_metadata_fetches": 30,
+      "notes": "Uses the blog-index sitemap for article discovery."
+    },
+    {
+      "id": "fantasyfootballgeek",
+      "name": "Fantasy Football Geek",
+      "base_url": "https://www.fantasyfootballgeek.co.uk",
+      "rss_url": null,
+      "sitemap_urls": [
+        "https://www.fantasyfootballgeek.co.uk/sitemaps.xml"
+      ],
+      "max_metadata_fetches": 25,
+      "notes": "Uses WordPress post sitemap discovery."
+    },
+    {
+      "id": "bbc-fantasy-football",
+      "name": "BBC Fantasy Football",
+      "base_url": "https://www.bbc.co.uk/sport/football/fantasy-football",
+      "rss_url": "https://feeds.bbci.co.uk/sport/football/fantasy-football/rss.xml",
+      "notes": "BBC RSS feed for fantasy football coverage."
+    },
+    {
+      "id": "fpl-wire",
+      "name": "FPL Wire",
+      "base_url": "https://fplwire.com/",
+      "rss_url": null,
+      "sitemap_urls": [
+        "https://www.fplwire.com/wp-sitemap.xml"
+      ],
+      "max_metadata_fetches": 20,
+      "notes": "Uses WordPress sitemap discovery for article posts."
+    },
+    {
+      "id": "fpl-official-scout",
+      "name": "FPL Official Scout",
+      "base_url": "https://fantasy.premierleague.com/en/the-scout",
+      "rss_url": null,
+      "notes": "Official source; the page is JavaScript-rendered, so a browser-based scraper would be needed to automate it reliably."
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+COPILOT INSTRUCTIONS - DO NOT EDIT
+
+FPL AGENT - TO DO LIST
+
+- check what the fpl_report gets statistics-wise (which file, how does it use it?)
+- create dashboard
+- rebuild NLP pipeline
+- create an NLP to suggest name aliases
+- improve report 
+- add extra fpl aliases
+- use canonical names from aggregated report
+- come back to name fixing later
+- get text downloads smooth
+- check text fetcher
+- put text fetcher into notebook file 
+
+COMPLETED
+- name list into json into lookup/ 
+- separate out the report, transcript data generator and statistics data generator
+- rename data_generator.ipynb to statistics_data_generator.ipynb
+- create your own URL transcript downloader (scripts/fetch_transcript.py)
+- check what data the statistics_data_generator.ipynb does
+

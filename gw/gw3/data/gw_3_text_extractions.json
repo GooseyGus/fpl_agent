@@ -1,0 +1,3874 @@
+{
+  "gameweek": 3,
+  "sources": [
+    "batch_01",
+    "batch_02",
+    "batch_03",
+    "batch_04",
+    "batch_05",
+    "batch_06",
+    "batch_07",
+    "batch_08",
+    "batch_09",
+    "batch_10",
+    "batch_11",
+    "batch_12",
+    "batch_13",
+    "batch_14",
+    "batch_15",
+    "batch_16"
+  ],
+  "recommendations": [
+    {
+      "source": "batch_01",
+      "player_name": "Mbeumo",
+      "stance": "hold",
+      "sentiment": "positive",
+      "recommendation_strength": 3,
+      "confidence": 4,
+      "rationale": "Despite many managers selling Mbeumo, the article argues he has a good fixture and will thrive against Man City due to their high line and Man United's counterattacks.",
+      "supporting_quote": "On paper, this is a good matchup, and also Mbeumo plays Man City in GW4, which is a difficult fixture on paper, but that is actually a fixture that Mbeumo will thrive on, considering Man City’s high line and Man United’s counterattacks.",
+      "reasons": [
+        {
+          "category": "fixture",
+          "sentiment": "positive",
+          "text": "Good matchup in upcoming gameweek"
+        },
+        {
+          "category": "playing_style",
+          "sentiment": "positive",
+          "text": "Thrives against teams with high defensive line"
+        }
+      ],
+      "risks": [
+        {
+          "category": "fixture",
+          "sentiment": "negative",
+          "text": "Man City is a difficult fixture on paper"
+        }
+      ],
+      "time_horizon": "short-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_01",
+      "player_name": "Konsa",
+      "stance": "consider",
+      "sentiment": "neutral",
+      "recommendation_strength": 3,
+      "confidence": 3,
+      "rationale": "Konsa is planned to be brought in for Ballard but the transfer is delayed pending confirmation of Mosquera's injury status.",
+      "supporting_quote": "My Transfer plan for this week is getting in Konsa/De Cuyp for Ballard. According to Sam Blitz– “Arsenal had an open training session for Sky Sports cameras this morning. No Christian Mosquera after he came off vs Aston Villa with his muscular issue. No Bruno Guimaraes too”. I would, however, wait for Arteta’s press conference before making the moves to confirm that Mosquera is ruled out for a while.",
+      "reasons": [
+        {
+          "category": "injury_news",
+          "sentiment": "neutral",
+          "text": "Mosquera's injury status affects Konsa's start"
+        }
+      ],
+      "risks": [
+        {
+          "category": "starting_status",
+          "sentiment": "negative",
+          "text": "Konsa might not start immediately"
+        }
+      ],
+      "time_horizon": "short-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_01",
+      "player_name": "De Cuyper",
+      "stance": "buy",
+      "sentiment": "positive",
+      "recommendation_strength": 4,
+      "confidence": 4,
+      "rationale": "De Cuyper is brought in as a short-term pick covering good fixtures and playing as a left wing-back, providing attacking potential.",
+      "supporting_quote": "I have done Ballard to De Cuyper with one of my Free Transfers and have decided to roll the other transfer. De Cuyper is playing as a LW(Being listed as a Defender) for Brighton. With no positive news on Mitoma/Minteh yet- I have gone for De Cuyper as a short term pick to cover GW3 vs LEE(H) and GW4 vs COV(A).",
+      "reasons": [
+        {
+          "category": "fixture",
+          "sentiment": "positive",
+          "text": "Good fixtures in GW3 and GW4"
+        },
+        {
+          "category": "position",
+          "sentiment": "positive",
+          "text": "Listed as defender but plays as LW, increasing attacking returns"
+        }
+      ],
+      "risks": [
+        {
+          "category": "injury_news",
+          "sentiment": "neutral",
+          "text": "No positive news on Mitoma/Minteh yet"
+        }
+      ],
+      "time_horizon": "short-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_01",
+      "player_name": "Haaland",
+      "stance": "hold",
+      "sentiment": "positive",
+      "recommendation_strength": 5,
+      "confidence": 5,
+      "rationale": "Haaland is locked in as the Triple Captain for GW3 due to favorable fixture and expected full minutes.",
+      "supporting_quote": "Haaland is locked in as the Triple Captain for me in GW3. And I am not overthinking this. City have only Haaland as the Striker in their main team, and he should at least play 75-80 minutes against Coventry.",
+      "reasons": [
+        {
+          "category": "fixture",
+          "sentiment": "positive",
+          "text": "Favorable fixture against promoted Coventry"
+        },
+        {
+          "category": "minutes",
+          "sentiment": "positive",
+          "text": "Expected to play 75-80 minutes"
+        }
+      ],
+      "risks": [
+        {
+          "category": "fixture_congestion",
+          "sentiment": "neutral",
+          "text": "Upcoming European and cup games could affect minutes but not expected"
+        }
+      ],
+      "time_horizon": "immediate",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_01",
+      "player_name": "Tzolis",
+      "stance": "sell",
+      "sentiment": "negative",
+      "recommendation_strength": 4,
+      "confidence": 4,
+      "rationale": "Tzolis is likely to be removed due to minutes risk and being subbed off at half-time.",
+      "supporting_quote": "Tzolis is very likely leaving my team not because he blanked, but because he was subbed off at half-time.",
+      "reasons": [
+        {
+          "category": "minutes",
+          "sentiment": "negative",
+          "text": "Subbed off at half-time indicating minutes risk"
+        }
+      ],
+      "risks": [
+        {
+          "category": "performance",
+          "sentiment": "negative",
+          "text": "Difficult game vs Villa in GW2"
+        }
+      ],
+      "time_horizon": "short-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_01",
+      "player_name": "Anderson",
+      "stance": "buy",
+      "sentiment": "positive",
+      "recommendation_strength": 3,
+      "confidence": 3,
+      "rationale": "Recommended as a long-term pick for minutes and consistent defensive contributions with occasional attacking returns.",
+      "supporting_quote": "The FFHUB AI Tool recommends doing Tzolis to Anderson for the fixture run for Man City starting from GW3 with COV(H). For a long term pick, Anderson should be good for minutes back while consistently hitting DEFCON and getting the odd attacking returns here and there.",
+      "reasons": [
+        {
+          "category": "minutes",
+          "sentiment": "positive",
+          "text": "Expected to get consistent minutes"
+        },
+        {
+          "category": "defensive_contributions",
+          "sentiment": "positive",
+          "text": "Consistently hitting DEFCON"
+        }
+      ],
+      "risks": [],
+      "time_horizon": "long-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_01",
+      "player_name": "Foden",
+      "stance": "buy",
+      "sentiment": "positive",
+      "recommendation_strength": 4,
+      "confidence": 4,
+      "rationale": "Foden is brought in for his attacking potential and good recent form with assists and points.",
+      "supporting_quote": "The transfers for GW3 planned(which I am very likely to do) are Foden and Gomez coming in for Tzolis and Le Fee. I will also have 0.4 million in the bank after making these moves. Foden got 2 assists and a 9-pointer in GW2.",
+      "reasons": [
+        {
+          "category": "form",
+          "sentiment": "positive",
+          "text": "Good recent form with assists and points"
+        },
+        {
+          "category": "fixture",
+          "sentiment": "positive",
+          "text": "Good fixtures in upcoming gameweeks"
+        }
+      ],
+      "risks": [
+        {
+          "category": "minutes",
+          "sentiment": "neutral",
+          "text": "Potential rotation risk due to fixture congestion"
+        }
+      ],
+      "time_horizon": "short-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_01",
+      "player_name": "Gomez",
+      "stance": "buy",
+      "sentiment": "positive",
+      "recommendation_strength": 4,
+      "confidence": 4,
+      "rationale": "Gomez is recommended due to strong underlying attacking stats and assists in first two games.",
+      "supporting_quote": "Gomez(5.0) comes into the team having 2 assists over the first 2 games. But the impressive part is the underlying numbers: 8 Shots, 7 Shots inside the box(3rd among MIDs), 4 Big Chance Involvements, and 1.21 xGI.",
+      "reasons": [
+        {
+          "category": "underlying_stats",
+          "sentiment": "positive",
+          "text": "Strong attacking stats and chance involvements"
+        },
+        {
+          "category": "form",
+          "sentiment": "positive",
+          "text": "Two assists in first two games"
+        }
+      ],
+      "risks": [],
+      "time_horizon": "short-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_03",
+      "player_name": "Palmer",
+      "stance": "consider",
+      "sentiment": "positive",
+      "recommendation_strength": 3,
+      "confidence": 3,
+      "rationale": "Palmer is seen as a player who will come back to his best this season and passes the eye test so far.",
+      "supporting_quote": "Palmer passes the eye test so far and I think he’s going to come back to his best this season.",
+      "reasons": [
+        {
+          "category": "form",
+          "sentiment": "positive",
+          "text": "Good early season form"
+        }
+      ],
+      "risks": [],
+      "time_horizon": "medium-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_03",
+      "player_name": "MGW",
+      "stance": "consider",
+      "sentiment": "positive",
+      "recommendation_strength": 3,
+      "confidence": 3,
+      "rationale": "MGW is expected to shine under Glasner and is included in the team.",
+      "supporting_quote": "MGW is another player I feel will shine under Glasner, so he’s in.",
+      "reasons": [
+        {
+          "category": "manager_trust",
+          "sentiment": "positive",
+          "text": "Expected to perform well under current manager"
+        }
+      ],
+      "risks": [],
+      "time_horizon": "medium-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_03",
+      "player_name": "Konsa",
+      "stance": "buy",
+      "sentiment": "positive",
+      "recommendation_strength": 4,
+      "confidence": 4,
+      "rationale": "Konsa is a great price and having at least two Arsenal defenders is a must.",
+      "supporting_quote": "Having at least two Arsenal defenders is a must, Konsa is a great price.",
+      "reasons": [
+        {
+          "category": "price",
+          "sentiment": "positive",
+          "text": "Affordable defender option"
+        },
+        {
+          "category": "team_structure",
+          "sentiment": "positive",
+          "text": "Arsenal defenders are essential"
+        }
+      ],
+      "risks": [],
+      "time_horizon": "medium-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_03",
+      "player_name": "Szoboszlai",
+      "stance": "hold",
+      "sentiment": "neutral",
+      "recommendation_strength": 3,
+      "confidence": 3,
+      "rationale": "Szoboszlai is considered a solid pick in the team.",
+      "supporting_quote": "Szoboszlai is a solid pick.",
+      "reasons": [
+        {
+          "category": "team_structure",
+          "sentiment": "neutral",
+          "text": "Part of the planned team structure"
+        }
+      ],
+      "risks": [],
+      "time_horizon": "medium-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_03",
+      "player_name": "Sangare",
+      "stance": "consider",
+      "sentiment": "positive",
+      "recommendation_strength": 3,
+      "confidence": 3,
+      "rationale": "Sangare at Brentford offers good value.",
+      "supporting_quote": "Sangare at Brentford offers good value.",
+      "reasons": [
+        {
+          "category": "value",
+          "sentiment": "positive",
+          "text": "Good value pick"
+        }
+      ],
+      "risks": [],
+      "time_horizon": "medium-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_03",
+      "player_name": "Haaland",
+      "stance": "hold",
+      "sentiment": "positive",
+      "recommendation_strength": 5,
+      "confidence": 5,
+      "rationale": "Haaland takes the armband for GW3 against Coventry.",
+      "supporting_quote": "Haaland takes the armband this week for the home game against Coventry.",
+      "reasons": [
+        {
+          "category": "fixture",
+          "sentiment": "positive",
+          "text": "Favorable fixture"
+        }
+      ],
+      "risks": [],
+      "time_horizon": "immediate",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_03",
+      "player_name": "Gibbs-White",
+      "stance": "buy",
+      "sentiment": "positive",
+      "recommendation_strength": 4,
+      "confidence": 4,
+      "rationale": "Gibbs-White scored 13 points and is coming back into the starting XI for GW3.",
+      "supporting_quote": "Gibbs-White remains available and comes straight back into my starting XI for GW3.",
+      "reasons": [
+        {
+          "category": "form",
+          "sentiment": "positive",
+          "text": "Strong points return"
+        }
+      ],
+      "risks": [
+        {
+          "category": "injury",
+          "sentiment": "neutral",
+          "text": "Ankle caution previously"
+        }
+      ],
+      "time_horizon": "immediate",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_04",
+      "player_name": "Cherki",
+      "stance": "buy",
+      "sentiment": "positive",
+      "recommendation_strength": 4,
+      "confidence": 4,
+      "rationale": "Cherki is a top transferred player and part of the Algorithm’s optimal Free Hit team.",
+      "supporting_quote": "1️⃣ Cherki — 1,635,311 transfers in",
+      "reasons": [
+        {
+          "category": "popularity",
+          "sentiment": "positive",
+          "text": "High number of transfers in"
+        },
+        {
+          "category": "algorithm_selection",
+          "sentiment": "positive",
+          "text": "Selected in optimal Free Hit team"
+        }
+      ],
+      "risks": [],
+      "time_horizon": "immediate",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_04",
+      "player_name": "Wissa",
+      "stance": "buy",
+      "sentiment": "positive",
+      "recommendation_strength": 3,
+      "confidence": 3,
+      "rationale": "Wissa is a popular pick with many transfers in and is highlighted as a top differential.",
+      "supporting_quote": "2️⃣ Wissa — 968,323",
+      "reasons": [
+        {
+          "category": "popularity",
+          "sentiment": "positive",
+          "text": "High number of transfers in"
+        },
+        {
+          "category": "differential",
+          "sentiment": "positive",
+          "text": "Top differential pick"
+        }
+      ],
+      "risks": [],
+      "time_horizon": "immediate",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_04",
+      "player_name": "De Cuyper",
+      "stance": "buy",
+      "sentiment": "positive",
+      "recommendation_strength": 4,
+      "confidence": 4,
+      "rationale": "De Cuyper is a popular transfer and has reached DEFCON threshold in opening matches.",
+      "supporting_quote": "3️⃣ De Cuyper — 744,024",
+      "reasons": [
+        {
+          "category": "popularity",
+          "sentiment": "positive",
+          "text": "High number of transfers in"
+        },
+        {
+          "category": "defensive_contributions",
+          "sentiment": "positive",
+          "text": "Reached DEFCON threshold in opening matches"
+        }
+      ],
+      "risks": [],
+      "time_horizon": "immediate",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_04",
+      "player_name": "Elanga",
+      "stance": "buy",
+      "sentiment": "positive",
+      "recommendation_strength": 3,
+      "confidence": 3,
+      "rationale": "Elanga is a popular transfer and part of the Algorithm’s optimal Free Hit team.",
+      "supporting_quote": "4️⃣ Elanga — 716,964",
+      "reasons": [
+        {
+          "category": "popularity",
+          "sentiment": "positive",
+          "text": "High number of transfers in"
+        },
+        {
+          "category": "algorithm_selection",
+          "sentiment": "positive",
+          "text": "Selected in optimal Free Hit team"
+        }
+      ],
+      "risks": [],
+      "time_horizon": "immediate",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_04",
+      "player_name": "Haaland",
+      "stance": "hold",
+      "sentiment": "positive",
+      "recommendation_strength": 5,
+      "confidence": 5,
+      "rationale": "Haaland leads projections and is recommended as captain and triple captain against Coventry.",
+      "supporting_quote": "Erling Haaland leads the projections ahead of Manchester City's home meeting with newly promoted Coventry.",
+      "reasons": [
+        {
+          "category": "projected_points",
+          "sentiment": "positive",
+          "text": "Highest projected points (7.8)"
+        },
+        {
+          "category": "fixture",
+          "sentiment": "positive",
+          "text": "Favorable fixture against promoted Coventry"
+        }
+      ],
+      "risks": [
+        {
+          "category": "minutes_risk",
+          "sentiment": "neutral",
+          "text": "Potential minutes risk due to upcoming European games"
+        }
+      ],
+      "time_horizon": "immediate",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_05",
+      "player_name": "Erling Haaland",
+      "stance": "buy",
+      "sentiment": "positive",
+      "recommendation_strength": 5,
+      "confidence": 5,
+      "rationale": "Haaland is the leading Triple Captain candidate with a home fixture against promoted Coventry, fully fit and playing without fixture congestion.",
+      "supporting_quote": "My Triple Captain is active on Haaland.",
+      "reasons": [
+        {
+          "category": "fixture",
+          "sentiment": "positive",
+          "text": "Home match against promoted Coventry offers a favorable fixture."
+        },
+        {
+          "category": "fitness",
+          "sentiment": "positive",
+          "text": "Fully fit and playing without fixture congestion."
+        },
+        {
+          "category": "popularity",
+          "sentiment": "positive",
+          "text": "Leading Triple Captain candidate among experts."
+        }
+      ],
+      "risks": [
+        {
+          "category": "team news",
+          "sentiment": "neutral",
+          "text": "Plans remain subject to team news and late changes before the deadline."
+        }
+      ],
+      "time_horizon": "immediate",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_05",
+      "player_name": "Rayan Cherki",
+      "stance": "consider",
+      "sentiment": "positive",
+      "recommendation_strength": 4,
+      "confidence": 4,
+      "rationale": "Cherki features prominently in expert drafts and is considered a key part of Manchester City's triple attack alongside Haaland and Foden.",
+      "supporting_quote": "Triple attack with Haaland, Cherki and Foden should hopefully yield plenty of points.",
+      "reasons": [
+        {
+          "category": "team strategy",
+          "sentiment": "positive",
+          "text": "Part of a triple attack strategy with Haaland and Foden."
+        },
+        {
+          "category": "popularity",
+          "sentiment": "positive",
+          "text": "Featured in multiple expert drafts."
+        }
+      ],
+      "risks": [
+        {
+          "category": "fixture",
+          "sentiment": "neutral",
+          "text": "Fixture and team news could affect final selection."
+        }
+      ],
+      "time_horizon": "immediate",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_05",
+      "player_name": "Phil Foden",
+      "stance": "consider",
+      "sentiment": "neutral",
+      "recommendation_strength": 3,
+      "confidence": 3,
+      "rationale": "Included in Dan Bennett's triple attack plan and noted for potential points, but less emphasis compared to Haaland and Cherki.",
+      "supporting_quote": "Triple attack with Haaland, Cherki and Foden should hopefully yield plenty of points.",
+      "reasons": [
+        {
+          "category": "team strategy",
+          "sentiment": "positive",
+          "text": "Part of triple attack alongside Haaland and Cherki."
+        }
+      ],
+      "risks": [
+        {
+          "category": "competition",
+          "sentiment": "neutral",
+          "text": "Less focus compared to Haaland and Cherki."
+        }
+      ],
+      "time_horizon": "immediate",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_05",
+      "player_name": "Maxim De Cuyper",
+      "stance": "consider",
+      "sentiment": "positive",
+      "recommendation_strength": 3,
+      "confidence": 3,
+      "rationale": "Likely to feature after starting the season on the wing and attracting Free Hit interest.",
+      "supporting_quote": "Maxim De Cuyper looks particularly likely to feature after starting the season on the wing.",
+      "reasons": [
+        {
+          "category": "form",
+          "sentiment": "positive",
+          "text": "Started the season on the wing."
+        },
+        {
+          "category": "chip strategy",
+          "sentiment": "positive",
+          "text": "Attracting Free Hit interest."
+        }
+      ],
+      "risks": [
+        {
+          "category": "team news",
+          "sentiment": "neutral",
+          "text": "Subject to late changes before the deadline."
+        }
+      ],
+      "time_horizon": "immediate",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_05",
+      "player_name": "João Pedro",
+      "stance": "consider",
+      "sentiment": "neutral",
+      "recommendation_strength": 3,
+      "confidence": 3,
+      "rationale": "Shortlisted by Copenhagen Wednesday for Wildcard plans, indicating potential medium-term interest.",
+      "supporting_quote": "Haaland, Cherki, Palmer, Szoboszlai, João Pedro, Wissa, De Cuyper and Gvardiol are among those shortlisted.",
+      "reasons": [
+        {
+          "category": "wildcard planning",
+          "sentiment": "neutral",
+          "text": "Shortlisted for upcoming Wildcard."
+        }
+      ],
+      "risks": [
+        {
+          "category": "injury",
+          "sentiment": "neutral",
+          "text": "Dependent on press conference fitness updates."
+        }
+      ],
+      "time_horizon": "medium-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_05",
+      "player_name": "Szoboszlai",
+      "stance": "consider",
+      "sentiment": "neutral",
+      "recommendation_strength": 3,
+      "confidence": 3,
+      "rationale": "Considered for midfield punts and shortlisted for Wildcard plans, but with some caution due to team news.",
+      "supporting_quote": "Haaland, Cherki, Palmer, Szoboszlai, João Pedro, Wissa, De Cuyper and Gvardiol are among those shortlisted.",
+      "reasons": [
+        {
+          "category": "wildcard planning",
+          "sentiment": "neutral",
+          "text": "Shortlisted for upcoming Wildcard."
+        }
+      ],
+      "risks": [
+        {
+          "category": "team news",
+          "sentiment": "neutral",
+          "text": "Subject to press conference fitness updates."
+        }
+      ],
+      "time_horizon": "medium-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_07",
+      "player_name": "Phil Foden",
+      "stance": "buy",
+      "sentiment": "positive",
+      "recommendation_strength": 4,
+      "confidence": 4,
+      "rationale": "Foden has favorable fixture against Coventry, high xGI, and is expected to play close to 90 minutes, making him a strong differential pick.",
+      "supporting_quote": "Manchester City have the highest odds of scoring the most goals this Gameweek... Foden actually ranks higher than both Cherki & Semenyo for xGI among the City midfielders.",
+      "reasons": [
+        {
+          "category": "fixture",
+          "sentiment": "positive",
+          "text": "Favorable fixture against Coventry with high expected goals."
+        },
+        {
+          "category": "performance",
+          "sentiment": "positive",
+          "text": "Ranks 4th best midfielder for xGI in the league."
+        },
+        {
+          "category": "playing time",
+          "sentiment": "positive",
+          "text": "More likely to play close to 90 minutes compared to Cherki and Semenyo."
+        }
+      ],
+      "risks": [
+        {
+          "category": "confidence",
+          "sentiment": "negative",
+          "text": "Missed two big chances last gameweek, possibly indicating confidence issues."
+        }
+      ],
+      "time_horizon": "short-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_07",
+      "player_name": "Kristoffer Ajer",
+      "stance": "buy",
+      "sentiment": "positive",
+      "recommendation_strength": 4,
+      "confidence": 4,
+      "rationale": "Ajer offers a cheap defensive option with strong clean sheet odds and good defensive metrics, making him a good rotation option.",
+      "supporting_quote": "Brentford have the 2nd-best clean sheet odds this Gameweek... Ajer is one of 4 defenders who has banked DEFCON in both games.",
+      "reasons": [
+        {
+          "category": "fixture",
+          "sentiment": "positive",
+          "text": "Brentford have strong clean sheet odds."
+        },
+        {
+          "category": "performance",
+          "sentiment": "positive",
+          "text": "Consistent DEFCON points and strong defensive stats."
+        },
+        {
+          "category": "value",
+          "sentiment": "positive",
+          "text": "Cheap route into Brentford defense."
+        }
+      ],
+      "risks": [
+        {
+          "category": "rotation",
+          "sentiment": "neutral",
+          "text": "May face rotation risk but forms good rotation with Newcastle defenders."
+        }
+      ],
+      "time_horizon": "short-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_07",
+      "player_name": "Morgan Gibbs White",
+      "stance": "buy",
+      "sentiment": "positive",
+      "recommendation_strength": 5,
+      "confidence": 5,
+      "rationale": "Forest's talisman with high goal output and set-piece duties, facing bottom 4 teams in upcoming fixtures, making him a reliable pick.",
+      "supporting_quote": "Gibbs White has scored a remarkable 13 Premier League Goals this calendar year... With a share of set pieces and direct free kicks in his locker, Gibbs White becomes a very interesting option.",
+      "reasons": [
+        {
+          "category": "form",
+          "sentiment": "positive",
+          "text": "Top scorer for Forest and high goal tally this year."
+        },
+        {
+          "category": "fixture",
+          "sentiment": "positive",
+          "text": "Upcoming fixtures against bottom 4 teams."
+        },
+        {
+          "category": "role",
+          "sentiment": "positive",
+          "text": "Takes spot-kicks and free kicks."
+        }
+      ],
+      "risks": [],
+      "time_horizon": "medium-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_07",
+      "player_name": "Cody Gakpo",
+      "stance": "buy",
+      "sentiment": "positive",
+      "recommendation_strength": 4,
+      "confidence": 4,
+      "rationale": "Liverpool's most threatening player with good stats and favorable fixtures against Ipswich and Fulham.",
+      "supporting_quote": "Gakpo has looked Liverpool’s most threatening player so far this season... Liverpool play Ipswich this Gameweek – the team that has conceded the most Big Chances.",
+      "reasons": [
+        {
+          "category": "form",
+          "sentiment": "positive",
+          "text": "Good attacking stats and recent goal involvement."
+        },
+        {
+          "category": "fixture",
+          "sentiment": "positive",
+          "text": "Favorable fixtures against weak defensive teams."
+        }
+      ],
+      "risks": [
+        {
+          "category": "competition",
+          "sentiment": "neutral",
+          "text": "Arrival of positional rival Bradley Barcola may affect minutes."
+        }
+      ],
+      "time_horizon": "short-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_07",
+      "player_name": "Lewis Hall",
+      "stance": "buy",
+      "sentiment": "positive",
+      "recommendation_strength": 4,
+      "confidence": 4,
+      "rationale": "Key Newcastle defender with good attacking involvement and clean sheet potential in upcoming fixtures.",
+      "supporting_quote": "Hall has banked Defcon in both games this season... He has also been playing really high up the pitch.",
+      "reasons": [
+        {
+          "category": "form",
+          "sentiment": "positive",
+          "text": "Consistent DEFCON points and attacking involvement."
+        },
+        {
+          "category": "fixture",
+          "sentiment": "positive",
+          "text": "Good upcoming fixtures without Big 6 opposition until GW11."
+        }
+      ],
+      "risks": [],
+      "time_horizon": "medium-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_07",
+      "player_name": "Nicolas Jackson",
+      "stance": "consider",
+      "sentiment": "positive",
+      "recommendation_strength": 3,
+      "confidence": 3,
+      "rationale": "Ultra differential pick against Hull City, who have conceded many shots from central areas; Jackson is expected to get more minutes and be Villa's main striker.",
+      "supporting_quote": "Hull City have conceded 32 Shots so far... Jackson played 70 minutes for Villa last Gameweek and should be good for more minutes this Gameweek.",
+      "reasons": [
+        {
+          "category": "fixture",
+          "sentiment": "positive",
+          "text": "Hull City concede many shots, especially from the center."
+        },
+        {
+          "category": "playing time",
+          "sentiment": "positive",
+          "text": "Expected to get more minutes and be main striker."
+        }
+      ],
+      "risks": [
+        {
+          "category": "ownership",
+          "sentiment": "neutral",
+          "text": "Very low ownership under 1%."
+        }
+      ],
+      "time_horizon": "short-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_08",
+      "player_name": "Erling Haaland",
+      "stance": "buy",
+      "sentiment": "positive",
+      "recommendation_strength": 5,
+      "confidence": 5,
+      "rationale": "Top of captaincy poll with 75% votes, highest points projection, and favorable fixture against Coventry with low clean sheet odds for opposition.",
+      "supporting_quote": "Erling Haaland tops the captaincy poll for the first week with a landslide 75% of the votes against Coventry (H).",
+      "reasons": [
+        {
+          "category": "captaincy poll",
+          "sentiment": "positive",
+          "text": "Received 75% of captaincy votes."
+        },
+        {
+          "category": "fixture",
+          "sentiment": "positive",
+          "text": "Home fixture against Coventry with 8% clean sheet chance for opposition."
+        },
+        {
+          "category": "performance",
+          "sentiment": "positive",
+          "text": "Highest points projection of 7.9 for GW3."
+        }
+      ],
+      "risks": [],
+      "time_horizon": "immediate",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_08",
+      "player_name": "Rayan Cherki",
+      "stance": "consider",
+      "sentiment": "positive",
+      "recommendation_strength": 4,
+      "confidence": 4,
+      "rationale": "Second in captaincy poll with 6% votes and second highest points projection, making him a viable captaincy alternative.",
+      "supporting_quote": "Teammate Rayan Cherki is second with 6% of the votes.",
+      "reasons": [
+        {
+          "category": "captaincy poll",
+          "sentiment": "positive",
+          "text": "Second highest captaincy votes at 6%."
+        },
+        {
+          "category": "performance",
+          "sentiment": "positive",
+          "text": "Second highest points projection of 5.4."
+        }
+      ],
+      "risks": [],
+      "time_horizon": "immediate",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_08",
+      "player_name": "Bruno Fernandes",
+      "stance": "consider",
+      "sentiment": "positive",
+      "recommendation_strength": 4,
+      "confidence": 4,
+      "rationale": "Third in captaincy poll and points projection with strong underlying stats including shots and big chances.",
+      "supporting_quote": "Bruno Fernandes tops the table with 4 shots in the box, 3 big chances, and an xG of 2.11 in the season so far.",
+      "reasons": [
+        {
+          "category": "captaincy poll",
+          "sentiment": "positive",
+          "text": "Third highest captaincy votes."
+        },
+        {
+          "category": "performance",
+          "sentiment": "positive",
+          "text": "Strong attacking stats and points projection."
+        }
+      ],
+      "risks": [],
+      "time_horizon": "immediate",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_08",
+      "player_name": "Aleksander Isak",
+      "stance": "consider",
+      "sentiment": "positive",
+      "recommendation_strength": 3,
+      "confidence": 3,
+      "rationale": "Fourth in captaincy poll and points projection with good attacking stats.",
+      "supporting_quote": "Aleksander Isak is 2nd with an xG of 2.08 in the season so far.",
+      "reasons": [
+        {
+          "category": "captaincy poll",
+          "sentiment": "positive",
+          "text": "Fourth highest captaincy votes."
+        },
+        {
+          "category": "performance",
+          "sentiment": "positive",
+          "text": "Good attacking stats and points projection."
+        }
+      ],
+      "risks": [],
+      "time_horizon": "immediate",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_08",
+      "player_name": "Szoboszlai",
+      "stance": "consider",
+      "sentiment": "neutral",
+      "recommendation_strength": 3,
+      "confidence": 3,
+      "rationale": "Fifth in captaincy poll with lower xG and points projection, making him a less favored captaincy option.",
+      "supporting_quote": "Szoboszlai stands 4th with an xG of 1.01, managing 1 shot inside the box and 1 big chance.",
+      "reasons": [
+        {
+          "category": "captaincy poll",
+          "sentiment": "neutral",
+          "text": "Fifth in captaincy votes."
+        },
+        {
+          "category": "performance",
+          "sentiment": "neutral",
+          "text": "Lower xG and points projection compared to others."
+        }
+      ],
+      "risks": [],
+      "time_horizon": "immediate",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_09",
+      "player_name": "Isak",
+      "stance": "buy",
+      "sentiment": "positive",
+      "recommendation_strength": 4,
+      "confidence": 4,
+      "rationale": "Isak is preferred as a Liverpool attacker with good upcoming fixtures and is favored over Gakpo and Barcola.",
+      "supporting_quote": "For Liverpool I have Jacquet but I want to add an attacker. Realistically that’s Wirtz or Isak. I like Gakpo but he’s now going to play on the right where he will be less of a goalscoring threat. I’m not sure Barcola will start so that rules him out. I’m going to go for Isak",
+      "reasons": [
+        {
+          "category": "fixtures",
+          "sentiment": "positive",
+          "text": "Liverpool have Ipswich next, a good fixture"
+        },
+        {
+          "category": "player_role",
+          "sentiment": "positive",
+          "text": "Isak is a preferred attacker option over Gakpo and Barcola"
+        }
+      ],
+      "risks": [
+        {
+          "category": "competition",
+          "sentiment": "neutral",
+          "text": "Uncertainty about Barcola's starting status"
+        }
+      ],
+      "time_horizon": "short-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_09",
+      "player_name": "Foden",
+      "stance": "consider",
+      "sentiment": "mixed",
+      "recommendation_strength": 3,
+      "confidence": 3,
+      "rationale": "Foden is considered as a Man City attacker option with saved funds and potential for short-term punt despite no recent goals.",
+      "supporting_quote": "Of the two I’d prefer Foden, who I currently have the exact money for thanks to that saved 0.5m. He’s not scored in a long time, but he’s looking lively this season, and might be worth punting on for a couple of weeks before my planned WC in GW6.",
+      "reasons": [
+        {
+          "category": "budget",
+          "sentiment": "positive",
+          "text": "Exact money saved to afford Foden"
+        },
+        {
+          "category": "form",
+          "sentiment": "neutral",
+          "text": "Looking lively this season despite no recent goals"
+        }
+      ],
+      "risks": [
+        {
+          "category": "goal_scoring",
+          "sentiment": "negative",
+          "text": "Has not scored in a long time"
+        }
+      ],
+      "time_horizon": "short-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_09",
+      "player_name": "Fernandes",
+      "stance": "sell",
+      "sentiment": "mixed",
+      "recommendation_strength": 3,
+      "confidence": 3,
+      "rationale": "Fernandes is likely to be sold to fund Palmer and is not expected to be a captaincy option until GW6.",
+      "supporting_quote": "Transfer summary: Likely Fernandes and Calvert-Lewin OUT Foden and Isak in. Triple Captain activated. Fernandes also demonstrated his potential power as a captaincy pick on Sunday, although he may not come into consideration again until GW6.",
+      "reasons": [
+        {
+          "category": "transfer_funding",
+          "sentiment": "negative",
+          "text": "Selling Fernandes to afford Palmer"
+        },
+        {
+          "category": "captaincy_potential",
+          "sentiment": "neutral",
+          "text": "May not be captaincy option until GW6"
+        }
+      ],
+      "risks": [
+        {
+          "category": "timing",
+          "sentiment": "neutral",
+          "text": "Uncertainty about when to downgrade"
+        }
+      ],
+      "time_horizon": "short-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_11",
+      "player_name": "Haaland",
+      "stance": "buy",
+      "sentiment": "positive",
+      "recommendation_strength": 4,
+      "confidence": 4,
+      "rationale": "Haaland is a top forward with the most shots and big chances, and triple captain chip is recommended.",
+      "supporting_quote": "No forward has attempted more shots (10) or shots in the box (nine) than the Norwegian international this season, while he is also joint-top for big chances (three).",
+      "reasons": [
+        {
+          "category": "form",
+          "sentiment": "positive",
+          "text": "Top in shots and big chances this season"
+        },
+        {
+          "category": "chip_usage",
+          "sentiment": "positive",
+          "text": "Triple Captain chip recommended"
+        }
+      ],
+      "risks": [],
+      "time_horizon": "short-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_12",
+      "player_name": "Bukayo Saka",
+      "stance": "buy",
+      "sentiment": "positive",
+      "recommendation_strength": 5,
+      "confidence": 5,
+      "rationale": "Saka is in fine form with top attacking stats for Arsenal and good fixture against Chelsea.",
+      "supporting_quote": "Bukayo Saka has started the season in fine form, scoring twice in as many games. He ranks top among Arsenal players over the opening two Gameweeks for shots (five), shots in the box (four), big chances (two) and Expected Goals (xG) (1.60).",
+      "reasons": [
+        {
+          "category": "form",
+          "sentiment": "positive",
+          "text": "Scored twice in two games"
+        },
+        {
+          "category": "stats",
+          "sentiment": "positive",
+          "text": "Top for shots, big chances, and xG among Arsenal players"
+        },
+        {
+          "category": "fixture",
+          "sentiment": "positive",
+          "text": "Arsenal face Chelsea who have conceded 5 goals in 2 games"
+        }
+      ],
+      "risks": [],
+      "time_horizon": "short-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_12",
+      "player_name": "Erling Haaland",
+      "stance": "buy",
+      "sentiment": "positive",
+      "recommendation_strength": 5,
+      "confidence": 5,
+      "rationale": "Haaland leads in shots and big chances and has strong home form; good fixture against Coventry.",
+      "supporting_quote": "No forward has attempted more shots (10) or shots in the box (nine) than the Norwegian international this season, while he is also joint-top for big chances (three).",
+      "reasons": [
+        {
+          "category": "form",
+          "sentiment": "positive",
+          "text": "Most shots and big chances this season"
+        },
+        {
+          "category": "fixture",
+          "sentiment": "positive",
+          "text": "Man City have scored 6 goals in 2 games; Coventry conceded 4"
+        }
+      ],
+      "risks": [],
+      "time_horizon": "short-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_12",
+      "player_name": "Kevin Schade",
+      "stance": "buy",
+      "sentiment": "positive",
+      "recommendation_strength": 4,
+      "confidence": 4,
+      "rationale": "Schade is joint-top among midfielders for shots in the box and big chances, showing strong attacking potential.",
+      "supporting_quote": "Kevin Schade got his campaign up and running with a well-taken goal against Leeds. The 24-year-old is joint-top among midfielders for shots in the box (eight) over the opening two Gameweeks, alongside Bryan Mbeumo.",
+      "reasons": [
+        {
+          "category": "form",
+          "sentiment": "positive",
+          "text": "Scored and high shots in box"
+        },
+        {
+          "category": "stats",
+          "sentiment": "positive",
+          "text": "Most big chances among midfielders last season"
+        }
+      ],
+      "risks": [],
+      "time_horizon": "short-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_12",
+      "player_name": "Yoane Wissa",
+      "stance": "buy",
+      "sentiment": "positive",
+      "recommendation_strength": 4,
+      "confidence": 4,
+      "rationale": "Wissa is revitalised with top attacking stats for Newcastle and good fixture against Bournemouth.",
+      "supporting_quote": "Yoane Wissa has looked revitalised under new manager Matthias Jaissle after an injury curtailed 2025/26 campaign. The DR Congo international is top amongst Newcastle players for shots (six), shots in the box (four), 'big chances' (three) and xG (1.26) in the opening two matches.",
+      "reasons": [
+        {
+          "category": "form",
+          "sentiment": "positive",
+          "text": "Top attacking stats for Newcastle"
+        },
+        {
+          "category": "fixture",
+          "sentiment": "positive",
+          "text": "Newcastle face Bournemouth who conceded 3 goals in 2 games"
+        }
+      ],
+      "risks": [],
+      "time_horizon": "short-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_12",
+      "player_name": "Nathan Collins",
+      "stance": "buy",
+      "sentiment": "positive",
+      "recommendation_strength": 4,
+      "confidence": 4,
+      "rationale": "Collins offers defensive potential with attacking threat and Brentford have strong defensive stats.",
+      "supporting_quote": "Nathan Collins found the back of the net only once last season but was ranked seventh amongst defenders for DEFCON (318). He had a total of 19 shots in the box and five 'big chances' totaling 2.32 xG so the underlying numbers indicate that the goal threat is significant to go alongside the DEFCON potential.",
+      "reasons": [
+        {
+          "category": "defense",
+          "sentiment": "positive",
+          "text": "Brentford conceded just one goal in 2 matches"
+        },
+        {
+          "category": "attacking_threat",
+          "sentiment": "positive",
+          "text": "High shots in box and big chances for a defender"
+        }
+      ],
+      "risks": [],
+      "time_horizon": "short-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_13",
+      "player_name": "Erling Haaland",
+      "stance": "buy",
+      "sentiment": "positive",
+      "recommendation_strength": 5,
+      "confidence": 5,
+      "rationale": "Haaland leads in shots, big chances, and xG early in the season and has strong home form from last season, with high goal involvement and expected points.",
+      "supporting_quote": "Erling Haaland got back among the goals with a brace against Crystal Palace. No forward has attempted more shots (10) or shots in the box (nine) than the 26-year-old over the opening two Gameweeks, while he is also joint-top for big chances (three).",
+      "reasons": [
+        {
+          "category": "performance",
+          "sentiment": "positive",
+          "text": "Top for goals, shots on target, big chances, and xG in home matches last season."
+        },
+        {
+          "category": "fixture",
+          "sentiment": "positive",
+          "text": "Manchester City scored 45 goals at home last season, more than any other side."
+        },
+        {
+          "category": "projection",
+          "sentiment": "positive",
+          "text": "Player Points Projections tool predicts 7.2 FPL points for Gameweek 3."
+        }
+      ],
+      "risks": [
+        {
+          "category": "none_explicit",
+          "sentiment": "neutral",
+          "text": "No explicit risks mentioned."
+        }
+      ],
+      "time_horizon": "short-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_13",
+      "player_name": "Bruno Fernandes",
+      "stance": "buy",
+      "sentiment": "positive",
+      "recommendation_strength": 4,
+      "confidence": 4,
+      "rationale": "After a slow start, Fernandes scored 23 points in Gameweek 2 and ranks highly for shots and big chances, with good away fixture stats for Manchester United.",
+      "supporting_quote": "After a disappointing Gameweek 1, Bruno Fernandes reminded FPL managers of his explosive potential with a mammoth 23-point haul against Ipswich.",
+      "reasons": [
+        {
+          "category": "performance",
+          "sentiment": "positive",
+          "text": "Second for big chances among midfielders and highest xG."
+        },
+        {
+          "category": "fixture",
+          "sentiment": "positive",
+          "text": "Manchester United ranked third for goals scored in away matches last season."
+        },
+        {
+          "category": "projection",
+          "sentiment": "positive",
+          "text": "Player Points Projections tool predicts 6.3 FPL points for Gameweek 3."
+        }
+      ],
+      "risks": [
+        {
+          "category": "fixture_difficulty",
+          "sentiment": "neutral",
+          "text": "Hosts Everton have conceded only one goal but underlying numbers suggest some luck."
+        }
+      ],
+      "time_horizon": "short-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_13",
+      "player_name": "Bukayo Saka",
+      "stance": "buy",
+      "sentiment": "positive",
+      "recommendation_strength": 4,
+      "confidence": 4,
+      "rationale": "Saka has scored in both opening fixtures, leads Arsenal in shots and big chances, and benefits from strong home attacking stats.",
+      "supporting_quote": "With goals in both of Arsenal’s opening fixtures, Bukayo Saka looks back to his best after a spate of injuries last season.",
+      "reasons": [
+        {
+          "category": "performance",
+          "sentiment": "positive",
+          "text": "No Arsenal player has registered more shots, shots in the box, big chances or xG over the opening two Gameweeks."
+        },
+        {
+          "category": "fixture",
+          "sentiment": "positive",
+          "text": "Arsenal ranked second for goals scored in home matches last season."
+        },
+        {
+          "category": "projection",
+          "sentiment": "positive",
+          "text": "Player Points Projections tool predicts 5.2 FPL points for Gameweek 3."
+        }
+      ],
+      "risks": [
+        {
+          "category": "fixture_difficulty",
+          "sentiment": "neutral",
+          "text": "Chelsea have conceded five goals over two Gameweeks, indicating a potentially favorable fixture."
+        }
+      ],
+      "time_horizon": "short-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_16",
+      "player_name": "Erling Haaland",
+      "stance": "buy",
+      "sentiment": "positive",
+      "recommendation_strength": 5,
+      "confidence": 5,
+      "rationale": "Haaland is the best Triple Captain option with strong fixtures and a clear midweek rest before Gameweek 3.",
+      "supporting_quote": "If you are not using a Wildcard or Free Hit, choosing Haaland as your Triple Captain looks a strong option, which I am likely to run with.",
+      "reasons": [
+        {
+          "category": "fixture",
+          "sentiment": "positive",
+          "text": "Coventry have been among the most defensively vulnerable sides."
+        },
+        {
+          "category": "rest",
+          "sentiment": "positive",
+          "text": "Haaland has had a clear midweek before Saturday's game."
+        }
+      ],
+      "risks": [
+        {
+          "category": "fixture_congestion",
+          "sentiment": "neutral",
+          "text": "Upcoming fixtures fall during heavy Champions League congestion."
+        }
+      ],
+      "time_horizon": "short-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_16",
+      "player_name": "Bruno Fernandes",
+      "stance": "hold",
+      "sentiment": "mixed",
+      "recommendation_strength": 3,
+      "confidence": 4,
+      "rationale": "Fernandes is a strong, talismanic option but is expensive and may be less optimal if not captained soon.",
+      "supporting_quote": "Manchester United captain Fernandes is close to the ideal FPL asset... He is a stronger option than Cole Palmer or Bukayo Saka, but he is also significantly more expensive.",
+      "reasons": [
+        {
+          "category": "role",
+          "sentiment": "positive",
+          "text": "Takes set-pieces, rarely injured or substituted."
+        },
+        {
+          "category": "value",
+          "sentiment": "negative",
+          "text": "Significantly more expensive than alternatives."
+        }
+      ],
+      "risks": [
+        {
+          "category": "fixture_congestion",
+          "sentiment": "neutral",
+          "text": "Faces Coventry in a run of three matches in seven days."
+        }
+      ],
+      "time_horizon": "medium-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_16",
+      "player_name": "Rayan Cherki",
+      "stance": "consider",
+      "sentiment": "positive",
+      "recommendation_strength": 3,
+      "confidence": 4,
+      "rationale": "Cherki is the most-bought player this week with two price rises and impressive recent performances.",
+      "supporting_quote": "Rayan Cherki is this week's most-bought player, with two price rises already. After his impressive last outing, he is the standout midfield pick.",
+      "reasons": [
+        {
+          "category": "form",
+          "sentiment": "positive",
+          "text": "Impressive last outing."
+        }
+      ],
+      "risks": [
+        {
+          "category": "minutes",
+          "sentiment": "negative",
+          "text": "May become a minutes risk later in the season."
+        }
+      ],
+      "time_horizon": "short-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_16",
+      "player_name": "Phil Foden",
+      "stance": "consider",
+      "sentiment": "positive",
+      "recommendation_strength": 3,
+      "confidence": 4,
+      "rationale": "Foden has stronger underlying expected data than Cherki and is worth considering.",
+      "supporting_quote": "Phil Foden is also worth considering, with stronger underlying expected data than Cherki over the first two games.",
+      "reasons": [
+        {
+          "category": "underlying_stats",
+          "sentiment": "positive",
+          "text": "Stronger expected data than Cherki."
+        }
+      ],
+      "risks": [
+        {
+          "category": "minutes",
+          "sentiment": "negative",
+          "text": "May become a minutes risk later in the season."
+        }
+      ],
+      "time_horizon": "short-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_16",
+      "player_name": "Josko Gvardiol",
+      "stance": "buy",
+      "sentiment": "positive",
+      "recommendation_strength": 4,
+      "confidence": 4,
+      "rationale": "Gvardiol is the best defensive option at Manchester City.",
+      "supporting_quote": "In defence, Josko Gvardiol is the best option.",
+      "reasons": [
+        {
+          "category": "defense",
+          "sentiment": "positive",
+          "text": "Best defensive asset at Manchester City."
+        }
+      ],
+      "risks": [],
+      "time_horizon": "short-term",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_16",
+      "player_name": "Christos Tzolis",
+      "stance": "hold",
+      "sentiment": "mixed",
+      "recommendation_strength": 3,
+      "confidence": 3,
+      "rationale": "Tzolis showed potential but was substituted early; expected to be first choice but may face early subs.",
+      "supporting_quote": "The half-time substitution of Christos Tzolis against Aston Villa was a concern for owners.",
+      "reasons": [
+        {
+          "category": "potential",
+          "sentiment": "positive",
+          "text": "Dangerous player and expected first choice."
+        }
+      ],
+      "risks": [
+        {
+          "category": "rotation",
+          "sentiment": "negative",
+          "text": "Subject to early substitutions."
+        }
+      ],
+      "time_horizon": "short-term",
+      "timestamp": ""
+    }
+  ],
+  "captaincy": [
+    {
+      "source": "batch_01",
+      "player_name": "Haaland",
+      "mention_type": "triple_captain",
+      "confidence": 5,
+      "expert_percentage": null,
+      "rationale": "Haaland is locked in as the Triple Captain for GW3 due to favorable fixture and expected full minutes.",
+      "supporting_quote": "Haaland is locked in as the Triple Captain for me in GW3. And I am not overthinking this.",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_03",
+      "player_name": "Haaland",
+      "mention_type": "captain",
+      "confidence": 5,
+      "expert_percentage": null,
+      "rationale": "Haaland is chosen as captain for GW3 due to fixture and form.",
+      "supporting_quote": "Haaland takes the armband this week for the home game against Coventry.",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_04",
+      "player_name": "Haaland",
+      "mention_type": "triple_captain",
+      "confidence": 5,
+      "expert_percentage": null,
+      "rationale": "Haaland is the preferred triple captain choice for GW3 due to fixture and form.",
+      "supporting_quote": "Haaland gets the armband against Coventry. 🧢",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_05",
+      "player_name": "Erling Haaland",
+      "mention_type": "triple_captain",
+      "confidence": 5,
+      "expert_percentage": null,
+      "rationale": "Leading Triple Captain candidate with a favorable home fixture and full fitness.",
+      "supporting_quote": "My Triple Captain is active on Haaland.",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_05",
+      "player_name": "Rayan Cherki",
+      "mention_type": "captain",
+      "confidence": 3,
+      "expert_percentage": null,
+      "rationale": "Considered for captaincy by multiple experts as part of Manchester City's attacking options.",
+      "supporting_quote": "Triple attack with Haaland, Cherki and Foden should hopefully yield plenty of points.",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_08",
+      "player_name": "Erling Haaland",
+      "mention_type": "captain",
+      "confidence": 5,
+      "expert_percentage": 75,
+      "rationale": "Top captaincy poll choice with strong stats and favorable fixture.",
+      "supporting_quote": "Erling Haaland tops the captaincy poll for the first week with a landslide 75% of the votes against Coventry (H).",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_08",
+      "player_name": "Rayan Cherki",
+      "mention_type": "captain",
+      "confidence": 3,
+      "expert_percentage": 6,
+      "rationale": "Second most popular captaincy choice with decent points projection.",
+      "supporting_quote": "Teammate Rayan Cherki is second with 6% of the votes.",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_08",
+      "player_name": "Bruno Fernandes",
+      "mention_type": "captain",
+      "confidence": 3,
+      "expert_percentage": null,
+      "rationale": "Third in captaincy poll with strong attacking stats.",
+      "supporting_quote": "Bruno Fernandes tops the table with 4 shots in the box, 3 big chances, and an xG of 2.11 in the season so far.",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_09",
+      "player_name": "Fernandes",
+      "mention_type": "captain",
+      "confidence": 4,
+      "expert_percentage": null,
+      "rationale": "Fernandes had double figure returns and was a successful captain choice in GW2.",
+      "supporting_quote": "Double figure returns from Captain Fernandes plus Schade, Haaland, Gross and Calafiori",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_09",
+      "player_name": "Haaland",
+      "mention_type": "triple_captain",
+      "confidence": 5,
+      "expert_percentage": null,
+      "rationale": "Triple Captain chip activated on Haaland for GW3.",
+      "supporting_quote": "Transfer summary: Likely Fernandes and Calvert-Lewin OUT Foden and Isak in. Triple Captain activated",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_11",
+      "player_name": "Haaland",
+      "mention_type": "triple_captain",
+      "confidence": 5,
+      "expert_percentage": null,
+      "rationale": "Expert recommends triple captain on Haaland due to his strong attacking stats and form.",
+      "supporting_quote": "Time to triple up on Man City attackers on FPL? FPL expert Gianni Buttice reveals his best team selection picks for Gameweek 3 and why he thinks it is time to invest in Manchester City and Brentford players.",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_12",
+      "player_name": "Haaland",
+      "mention_type": "captain",
+      "confidence": 5,
+      "expert_percentage": null,
+      "rationale": "Haaland has strong attacking stats and good fixture, making him a top captaincy pick.",
+      "supporting_quote": "No forward has attempted more shots (10) or shots in the box (nine) than the Norwegian international this season, while he is also joint-top for big chances (three).",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_13",
+      "player_name": "Erling Haaland",
+      "mention_type": "captain",
+      "confidence": 5,
+      "expert_percentage": null,
+      "rationale": "Haaland leads in shots, big chances, and xG, with strong home form and a high Player Points Projection for Gameweek 3.",
+      "supporting_quote": "Our Player Points Projections tool currently predicts 7.2 FPL points for Erling Haaland in Gameweek 3.",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_13",
+      "player_name": "Bruno Fernandes",
+      "mention_type": "captain",
+      "confidence": 4,
+      "expert_percentage": null,
+      "rationale": "Fernandes has explosive potential and ranks highly for big chances and xG among midfielders.",
+      "supporting_quote": "Our Player Points Projections tool currently predicts 6.3 FPL points for Bruno Fernandes in Gameweek 3.",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_13",
+      "player_name": "Bukayo Saka",
+      "mention_type": "captain",
+      "confidence": 4,
+      "expert_percentage": null,
+      "rationale": "Saka has scored in both opening fixtures and leads Arsenal in attacking metrics with a solid Player Points Projection.",
+      "supporting_quote": "Our Player Points Projections tool currently predicts 5.2 FPL points for Bukayo Saka in Gameweek 3.",
+      "timestamp": ""
+    },
+    {
+      "source": "batch_16",
+      "player_name": "Erling Haaland",
+      "mention_type": "triple_captain",
+      "confidence": 5,
+      "expert_percentage": null,
+      "rationale": "Strong fixtures, rested midweek, and high scoring potential make Haaland the best Triple Captain option.",
+      "supporting_quote": "If you are not using a Wildcard or Free Hit, choosing Haaland as your Triple Captain looks a strong option, which I am likely to run with.",
+      "timestamp": ""
+    }
+  ],
+  "themes": [
+    {
+      "source": "batch_01",
+      "theme": "Triple Captain on Haaland"
+    },
+    {
+      "source": "batch_01",
+      "theme": "Hold Mbeumo despite many selling"
+    },
+    {
+      "source": "batch_01",
+      "theme": "Transfer plans involving Konsa, De Cuyper, Foden, Gomez"
+    },
+    {
+      "source": "batch_01",
+      "theme": "Free Hit planned for GW4"
+    },
+    {
+      "source": "batch_01",
+      "theme": "Minutes risk concerns for Tzolis"
+    },
+    {
+      "source": "batch_02",
+      "theme": "Positive GW2 performance led by Bruno Fernandes"
+    },
+    {
+      "source": "batch_02",
+      "theme": "Injury doubts for Sarr"
+    },
+    {
+      "source": "batch_02",
+      "theme": "Uncertainty around Ndiaye's minutes due to Man City move"
+    },
+    {
+      "source": "batch_02",
+      "theme": "Cautious approach to transfers due to bench strength"
+    },
+    {
+      "source": "batch_03",
+      "theme": "Wildcard activated for GW3"
+    },
+    {
+      "source": "batch_03",
+      "theme": "Haaland captaincy for GW3"
+    },
+    {
+      "source": "batch_03",
+      "theme": "Focus on Arsenal defenders"
+    },
+    {
+      "source": "batch_03",
+      "theme": "Gibbs-White returns to starting XI"
+    },
+    {
+      "source": "batch_03",
+      "theme": "Disappointment from GW2 decisions"
+    },
+    {
+      "source": "batch_04",
+      "theme": "Chip usage in GW3"
+    },
+    {
+      "source": "batch_04",
+      "theme": "Free Hit activated by top managers"
+    },
+    {
+      "source": "batch_04",
+      "theme": "Wildcard plans after press conferences"
+    },
+    {
+      "source": "batch_04",
+      "theme": "Haaland as top captain and triple captain pick"
+    },
+    {
+      "source": "batch_04",
+      "theme": "Liverpool midfield double-up"
+    },
+    {
+      "source": "batch_04",
+      "theme": "Man City triple-up targeting Coventry"
+    },
+    {
+      "source": "batch_04",
+      "theme": "Injury updates on key players"
+    },
+    {
+      "source": "batch_05",
+      "theme": "Manchester City dominance"
+    },
+    {
+      "source": "batch_05",
+      "theme": "Triple Captain on Haaland"
+    },
+    {
+      "source": "batch_05",
+      "theme": "Free Hit chip usage"
+    },
+    {
+      "source": "batch_05",
+      "theme": "Liverpool, Brentford, Brighton, Aston Villa interest"
+    },
+    {
+      "source": "batch_05",
+      "theme": "Wildcard planning for medium term"
+    },
+    {
+      "source": "batch_06",
+      "theme": "FPL GW3 chip strategy overview"
+    },
+    {
+      "source": "batch_06",
+      "theme": "Wildcard pros and cons"
+    },
+    {
+      "source": "batch_06",
+      "theme": "Captaincy picks and polls"
+    },
+    {
+      "source": "batch_06",
+      "theme": "Differential player targeting"
+    },
+    {
+      "source": "batch_06",
+      "theme": "Transfer plans and team reveals"
+    },
+    {
+      "source": "batch_07",
+      "theme": "Differential picks under 10% ownership"
+    },
+    {
+      "source": "batch_07",
+      "theme": "Favorable fixtures for attacking midfielders and defenders"
+    },
+    {
+      "source": "batch_07",
+      "theme": "Targeting teams with weak defenses"
+    },
+    {
+      "source": "batch_07",
+      "theme": "Rotation and playing time considerations"
+    },
+    {
+      "source": "batch_07",
+      "theme": "Ultra differential targeting Hull City defense"
+    },
+    {
+      "source": "batch_08",
+      "theme": "Captaincy poll dominance by Haaland"
+    },
+    {
+      "source": "batch_08",
+      "theme": "Strong attacking stats for captaincy candidates"
+    },
+    {
+      "source": "batch_08",
+      "theme": "Fixture difficulty and expected goals analysis"
+    },
+    {
+      "source": "batch_08",
+      "theme": "Projected points for captaincy picks"
+    },
+    {
+      "source": "batch_08",
+      "theme": "Use of cumulative rank factor for captaincy decision"
+    },
+    {
+      "source": "batch_09",
+      "theme": "Focus on teams with good fixtures: Liverpool and Man City"
+    },
+    {
+      "source": "batch_09",
+      "theme": "Cautious approach to Palace and Villa players"
+    },
+    {
+      "source": "batch_09",
+      "theme": "Use of chips like Bench Boost and Triple Captain"
+    },
+    {
+      "source": "batch_09",
+      "theme": "Monitoring player minutes and form for transfers"
+    },
+    {
+      "source": "batch_09",
+      "theme": "Balancing budget for future transfers"
+    },
+    {
+      "source": "batch_10",
+      "theme": "Wildcard and Free Hit team ideas for GW3"
+    },
+    {
+      "source": "batch_10",
+      "theme": "Composite popular player picks from various sources"
+    },
+    {
+      "source": "batch_10",
+      "theme": "Planning transfers ahead using Joe’s FPL Transfer Planner"
+    },
+    {
+      "source": "batch_10",
+      "theme": "Wildcarding limits chip usage like triple captain on Haaland"
+    },
+    {
+      "source": "batch_11",
+      "theme": "Investing in Manchester City attackers for GW3"
+    },
+    {
+      "source": "batch_11",
+      "theme": "Triple captain chip usage on Haaland"
+    },
+    {
+      "source": "batch_11",
+      "theme": "Brentford players as potential picks"
+    },
+    {
+      "source": "batch_12",
+      "theme": "Premium attacking options with strong underlying stats"
+    },
+    {
+      "source": "batch_12",
+      "theme": "Brentford players offering value and defensive potential"
+    },
+    {
+      "source": "batch_12",
+      "theme": "Focus on players with good fixtures and form"
+    },
+    {
+      "source": "batch_12",
+      "theme": "Use of data tools for points projections"
+    },
+    {
+      "source": "batch_13",
+      "theme": "Focus on players with strong attacking metrics and big chances"
+    },
+    {
+      "source": "batch_13",
+      "theme": "Prioritize players with favorable home fixtures"
+    },
+    {
+      "source": "batch_13",
+      "theme": "Use Player Points Projections to guide captaincy and transfers"
+    },
+    {
+      "source": "batch_13",
+      "theme": "Consider recent form and underlying stats over raw goal counts"
+    },
+    {
+      "source": "batch_14",
+      "theme": "Free Hit chip maximizes points for a single Gameweek"
+    },
+    {
+      "source": "batch_14",
+      "theme": "Prioritize strong fixtures, attacking potential, and expected minutes"
+    },
+    {
+      "source": "batch_14",
+      "theme": "Balance premium players with value and differential picks"
+    },
+    {
+      "source": "batch_14",
+      "theme": "Captaincy choice is critical for maximizing points"
+    },
+    {
+      "source": "batch_14",
+      "theme": "Avoid locking team too early; monitor injuries and team news"
+    },
+    {
+      "source": "batch_15",
+      "theme": "Lineup changes and starting XI updates"
+    },
+    {
+      "source": "batch_15",
+      "theme": "New signings on bench may impact minutes"
+    },
+    {
+      "source": "batch_15",
+      "theme": "Rotation and substitutions affect player selection"
+    },
+    {
+      "source": "batch_16",
+      "theme": "Use chips to bring in premium players like Haaland"
+    },
+    {
+      "source": "batch_16",
+      "theme": "Captaincy choice critical for maximizing points"
+    },
+    {
+      "source": "batch_16",
+      "theme": "Monitor minutes risk especially for midfielders Cherki and Foden"
+    },
+    {
+      "source": "batch_16",
+      "theme": "Be cautious with new signings and early substitutions"
+    },
+    {
+      "source": "batch_16",
+      "theme": "Consider fixture congestion and rotation risks"
+    }
+  ],
+  "per_source": {
+    "batch_01": {
+      "recommendations": [
+        {
+          "source": "batch_01",
+          "player_name": "Mbeumo",
+          "stance": "hold",
+          "sentiment": "positive",
+          "recommendation_strength": 3,
+          "confidence": 4,
+          "rationale": "Despite many managers selling Mbeumo, the article argues he has a good fixture and will thrive against Man City due to their high line and Man United's counterattacks.",
+          "supporting_quote": "On paper, this is a good matchup, and also Mbeumo plays Man City in GW4, which is a difficult fixture on paper, but that is actually a fixture that Mbeumo will thrive on, considering Man City’s high line and Man United’s counterattacks.",
+          "reasons": [
+            {
+              "category": "fixture",
+              "sentiment": "positive",
+              "text": "Good matchup in upcoming gameweek"
+            },
+            {
+              "category": "playing_style",
+              "sentiment": "positive",
+              "text": "Thrives against teams with high defensive line"
+            }
+          ],
+          "risks": [
+            {
+              "category": "fixture",
+              "sentiment": "negative",
+              "text": "Man City is a difficult fixture on paper"
+            }
+          ],
+          "time_horizon": "short-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_01",
+          "player_name": "Konsa",
+          "stance": "consider",
+          "sentiment": "neutral",
+          "recommendation_strength": 3,
+          "confidence": 3,
+          "rationale": "Konsa is planned to be brought in for Ballard but the transfer is delayed pending confirmation of Mosquera's injury status.",
+          "supporting_quote": "My Transfer plan for this week is getting in Konsa/De Cuyp for Ballard. According to Sam Blitz– “Arsenal had an open training session for Sky Sports cameras this morning. No Christian Mosquera after he came off vs Aston Villa with his muscular issue. No Bruno Guimaraes too”. I would, however, wait for Arteta’s press conference before making the moves to confirm that Mosquera is ruled out for a while.",
+          "reasons": [
+            {
+              "category": "injury_news",
+              "sentiment": "neutral",
+              "text": "Mosquera's injury status affects Konsa's start"
+            }
+          ],
+          "risks": [
+            {
+              "category": "starting_status",
+              "sentiment": "negative",
+              "text": "Konsa might not start immediately"
+            }
+          ],
+          "time_horizon": "short-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_01",
+          "player_name": "De Cuyper",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 4,
+          "confidence": 4,
+          "rationale": "De Cuyper is brought in as a short-term pick covering good fixtures and playing as a left wing-back, providing attacking potential.",
+          "supporting_quote": "I have done Ballard to De Cuyper with one of my Free Transfers and have decided to roll the other transfer. De Cuyper is playing as a LW(Being listed as a Defender) for Brighton. With no positive news on Mitoma/Minteh yet- I have gone for De Cuyper as a short term pick to cover GW3 vs LEE(H) and GW4 vs COV(A).",
+          "reasons": [
+            {
+              "category": "fixture",
+              "sentiment": "positive",
+              "text": "Good fixtures in GW3 and GW4"
+            },
+            {
+              "category": "position",
+              "sentiment": "positive",
+              "text": "Listed as defender but plays as LW, increasing attacking returns"
+            }
+          ],
+          "risks": [
+            {
+              "category": "injury_news",
+              "sentiment": "neutral",
+              "text": "No positive news on Mitoma/Minteh yet"
+            }
+          ],
+          "time_horizon": "short-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_01",
+          "player_name": "Haaland",
+          "stance": "hold",
+          "sentiment": "positive",
+          "recommendation_strength": 5,
+          "confidence": 5,
+          "rationale": "Haaland is locked in as the Triple Captain for GW3 due to favorable fixture and expected full minutes.",
+          "supporting_quote": "Haaland is locked in as the Triple Captain for me in GW3. And I am not overthinking this. City have only Haaland as the Striker in their main team, and he should at least play 75-80 minutes against Coventry.",
+          "reasons": [
+            {
+              "category": "fixture",
+              "sentiment": "positive",
+              "text": "Favorable fixture against promoted Coventry"
+            },
+            {
+              "category": "minutes",
+              "sentiment": "positive",
+              "text": "Expected to play 75-80 minutes"
+            }
+          ],
+          "risks": [
+            {
+              "category": "fixture_congestion",
+              "sentiment": "neutral",
+              "text": "Upcoming European and cup games could affect minutes but not expected"
+            }
+          ],
+          "time_horizon": "immediate",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_01",
+          "player_name": "Tzolis",
+          "stance": "sell",
+          "sentiment": "negative",
+          "recommendation_strength": 4,
+          "confidence": 4,
+          "rationale": "Tzolis is likely to be removed due to minutes risk and being subbed off at half-time.",
+          "supporting_quote": "Tzolis is very likely leaving my team not because he blanked, but because he was subbed off at half-time.",
+          "reasons": [
+            {
+              "category": "minutes",
+              "sentiment": "negative",
+              "text": "Subbed off at half-time indicating minutes risk"
+            }
+          ],
+          "risks": [
+            {
+              "category": "performance",
+              "sentiment": "negative",
+              "text": "Difficult game vs Villa in GW2"
+            }
+          ],
+          "time_horizon": "short-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_01",
+          "player_name": "Anderson",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 3,
+          "confidence": 3,
+          "rationale": "Recommended as a long-term pick for minutes and consistent defensive contributions with occasional attacking returns.",
+          "supporting_quote": "The FFHUB AI Tool recommends doing Tzolis to Anderson for the fixture run for Man City starting from GW3 with COV(H). For a long term pick, Anderson should be good for minutes back while consistently hitting DEFCON and getting the odd attacking returns here and there.",
+          "reasons": [
+            {
+              "category": "minutes",
+              "sentiment": "positive",
+              "text": "Expected to get consistent minutes"
+            },
+            {
+              "category": "defensive_contributions",
+              "sentiment": "positive",
+              "text": "Consistently hitting DEFCON"
+            }
+          ],
+          "risks": [],
+          "time_horizon": "long-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_01",
+          "player_name": "Foden",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 4,
+          "confidence": 4,
+          "rationale": "Foden is brought in for his attacking potential and good recent form with assists and points.",
+          "supporting_quote": "The transfers for GW3 planned(which I am very likely to do) are Foden and Gomez coming in for Tzolis and Le Fee. I will also have 0.4 million in the bank after making these moves. Foden got 2 assists and a 9-pointer in GW2.",
+          "reasons": [
+            {
+              "category": "form",
+              "sentiment": "positive",
+              "text": "Good recent form with assists and points"
+            },
+            {
+              "category": "fixture",
+              "sentiment": "positive",
+              "text": "Good fixtures in upcoming gameweeks"
+            }
+          ],
+          "risks": [
+            {
+              "category": "minutes",
+              "sentiment": "neutral",
+              "text": "Potential rotation risk due to fixture congestion"
+            }
+          ],
+          "time_horizon": "short-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_01",
+          "player_name": "Gomez",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 4,
+          "confidence": 4,
+          "rationale": "Gomez is recommended due to strong underlying attacking stats and assists in first two games.",
+          "supporting_quote": "Gomez(5.0) comes into the team having 2 assists over the first 2 games. But the impressive part is the underlying numbers: 8 Shots, 7 Shots inside the box(3rd among MIDs), 4 Big Chance Involvements, and 1.21 xGI.",
+          "reasons": [
+            {
+              "category": "underlying_stats",
+              "sentiment": "positive",
+              "text": "Strong attacking stats and chance involvements"
+            },
+            {
+              "category": "form",
+              "sentiment": "positive",
+              "text": "Two assists in first two games"
+            }
+          ],
+          "risks": [],
+          "time_horizon": "short-term",
+          "timestamp": ""
+        }
+      ],
+      "captaincy": [
+        {
+          "source": "batch_01",
+          "player_name": "Haaland",
+          "mention_type": "triple_captain",
+          "confidence": 5,
+          "expert_percentage": null,
+          "rationale": "Haaland is locked in as the Triple Captain for GW3 due to favorable fixture and expected full minutes.",
+          "supporting_quote": "Haaland is locked in as the Triple Captain for me in GW3. And I am not overthinking this.",
+          "timestamp": ""
+        }
+      ],
+      "themes": [
+        "Triple Captain on Haaland",
+        "Hold Mbeumo despite many selling",
+        "Transfer plans involving Konsa, De Cuyper, Foden, Gomez",
+        "Free Hit planned for GW4",
+        "Minutes risk concerns for Tzolis"
+      ]
+    },
+    "batch_02": {
+      "recommendations": [],
+      "captaincy": [],
+      "themes": [
+        "Positive GW2 performance led by Bruno Fernandes",
+        "Injury doubts for Sarr",
+        "Uncertainty around Ndiaye's minutes due to Man City move",
+        "Cautious approach to transfers due to bench strength"
+      ]
+    },
+    "batch_03": {
+      "recommendations": [
+        {
+          "source": "batch_03",
+          "player_name": "Palmer",
+          "stance": "consider",
+          "sentiment": "positive",
+          "recommendation_strength": 3,
+          "confidence": 3,
+          "rationale": "Palmer is seen as a player who will come back to his best this season and passes the eye test so far.",
+          "supporting_quote": "Palmer passes the eye test so far and I think he’s going to come back to his best this season.",
+          "reasons": [
+            {
+              "category": "form",
+              "sentiment": "positive",
+              "text": "Good early season form"
+            }
+          ],
+          "risks": [],
+          "time_horizon": "medium-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_03",
+          "player_name": "MGW",
+          "stance": "consider",
+          "sentiment": "positive",
+          "recommendation_strength": 3,
+          "confidence": 3,
+          "rationale": "MGW is expected to shine under Glasner and is included in the team.",
+          "supporting_quote": "MGW is another player I feel will shine under Glasner, so he’s in.",
+          "reasons": [
+            {
+              "category": "manager_trust",
+              "sentiment": "positive",
+              "text": "Expected to perform well under current manager"
+            }
+          ],
+          "risks": [],
+          "time_horizon": "medium-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_03",
+          "player_name": "Konsa",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 4,
+          "confidence": 4,
+          "rationale": "Konsa is a great price and having at least two Arsenal defenders is a must.",
+          "supporting_quote": "Having at least two Arsenal defenders is a must, Konsa is a great price.",
+          "reasons": [
+            {
+              "category": "price",
+              "sentiment": "positive",
+              "text": "Affordable defender option"
+            },
+            {
+              "category": "team_structure",
+              "sentiment": "positive",
+              "text": "Arsenal defenders are essential"
+            }
+          ],
+          "risks": [],
+          "time_horizon": "medium-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_03",
+          "player_name": "Szoboszlai",
+          "stance": "hold",
+          "sentiment": "neutral",
+          "recommendation_strength": 3,
+          "confidence": 3,
+          "rationale": "Szoboszlai is considered a solid pick in the team.",
+          "supporting_quote": "Szoboszlai is a solid pick.",
+          "reasons": [
+            {
+              "category": "team_structure",
+              "sentiment": "neutral",
+              "text": "Part of the planned team structure"
+            }
+          ],
+          "risks": [],
+          "time_horizon": "medium-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_03",
+          "player_name": "Sangare",
+          "stance": "consider",
+          "sentiment": "positive",
+          "recommendation_strength": 3,
+          "confidence": 3,
+          "rationale": "Sangare at Brentford offers good value.",
+          "supporting_quote": "Sangare at Brentford offers good value.",
+          "reasons": [
+            {
+              "category": "value",
+              "sentiment": "positive",
+              "text": "Good value pick"
+            }
+          ],
+          "risks": [],
+          "time_horizon": "medium-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_03",
+          "player_name": "Haaland",
+          "stance": "hold",
+          "sentiment": "positive",
+          "recommendation_strength": 5,
+          "confidence": 5,
+          "rationale": "Haaland takes the armband for GW3 against Coventry.",
+          "supporting_quote": "Haaland takes the armband this week for the home game against Coventry.",
+          "reasons": [
+            {
+              "category": "fixture",
+              "sentiment": "positive",
+              "text": "Favorable fixture"
+            }
+          ],
+          "risks": [],
+          "time_horizon": "immediate",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_03",
+          "player_name": "Gibbs-White",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 4,
+          "confidence": 4,
+          "rationale": "Gibbs-White scored 13 points and is coming back into the starting XI for GW3.",
+          "supporting_quote": "Gibbs-White remains available and comes straight back into my starting XI for GW3.",
+          "reasons": [
+            {
+              "category": "form",
+              "sentiment": "positive",
+              "text": "Strong points return"
+            }
+          ],
+          "risks": [
+            {
+              "category": "injury",
+              "sentiment": "neutral",
+              "text": "Ankle caution previously"
+            }
+          ],
+          "time_horizon": "immediate",
+          "timestamp": ""
+        }
+      ],
+      "captaincy": [
+        {
+          "source": "batch_03",
+          "player_name": "Haaland",
+          "mention_type": "captain",
+          "confidence": 5,
+          "expert_percentage": null,
+          "rationale": "Haaland is chosen as captain for GW3 due to fixture and form.",
+          "supporting_quote": "Haaland takes the armband this week for the home game against Coventry.",
+          "timestamp": ""
+        }
+      ],
+      "themes": [
+        "Wildcard activated for GW3",
+        "Haaland captaincy for GW3",
+        "Focus on Arsenal defenders",
+        "Gibbs-White returns to starting XI",
+        "Disappointment from GW2 decisions"
+      ]
+    },
+    "batch_04": {
+      "recommendations": [
+        {
+          "source": "batch_04",
+          "player_name": "Cherki",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 4,
+          "confidence": 4,
+          "rationale": "Cherki is a top transferred player and part of the Algorithm’s optimal Free Hit team.",
+          "supporting_quote": "1️⃣ Cherki — 1,635,311 transfers in",
+          "reasons": [
+            {
+              "category": "popularity",
+              "sentiment": "positive",
+              "text": "High number of transfers in"
+            },
+            {
+              "category": "algorithm_selection",
+              "sentiment": "positive",
+              "text": "Selected in optimal Free Hit team"
+            }
+          ],
+          "risks": [],
+          "time_horizon": "immediate",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_04",
+          "player_name": "Wissa",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 3,
+          "confidence": 3,
+          "rationale": "Wissa is a popular pick with many transfers in and is highlighted as a top differential.",
+          "supporting_quote": "2️⃣ Wissa — 968,323",
+          "reasons": [
+            {
+              "category": "popularity",
+              "sentiment": "positive",
+              "text": "High number of transfers in"
+            },
+            {
+              "category": "differential",
+              "sentiment": "positive",
+              "text": "Top differential pick"
+            }
+          ],
+          "risks": [],
+          "time_horizon": "immediate",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_04",
+          "player_name": "De Cuyper",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 4,
+          "confidence": 4,
+          "rationale": "De Cuyper is a popular transfer and has reached DEFCON threshold in opening matches.",
+          "supporting_quote": "3️⃣ De Cuyper — 744,024",
+          "reasons": [
+            {
+              "category": "popularity",
+              "sentiment": "positive",
+              "text": "High number of transfers in"
+            },
+            {
+              "category": "defensive_contributions",
+              "sentiment": "positive",
+              "text": "Reached DEFCON threshold in opening matches"
+            }
+          ],
+          "risks": [],
+          "time_horizon": "immediate",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_04",
+          "player_name": "Elanga",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 3,
+          "confidence": 3,
+          "rationale": "Elanga is a popular transfer and part of the Algorithm’s optimal Free Hit team.",
+          "supporting_quote": "4️⃣ Elanga — 716,964",
+          "reasons": [
+            {
+              "category": "popularity",
+              "sentiment": "positive",
+              "text": "High number of transfers in"
+            },
+            {
+              "category": "algorithm_selection",
+              "sentiment": "positive",
+              "text": "Selected in optimal Free Hit team"
+            }
+          ],
+          "risks": [],
+          "time_horizon": "immediate",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_04",
+          "player_name": "Haaland",
+          "stance": "hold",
+          "sentiment": "positive",
+          "recommendation_strength": 5,
+          "confidence": 5,
+          "rationale": "Haaland leads projections and is recommended as captain and triple captain against Coventry.",
+          "supporting_quote": "Erling Haaland leads the projections ahead of Manchester City's home meeting with newly promoted Coventry.",
+          "reasons": [
+            {
+              "category": "projected_points",
+              "sentiment": "positive",
+              "text": "Highest projected points (7.8)"
+            },
+            {
+              "category": "fixture",
+              "sentiment": "positive",
+              "text": "Favorable fixture against promoted Coventry"
+            }
+          ],
+          "risks": [
+            {
+              "category": "minutes_risk",
+              "sentiment": "neutral",
+              "text": "Potential minutes risk due to upcoming European games"
+            }
+          ],
+          "time_horizon": "immediate",
+          "timestamp": ""
+        }
+      ],
+      "captaincy": [
+        {
+          "source": "batch_04",
+          "player_name": "Haaland",
+          "mention_type": "triple_captain",
+          "confidence": 5,
+          "expert_percentage": null,
+          "rationale": "Haaland is the preferred triple captain choice for GW3 due to fixture and form.",
+          "supporting_quote": "Haaland gets the armband against Coventry. 🧢",
+          "timestamp": ""
+        }
+      ],
+      "themes": [
+        "Chip usage in GW3",
+        "Free Hit activated by top managers",
+        "Wildcard plans after press conferences",
+        "Haaland as top captain and triple captain pick",
+        "Liverpool midfield double-up",
+        "Man City triple-up targeting Coventry",
+        "Injury updates on key players"
+      ]
+    },
+    "batch_05": {
+      "recommendations": [
+        {
+          "source": "batch_05",
+          "player_name": "Erling Haaland",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 5,
+          "confidence": 5,
+          "rationale": "Haaland is the leading Triple Captain candidate with a home fixture against promoted Coventry, fully fit and playing without fixture congestion.",
+          "supporting_quote": "My Triple Captain is active on Haaland.",
+          "reasons": [
+            {
+              "category": "fixture",
+              "sentiment": "positive",
+              "text": "Home match against promoted Coventry offers a favorable fixture."
+            },
+            {
+              "category": "fitness",
+              "sentiment": "positive",
+              "text": "Fully fit and playing without fixture congestion."
+            },
+            {
+              "category": "popularity",
+              "sentiment": "positive",
+              "text": "Leading Triple Captain candidate among experts."
+            }
+          ],
+          "risks": [
+            {
+              "category": "team news",
+              "sentiment": "neutral",
+              "text": "Plans remain subject to team news and late changes before the deadline."
+            }
+          ],
+          "time_horizon": "immediate",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_05",
+          "player_name": "Rayan Cherki",
+          "stance": "consider",
+          "sentiment": "positive",
+          "recommendation_strength": 4,
+          "confidence": 4,
+          "rationale": "Cherki features prominently in expert drafts and is considered a key part of Manchester City's triple attack alongside Haaland and Foden.",
+          "supporting_quote": "Triple attack with Haaland, Cherki and Foden should hopefully yield plenty of points.",
+          "reasons": [
+            {
+              "category": "team strategy",
+              "sentiment": "positive",
+              "text": "Part of a triple attack strategy with Haaland and Foden."
+            },
+            {
+              "category": "popularity",
+              "sentiment": "positive",
+              "text": "Featured in multiple expert drafts."
+            }
+          ],
+          "risks": [
+            {
+              "category": "fixture",
+              "sentiment": "neutral",
+              "text": "Fixture and team news could affect final selection."
+            }
+          ],
+          "time_horizon": "immediate",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_05",
+          "player_name": "Phil Foden",
+          "stance": "consider",
+          "sentiment": "neutral",
+          "recommendation_strength": 3,
+          "confidence": 3,
+          "rationale": "Included in Dan Bennett's triple attack plan and noted for potential points, but less emphasis compared to Haaland and Cherki.",
+          "supporting_quote": "Triple attack with Haaland, Cherki and Foden should hopefully yield plenty of points.",
+          "reasons": [
+            {
+              "category": "team strategy",
+              "sentiment": "positive",
+              "text": "Part of triple attack alongside Haaland and Cherki."
+            }
+          ],
+          "risks": [
+            {
+              "category": "competition",
+              "sentiment": "neutral",
+              "text": "Less focus compared to Haaland and Cherki."
+            }
+          ],
+          "time_horizon": "immediate",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_05",
+          "player_name": "Maxim De Cuyper",
+          "stance": "consider",
+          "sentiment": "positive",
+          "recommendation_strength": 3,
+          "confidence": 3,
+          "rationale": "Likely to feature after starting the season on the wing and attracting Free Hit interest.",
+          "supporting_quote": "Maxim De Cuyper looks particularly likely to feature after starting the season on the wing.",
+          "reasons": [
+            {
+              "category": "form",
+              "sentiment": "positive",
+              "text": "Started the season on the wing."
+            },
+            {
+              "category": "chip strategy",
+              "sentiment": "positive",
+              "text": "Attracting Free Hit interest."
+            }
+          ],
+          "risks": [
+            {
+              "category": "team news",
+              "sentiment": "neutral",
+              "text": "Subject to late changes before the deadline."
+            }
+          ],
+          "time_horizon": "immediate",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_05",
+          "player_name": "João Pedro",
+          "stance": "consider",
+          "sentiment": "neutral",
+          "recommendation_strength": 3,
+          "confidence": 3,
+          "rationale": "Shortlisted by Copenhagen Wednesday for Wildcard plans, indicating potential medium-term interest.",
+          "supporting_quote": "Haaland, Cherki, Palmer, Szoboszlai, João Pedro, Wissa, De Cuyper and Gvardiol are among those shortlisted.",
+          "reasons": [
+            {
+              "category": "wildcard planning",
+              "sentiment": "neutral",
+              "text": "Shortlisted for upcoming Wildcard."
+            }
+          ],
+          "risks": [
+            {
+              "category": "injury",
+              "sentiment": "neutral",
+              "text": "Dependent on press conference fitness updates."
+            }
+          ],
+          "time_horizon": "medium-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_05",
+          "player_name": "Szoboszlai",
+          "stance": "consider",
+          "sentiment": "neutral",
+          "recommendation_strength": 3,
+          "confidence": 3,
+          "rationale": "Considered for midfield punts and shortlisted for Wildcard plans, but with some caution due to team news.",
+          "supporting_quote": "Haaland, Cherki, Palmer, Szoboszlai, João Pedro, Wissa, De Cuyper and Gvardiol are among those shortlisted.",
+          "reasons": [
+            {
+              "category": "wildcard planning",
+              "sentiment": "neutral",
+              "text": "Shortlisted for upcoming Wildcard."
+            }
+          ],
+          "risks": [
+            {
+              "category": "team news",
+              "sentiment": "neutral",
+              "text": "Subject to press conference fitness updates."
+            }
+          ],
+          "time_horizon": "medium-term",
+          "timestamp": ""
+        }
+      ],
+      "captaincy": [
+        {
+          "source": "batch_05",
+          "player_name": "Erling Haaland",
+          "mention_type": "triple_captain",
+          "confidence": 5,
+          "expert_percentage": null,
+          "rationale": "Leading Triple Captain candidate with a favorable home fixture and full fitness.",
+          "supporting_quote": "My Triple Captain is active on Haaland.",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_05",
+          "player_name": "Rayan Cherki",
+          "mention_type": "captain",
+          "confidence": 3,
+          "expert_percentage": null,
+          "rationale": "Considered for captaincy by multiple experts as part of Manchester City's attacking options.",
+          "supporting_quote": "Triple attack with Haaland, Cherki and Foden should hopefully yield plenty of points.",
+          "timestamp": ""
+        }
+      ],
+      "themes": [
+        "Manchester City dominance",
+        "Triple Captain on Haaland",
+        "Free Hit chip usage",
+        "Liverpool, Brentford, Brighton, Aston Villa interest",
+        "Wildcard planning for medium term"
+      ]
+    },
+    "batch_06": {
+      "recommendations": [],
+      "captaincy": [],
+      "themes": [
+        "FPL GW3 chip strategy overview",
+        "Wildcard pros and cons",
+        "Captaincy picks and polls",
+        "Differential player targeting",
+        "Transfer plans and team reveals"
+      ]
+    },
+    "batch_07": {
+      "recommendations": [
+        {
+          "source": "batch_07",
+          "player_name": "Phil Foden",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 4,
+          "confidence": 4,
+          "rationale": "Foden has favorable fixture against Coventry, high xGI, and is expected to play close to 90 minutes, making him a strong differential pick.",
+          "supporting_quote": "Manchester City have the highest odds of scoring the most goals this Gameweek... Foden actually ranks higher than both Cherki & Semenyo for xGI among the City midfielders.",
+          "reasons": [
+            {
+              "category": "fixture",
+              "sentiment": "positive",
+              "text": "Favorable fixture against Coventry with high expected goals."
+            },
+            {
+              "category": "performance",
+              "sentiment": "positive",
+              "text": "Ranks 4th best midfielder for xGI in the league."
+            },
+            {
+              "category": "playing time",
+              "sentiment": "positive",
+              "text": "More likely to play close to 90 minutes compared to Cherki and Semenyo."
+            }
+          ],
+          "risks": [
+            {
+              "category": "confidence",
+              "sentiment": "negative",
+              "text": "Missed two big chances last gameweek, possibly indicating confidence issues."
+            }
+          ],
+          "time_horizon": "short-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_07",
+          "player_name": "Kristoffer Ajer",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 4,
+          "confidence": 4,
+          "rationale": "Ajer offers a cheap defensive option with strong clean sheet odds and good defensive metrics, making him a good rotation option.",
+          "supporting_quote": "Brentford have the 2nd-best clean sheet odds this Gameweek... Ajer is one of 4 defenders who has banked DEFCON in both games.",
+          "reasons": [
+            {
+              "category": "fixture",
+              "sentiment": "positive",
+              "text": "Brentford have strong clean sheet odds."
+            },
+            {
+              "category": "performance",
+              "sentiment": "positive",
+              "text": "Consistent DEFCON points and strong defensive stats."
+            },
+            {
+              "category": "value",
+              "sentiment": "positive",
+              "text": "Cheap route into Brentford defense."
+            }
+          ],
+          "risks": [
+            {
+              "category": "rotation",
+              "sentiment": "neutral",
+              "text": "May face rotation risk but forms good rotation with Newcastle defenders."
+            }
+          ],
+          "time_horizon": "short-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_07",
+          "player_name": "Morgan Gibbs White",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 5,
+          "confidence": 5,
+          "rationale": "Forest's talisman with high goal output and set-piece duties, facing bottom 4 teams in upcoming fixtures, making him a reliable pick.",
+          "supporting_quote": "Gibbs White has scored a remarkable 13 Premier League Goals this calendar year... With a share of set pieces and direct free kicks in his locker, Gibbs White becomes a very interesting option.",
+          "reasons": [
+            {
+              "category": "form",
+              "sentiment": "positive",
+              "text": "Top scorer for Forest and high goal tally this year."
+            },
+            {
+              "category": "fixture",
+              "sentiment": "positive",
+              "text": "Upcoming fixtures against bottom 4 teams."
+            },
+            {
+              "category": "role",
+              "sentiment": "positive",
+              "text": "Takes spot-kicks and free kicks."
+            }
+          ],
+          "risks": [],
+          "time_horizon": "medium-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_07",
+          "player_name": "Cody Gakpo",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 4,
+          "confidence": 4,
+          "rationale": "Liverpool's most threatening player with good stats and favorable fixtures against Ipswich and Fulham.",
+          "supporting_quote": "Gakpo has looked Liverpool’s most threatening player so far this season... Liverpool play Ipswich this Gameweek – the team that has conceded the most Big Chances.",
+          "reasons": [
+            {
+              "category": "form",
+              "sentiment": "positive",
+              "text": "Good attacking stats and recent goal involvement."
+            },
+            {
+              "category": "fixture",
+              "sentiment": "positive",
+              "text": "Favorable fixtures against weak defensive teams."
+            }
+          ],
+          "risks": [
+            {
+              "category": "competition",
+              "sentiment": "neutral",
+              "text": "Arrival of positional rival Bradley Barcola may affect minutes."
+            }
+          ],
+          "time_horizon": "short-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_07",
+          "player_name": "Lewis Hall",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 4,
+          "confidence": 4,
+          "rationale": "Key Newcastle defender with good attacking involvement and clean sheet potential in upcoming fixtures.",
+          "supporting_quote": "Hall has banked Defcon in both games this season... He has also been playing really high up the pitch.",
+          "reasons": [
+            {
+              "category": "form",
+              "sentiment": "positive",
+              "text": "Consistent DEFCON points and attacking involvement."
+            },
+            {
+              "category": "fixture",
+              "sentiment": "positive",
+              "text": "Good upcoming fixtures without Big 6 opposition until GW11."
+            }
+          ],
+          "risks": [],
+          "time_horizon": "medium-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_07",
+          "player_name": "Nicolas Jackson",
+          "stance": "consider",
+          "sentiment": "positive",
+          "recommendation_strength": 3,
+          "confidence": 3,
+          "rationale": "Ultra differential pick against Hull City, who have conceded many shots from central areas; Jackson is expected to get more minutes and be Villa's main striker.",
+          "supporting_quote": "Hull City have conceded 32 Shots so far... Jackson played 70 minutes for Villa last Gameweek and should be good for more minutes this Gameweek.",
+          "reasons": [
+            {
+              "category": "fixture",
+              "sentiment": "positive",
+              "text": "Hull City concede many shots, especially from the center."
+            },
+            {
+              "category": "playing time",
+              "sentiment": "positive",
+              "text": "Expected to get more minutes and be main striker."
+            }
+          ],
+          "risks": [
+            {
+              "category": "ownership",
+              "sentiment": "neutral",
+              "text": "Very low ownership under 1%."
+            }
+          ],
+          "time_horizon": "short-term",
+          "timestamp": ""
+        }
+      ],
+      "captaincy": [],
+      "themes": [
+        "Differential picks under 10% ownership",
+        "Favorable fixtures for attacking midfielders and defenders",
+        "Targeting teams with weak defenses",
+        "Rotation and playing time considerations",
+        "Ultra differential targeting Hull City defense"
+      ]
+    },
+    "batch_08": {
+      "recommendations": [
+        {
+          "source": "batch_08",
+          "player_name": "Erling Haaland",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 5,
+          "confidence": 5,
+          "rationale": "Top of captaincy poll with 75% votes, highest points projection, and favorable fixture against Coventry with low clean sheet odds for opposition.",
+          "supporting_quote": "Erling Haaland tops the captaincy poll for the first week with a landslide 75% of the votes against Coventry (H).",
+          "reasons": [
+            {
+              "category": "captaincy poll",
+              "sentiment": "positive",
+              "text": "Received 75% of captaincy votes."
+            },
+            {
+              "category": "fixture",
+              "sentiment": "positive",
+              "text": "Home fixture against Coventry with 8% clean sheet chance for opposition."
+            },
+            {
+              "category": "performance",
+              "sentiment": "positive",
+              "text": "Highest points projection of 7.9 for GW3."
+            }
+          ],
+          "risks": [],
+          "time_horizon": "immediate",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_08",
+          "player_name": "Rayan Cherki",
+          "stance": "consider",
+          "sentiment": "positive",
+          "recommendation_strength": 4,
+          "confidence": 4,
+          "rationale": "Second in captaincy poll with 6% votes and second highest points projection, making him a viable captaincy alternative.",
+          "supporting_quote": "Teammate Rayan Cherki is second with 6% of the votes.",
+          "reasons": [
+            {
+              "category": "captaincy poll",
+              "sentiment": "positive",
+              "text": "Second highest captaincy votes at 6%."
+            },
+            {
+              "category": "performance",
+              "sentiment": "positive",
+              "text": "Second highest points projection of 5.4."
+            }
+          ],
+          "risks": [],
+          "time_horizon": "immediate",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_08",
+          "player_name": "Bruno Fernandes",
+          "stance": "consider",
+          "sentiment": "positive",
+          "recommendation_strength": 4,
+          "confidence": 4,
+          "rationale": "Third in captaincy poll and points projection with strong underlying stats including shots and big chances.",
+          "supporting_quote": "Bruno Fernandes tops the table with 4 shots in the box, 3 big chances, and an xG of 2.11 in the season so far.",
+          "reasons": [
+            {
+              "category": "captaincy poll",
+              "sentiment": "positive",
+              "text": "Third highest captaincy votes."
+            },
+            {
+              "category": "performance",
+              "sentiment": "positive",
+              "text": "Strong attacking stats and points projection."
+            }
+          ],
+          "risks": [],
+          "time_horizon": "immediate",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_08",
+          "player_name": "Aleksander Isak",
+          "stance": "consider",
+          "sentiment": "positive",
+          "recommendation_strength": 3,
+          "confidence": 3,
+          "rationale": "Fourth in captaincy poll and points projection with good attacking stats.",
+          "supporting_quote": "Aleksander Isak is 2nd with an xG of 2.08 in the season so far.",
+          "reasons": [
+            {
+              "category": "captaincy poll",
+              "sentiment": "positive",
+              "text": "Fourth highest captaincy votes."
+            },
+            {
+              "category": "performance",
+              "sentiment": "positive",
+              "text": "Good attacking stats and points projection."
+            }
+          ],
+          "risks": [],
+          "time_horizon": "immediate",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_08",
+          "player_name": "Szoboszlai",
+          "stance": "consider",
+          "sentiment": "neutral",
+          "recommendation_strength": 3,
+          "confidence": 3,
+          "rationale": "Fifth in captaincy poll with lower xG and points projection, making him a less favored captaincy option.",
+          "supporting_quote": "Szoboszlai stands 4th with an xG of 1.01, managing 1 shot inside the box and 1 big chance.",
+          "reasons": [
+            {
+              "category": "captaincy poll",
+              "sentiment": "neutral",
+              "text": "Fifth in captaincy votes."
+            },
+            {
+              "category": "performance",
+              "sentiment": "neutral",
+              "text": "Lower xG and points projection compared to others."
+            }
+          ],
+          "risks": [],
+          "time_horizon": "immediate",
+          "timestamp": ""
+        }
+      ],
+      "captaincy": [
+        {
+          "source": "batch_08",
+          "player_name": "Erling Haaland",
+          "mention_type": "captain",
+          "confidence": 5,
+          "expert_percentage": 75,
+          "rationale": "Top captaincy poll choice with strong stats and favorable fixture.",
+          "supporting_quote": "Erling Haaland tops the captaincy poll for the first week with a landslide 75% of the votes against Coventry (H).",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_08",
+          "player_name": "Rayan Cherki",
+          "mention_type": "captain",
+          "confidence": 3,
+          "expert_percentage": 6,
+          "rationale": "Second most popular captaincy choice with decent points projection.",
+          "supporting_quote": "Teammate Rayan Cherki is second with 6% of the votes.",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_08",
+          "player_name": "Bruno Fernandes",
+          "mention_type": "captain",
+          "confidence": 3,
+          "expert_percentage": null,
+          "rationale": "Third in captaincy poll with strong attacking stats.",
+          "supporting_quote": "Bruno Fernandes tops the table with 4 shots in the box, 3 big chances, and an xG of 2.11 in the season so far.",
+          "timestamp": ""
+        }
+      ],
+      "themes": [
+        "Captaincy poll dominance by Haaland",
+        "Strong attacking stats for captaincy candidates",
+        "Fixture difficulty and expected goals analysis",
+        "Projected points for captaincy picks",
+        "Use of cumulative rank factor for captaincy decision"
+      ]
+    },
+    "batch_09": {
+      "recommendations": [
+        {
+          "source": "batch_09",
+          "player_name": "Isak",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 4,
+          "confidence": 4,
+          "rationale": "Isak is preferred as a Liverpool attacker with good upcoming fixtures and is favored over Gakpo and Barcola.",
+          "supporting_quote": "For Liverpool I have Jacquet but I want to add an attacker. Realistically that’s Wirtz or Isak. I like Gakpo but he’s now going to play on the right where he will be less of a goalscoring threat. I’m not sure Barcola will start so that rules him out. I’m going to go for Isak",
+          "reasons": [
+            {
+              "category": "fixtures",
+              "sentiment": "positive",
+              "text": "Liverpool have Ipswich next, a good fixture"
+            },
+            {
+              "category": "player_role",
+              "sentiment": "positive",
+              "text": "Isak is a preferred attacker option over Gakpo and Barcola"
+            }
+          ],
+          "risks": [
+            {
+              "category": "competition",
+              "sentiment": "neutral",
+              "text": "Uncertainty about Barcola's starting status"
+            }
+          ],
+          "time_horizon": "short-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_09",
+          "player_name": "Foden",
+          "stance": "consider",
+          "sentiment": "mixed",
+          "recommendation_strength": 3,
+          "confidence": 3,
+          "rationale": "Foden is considered as a Man City attacker option with saved funds and potential for short-term punt despite no recent goals.",
+          "supporting_quote": "Of the two I’d prefer Foden, who I currently have the exact money for thanks to that saved 0.5m. He’s not scored in a long time, but he’s looking lively this season, and might be worth punting on for a couple of weeks before my planned WC in GW6.",
+          "reasons": [
+            {
+              "category": "budget",
+              "sentiment": "positive",
+              "text": "Exact money saved to afford Foden"
+            },
+            {
+              "category": "form",
+              "sentiment": "neutral",
+              "text": "Looking lively this season despite no recent goals"
+            }
+          ],
+          "risks": [
+            {
+              "category": "goal_scoring",
+              "sentiment": "negative",
+              "text": "Has not scored in a long time"
+            }
+          ],
+          "time_horizon": "short-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_09",
+          "player_name": "Fernandes",
+          "stance": "sell",
+          "sentiment": "mixed",
+          "recommendation_strength": 3,
+          "confidence": 3,
+          "rationale": "Fernandes is likely to be sold to fund Palmer and is not expected to be a captaincy option until GW6.",
+          "supporting_quote": "Transfer summary: Likely Fernandes and Calvert-Lewin OUT Foden and Isak in. Triple Captain activated. Fernandes also demonstrated his potential power as a captaincy pick on Sunday, although he may not come into consideration again until GW6.",
+          "reasons": [
+            {
+              "category": "transfer_funding",
+              "sentiment": "negative",
+              "text": "Selling Fernandes to afford Palmer"
+            },
+            {
+              "category": "captaincy_potential",
+              "sentiment": "neutral",
+              "text": "May not be captaincy option until GW6"
+            }
+          ],
+          "risks": [
+            {
+              "category": "timing",
+              "sentiment": "neutral",
+              "text": "Uncertainty about when to downgrade"
+            }
+          ],
+          "time_horizon": "short-term",
+          "timestamp": ""
+        }
+      ],
+      "captaincy": [
+        {
+          "source": "batch_09",
+          "player_name": "Fernandes",
+          "mention_type": "captain",
+          "confidence": 4,
+          "expert_percentage": null,
+          "rationale": "Fernandes had double figure returns and was a successful captain choice in GW2.",
+          "supporting_quote": "Double figure returns from Captain Fernandes plus Schade, Haaland, Gross and Calafiori",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_09",
+          "player_name": "Haaland",
+          "mention_type": "triple_captain",
+          "confidence": 5,
+          "expert_percentage": null,
+          "rationale": "Triple Captain chip activated on Haaland for GW3.",
+          "supporting_quote": "Transfer summary: Likely Fernandes and Calvert-Lewin OUT Foden and Isak in. Triple Captain activated",
+          "timestamp": ""
+        }
+      ],
+      "themes": [
+        "Focus on teams with good fixtures: Liverpool and Man City",
+        "Cautious approach to Palace and Villa players",
+        "Use of chips like Bench Boost and Triple Captain",
+        "Monitoring player minutes and form for transfers",
+        "Balancing budget for future transfers"
+      ]
+    },
+    "batch_10": {
+      "recommendations": [],
+      "captaincy": [],
+      "themes": [
+        "Wildcard and Free Hit team ideas for GW3",
+        "Composite popular player picks from various sources",
+        "Planning transfers ahead using Joe’s FPL Transfer Planner",
+        "Wildcarding limits chip usage like triple captain on Haaland"
+      ]
+    },
+    "batch_11": {
+      "recommendations": [
+        {
+          "source": "batch_11",
+          "player_name": "Haaland",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 4,
+          "confidence": 4,
+          "rationale": "Haaland is a top forward with the most shots and big chances, and triple captain chip is recommended.",
+          "supporting_quote": "No forward has attempted more shots (10) or shots in the box (nine) than the Norwegian international this season, while he is also joint-top for big chances (three).",
+          "reasons": [
+            {
+              "category": "form",
+              "sentiment": "positive",
+              "text": "Top in shots and big chances this season"
+            },
+            {
+              "category": "chip_usage",
+              "sentiment": "positive",
+              "text": "Triple Captain chip recommended"
+            }
+          ],
+          "risks": [],
+          "time_horizon": "short-term",
+          "timestamp": ""
+        }
+      ],
+      "captaincy": [
+        {
+          "source": "batch_11",
+          "player_name": "Haaland",
+          "mention_type": "triple_captain",
+          "confidence": 5,
+          "expert_percentage": null,
+          "rationale": "Expert recommends triple captain on Haaland due to his strong attacking stats and form.",
+          "supporting_quote": "Time to triple up on Man City attackers on FPL? FPL expert Gianni Buttice reveals his best team selection picks for Gameweek 3 and why he thinks it is time to invest in Manchester City and Brentford players.",
+          "timestamp": ""
+        }
+      ],
+      "themes": [
+        "Investing in Manchester City attackers for GW3",
+        "Triple captain chip usage on Haaland",
+        "Brentford players as potential picks"
+      ]
+    },
+    "batch_12": {
+      "recommendations": [
+        {
+          "source": "batch_12",
+          "player_name": "Bukayo Saka",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 5,
+          "confidence": 5,
+          "rationale": "Saka is in fine form with top attacking stats for Arsenal and good fixture against Chelsea.",
+          "supporting_quote": "Bukayo Saka has started the season in fine form, scoring twice in as many games. He ranks top among Arsenal players over the opening two Gameweeks for shots (five), shots in the box (four), big chances (two) and Expected Goals (xG) (1.60).",
+          "reasons": [
+            {
+              "category": "form",
+              "sentiment": "positive",
+              "text": "Scored twice in two games"
+            },
+            {
+              "category": "stats",
+              "sentiment": "positive",
+              "text": "Top for shots, big chances, and xG among Arsenal players"
+            },
+            {
+              "category": "fixture",
+              "sentiment": "positive",
+              "text": "Arsenal face Chelsea who have conceded 5 goals in 2 games"
+            }
+          ],
+          "risks": [],
+          "time_horizon": "short-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_12",
+          "player_name": "Erling Haaland",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 5,
+          "confidence": 5,
+          "rationale": "Haaland leads in shots and big chances and has strong home form; good fixture against Coventry.",
+          "supporting_quote": "No forward has attempted more shots (10) or shots in the box (nine) than the Norwegian international this season, while he is also joint-top for big chances (three).",
+          "reasons": [
+            {
+              "category": "form",
+              "sentiment": "positive",
+              "text": "Most shots and big chances this season"
+            },
+            {
+              "category": "fixture",
+              "sentiment": "positive",
+              "text": "Man City have scored 6 goals in 2 games; Coventry conceded 4"
+            }
+          ],
+          "risks": [],
+          "time_horizon": "short-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_12",
+          "player_name": "Kevin Schade",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 4,
+          "confidence": 4,
+          "rationale": "Schade is joint-top among midfielders for shots in the box and big chances, showing strong attacking potential.",
+          "supporting_quote": "Kevin Schade got his campaign up and running with a well-taken goal against Leeds. The 24-year-old is joint-top among midfielders for shots in the box (eight) over the opening two Gameweeks, alongside Bryan Mbeumo.",
+          "reasons": [
+            {
+              "category": "form",
+              "sentiment": "positive",
+              "text": "Scored and high shots in box"
+            },
+            {
+              "category": "stats",
+              "sentiment": "positive",
+              "text": "Most big chances among midfielders last season"
+            }
+          ],
+          "risks": [],
+          "time_horizon": "short-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_12",
+          "player_name": "Yoane Wissa",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 4,
+          "confidence": 4,
+          "rationale": "Wissa is revitalised with top attacking stats for Newcastle and good fixture against Bournemouth.",
+          "supporting_quote": "Yoane Wissa has looked revitalised under new manager Matthias Jaissle after an injury curtailed 2025/26 campaign. The DR Congo international is top amongst Newcastle players for shots (six), shots in the box (four), 'big chances' (three) and xG (1.26) in the opening two matches.",
+          "reasons": [
+            {
+              "category": "form",
+              "sentiment": "positive",
+              "text": "Top attacking stats for Newcastle"
+            },
+            {
+              "category": "fixture",
+              "sentiment": "positive",
+              "text": "Newcastle face Bournemouth who conceded 3 goals in 2 games"
+            }
+          ],
+          "risks": [],
+          "time_horizon": "short-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_12",
+          "player_name": "Nathan Collins",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 4,
+          "confidence": 4,
+          "rationale": "Collins offers defensive potential with attacking threat and Brentford have strong defensive stats.",
+          "supporting_quote": "Nathan Collins found the back of the net only once last season but was ranked seventh amongst defenders for DEFCON (318). He had a total of 19 shots in the box and five 'big chances' totaling 2.32 xG so the underlying numbers indicate that the goal threat is significant to go alongside the DEFCON potential.",
+          "reasons": [
+            {
+              "category": "defense",
+              "sentiment": "positive",
+              "text": "Brentford conceded just one goal in 2 matches"
+            },
+            {
+              "category": "attacking_threat",
+              "sentiment": "positive",
+              "text": "High shots in box and big chances for a defender"
+            }
+          ],
+          "risks": [],
+          "time_horizon": "short-term",
+          "timestamp": ""
+        }
+      ],
+      "captaincy": [
+        {
+          "source": "batch_12",
+          "player_name": "Haaland",
+          "mention_type": "captain",
+          "confidence": 5,
+          "expert_percentage": null,
+          "rationale": "Haaland has strong attacking stats and good fixture, making him a top captaincy pick.",
+          "supporting_quote": "No forward has attempted more shots (10) or shots in the box (nine) than the Norwegian international this season, while he is also joint-top for big chances (three).",
+          "timestamp": ""
+        }
+      ],
+      "themes": [
+        "Premium attacking options with strong underlying stats",
+        "Brentford players offering value and defensive potential",
+        "Focus on players with good fixtures and form",
+        "Use of data tools for points projections"
+      ]
+    },
+    "batch_13": {
+      "recommendations": [
+        {
+          "source": "batch_13",
+          "player_name": "Erling Haaland",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 5,
+          "confidence": 5,
+          "rationale": "Haaland leads in shots, big chances, and xG early in the season and has strong home form from last season, with high goal involvement and expected points.",
+          "supporting_quote": "Erling Haaland got back among the goals with a brace against Crystal Palace. No forward has attempted more shots (10) or shots in the box (nine) than the 26-year-old over the opening two Gameweeks, while he is also joint-top for big chances (three).",
+          "reasons": [
+            {
+              "category": "performance",
+              "sentiment": "positive",
+              "text": "Top for goals, shots on target, big chances, and xG in home matches last season."
+            },
+            {
+              "category": "fixture",
+              "sentiment": "positive",
+              "text": "Manchester City scored 45 goals at home last season, more than any other side."
+            },
+            {
+              "category": "projection",
+              "sentiment": "positive",
+              "text": "Player Points Projections tool predicts 7.2 FPL points for Gameweek 3."
+            }
+          ],
+          "risks": [
+            {
+              "category": "none_explicit",
+              "sentiment": "neutral",
+              "text": "No explicit risks mentioned."
+            }
+          ],
+          "time_horizon": "short-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_13",
+          "player_name": "Bruno Fernandes",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 4,
+          "confidence": 4,
+          "rationale": "After a slow start, Fernandes scored 23 points in Gameweek 2 and ranks highly for shots and big chances, with good away fixture stats for Manchester United.",
+          "supporting_quote": "After a disappointing Gameweek 1, Bruno Fernandes reminded FPL managers of his explosive potential with a mammoth 23-point haul against Ipswich.",
+          "reasons": [
+            {
+              "category": "performance",
+              "sentiment": "positive",
+              "text": "Second for big chances among midfielders and highest xG."
+            },
+            {
+              "category": "fixture",
+              "sentiment": "positive",
+              "text": "Manchester United ranked third for goals scored in away matches last season."
+            },
+            {
+              "category": "projection",
+              "sentiment": "positive",
+              "text": "Player Points Projections tool predicts 6.3 FPL points for Gameweek 3."
+            }
+          ],
+          "risks": [
+            {
+              "category": "fixture_difficulty",
+              "sentiment": "neutral",
+              "text": "Hosts Everton have conceded only one goal but underlying numbers suggest some luck."
+            }
+          ],
+          "time_horizon": "short-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_13",
+          "player_name": "Bukayo Saka",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 4,
+          "confidence": 4,
+          "rationale": "Saka has scored in both opening fixtures, leads Arsenal in shots and big chances, and benefits from strong home attacking stats.",
+          "supporting_quote": "With goals in both of Arsenal’s opening fixtures, Bukayo Saka looks back to his best after a spate of injuries last season.",
+          "reasons": [
+            {
+              "category": "performance",
+              "sentiment": "positive",
+              "text": "No Arsenal player has registered more shots, shots in the box, big chances or xG over the opening two Gameweeks."
+            },
+            {
+              "category": "fixture",
+              "sentiment": "positive",
+              "text": "Arsenal ranked second for goals scored in home matches last season."
+            },
+            {
+              "category": "projection",
+              "sentiment": "positive",
+              "text": "Player Points Projections tool predicts 5.2 FPL points for Gameweek 3."
+            }
+          ],
+          "risks": [
+            {
+              "category": "fixture_difficulty",
+              "sentiment": "neutral",
+              "text": "Chelsea have conceded five goals over two Gameweeks, indicating a potentially favorable fixture."
+            }
+          ],
+          "time_horizon": "short-term",
+          "timestamp": ""
+        }
+      ],
+      "captaincy": [
+        {
+          "source": "batch_13",
+          "player_name": "Erling Haaland",
+          "mention_type": "captain",
+          "confidence": 5,
+          "expert_percentage": null,
+          "rationale": "Haaland leads in shots, big chances, and xG, with strong home form and a high Player Points Projection for Gameweek 3.",
+          "supporting_quote": "Our Player Points Projections tool currently predicts 7.2 FPL points for Erling Haaland in Gameweek 3.",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_13",
+          "player_name": "Bruno Fernandes",
+          "mention_type": "captain",
+          "confidence": 4,
+          "expert_percentage": null,
+          "rationale": "Fernandes has explosive potential and ranks highly for big chances and xG among midfielders.",
+          "supporting_quote": "Our Player Points Projections tool currently predicts 6.3 FPL points for Bruno Fernandes in Gameweek 3.",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_13",
+          "player_name": "Bukayo Saka",
+          "mention_type": "captain",
+          "confidence": 4,
+          "expert_percentage": null,
+          "rationale": "Saka has scored in both opening fixtures and leads Arsenal in attacking metrics with a solid Player Points Projection.",
+          "supporting_quote": "Our Player Points Projections tool currently predicts 5.2 FPL points for Bukayo Saka in Gameweek 3.",
+          "timestamp": ""
+        }
+      ],
+      "themes": [
+        "Focus on players with strong attacking metrics and big chances",
+        "Prioritize players with favorable home fixtures",
+        "Use Player Points Projections to guide captaincy and transfers",
+        "Consider recent form and underlying stats over raw goal counts"
+      ]
+    },
+    "batch_14": {
+      "recommendations": [],
+      "captaincy": [],
+      "themes": [
+        "Free Hit chip maximizes points for a single Gameweek",
+        "Prioritize strong fixtures, attacking potential, and expected minutes",
+        "Balance premium players with value and differential picks",
+        "Captaincy choice is critical for maximizing points",
+        "Avoid locking team too early; monitor injuries and team news"
+      ]
+    },
+    "batch_15": {
+      "recommendations": [],
+      "captaincy": [],
+      "themes": [
+        "Lineup changes and starting XI updates",
+        "New signings on bench may impact minutes",
+        "Rotation and substitutions affect player selection"
+      ]
+    },
+    "batch_16": {
+      "recommendations": [
+        {
+          "source": "batch_16",
+          "player_name": "Erling Haaland",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 5,
+          "confidence": 5,
+          "rationale": "Haaland is the best Triple Captain option with strong fixtures and a clear midweek rest before Gameweek 3.",
+          "supporting_quote": "If you are not using a Wildcard or Free Hit, choosing Haaland as your Triple Captain looks a strong option, which I am likely to run with.",
+          "reasons": [
+            {
+              "category": "fixture",
+              "sentiment": "positive",
+              "text": "Coventry have been among the most defensively vulnerable sides."
+            },
+            {
+              "category": "rest",
+              "sentiment": "positive",
+              "text": "Haaland has had a clear midweek before Saturday's game."
+            }
+          ],
+          "risks": [
+            {
+              "category": "fixture_congestion",
+              "sentiment": "neutral",
+              "text": "Upcoming fixtures fall during heavy Champions League congestion."
+            }
+          ],
+          "time_horizon": "short-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_16",
+          "player_name": "Bruno Fernandes",
+          "stance": "hold",
+          "sentiment": "mixed",
+          "recommendation_strength": 3,
+          "confidence": 4,
+          "rationale": "Fernandes is a strong, talismanic option but is expensive and may be less optimal if not captained soon.",
+          "supporting_quote": "Manchester United captain Fernandes is close to the ideal FPL asset... He is a stronger option than Cole Palmer or Bukayo Saka, but he is also significantly more expensive.",
+          "reasons": [
+            {
+              "category": "role",
+              "sentiment": "positive",
+              "text": "Takes set-pieces, rarely injured or substituted."
+            },
+            {
+              "category": "value",
+              "sentiment": "negative",
+              "text": "Significantly more expensive than alternatives."
+            }
+          ],
+          "risks": [
+            {
+              "category": "fixture_congestion",
+              "sentiment": "neutral",
+              "text": "Faces Coventry in a run of three matches in seven days."
+            }
+          ],
+          "time_horizon": "medium-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_16",
+          "player_name": "Rayan Cherki",
+          "stance": "consider",
+          "sentiment": "positive",
+          "recommendation_strength": 3,
+          "confidence": 4,
+          "rationale": "Cherki is the most-bought player this week with two price rises and impressive recent performances.",
+          "supporting_quote": "Rayan Cherki is this week's most-bought player, with two price rises already. After his impressive last outing, he is the standout midfield pick.",
+          "reasons": [
+            {
+              "category": "form",
+              "sentiment": "positive",
+              "text": "Impressive last outing."
+            }
+          ],
+          "risks": [
+            {
+              "category": "minutes",
+              "sentiment": "negative",
+              "text": "May become a minutes risk later in the season."
+            }
+          ],
+          "time_horizon": "short-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_16",
+          "player_name": "Phil Foden",
+          "stance": "consider",
+          "sentiment": "positive",
+          "recommendation_strength": 3,
+          "confidence": 4,
+          "rationale": "Foden has stronger underlying expected data than Cherki and is worth considering.",
+          "supporting_quote": "Phil Foden is also worth considering, with stronger underlying expected data than Cherki over the first two games.",
+          "reasons": [
+            {
+              "category": "underlying_stats",
+              "sentiment": "positive",
+              "text": "Stronger expected data than Cherki."
+            }
+          ],
+          "risks": [
+            {
+              "category": "minutes",
+              "sentiment": "negative",
+              "text": "May become a minutes risk later in the season."
+            }
+          ],
+          "time_horizon": "short-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_16",
+          "player_name": "Josko Gvardiol",
+          "stance": "buy",
+          "sentiment": "positive",
+          "recommendation_strength": 4,
+          "confidence": 4,
+          "rationale": "Gvardiol is the best defensive option at Manchester City.",
+          "supporting_quote": "In defence, Josko Gvardiol is the best option.",
+          "reasons": [
+            {
+              "category": "defense",
+              "sentiment": "positive",
+              "text": "Best defensive asset at Manchester City."
+            }
+          ],
+          "risks": [],
+          "time_horizon": "short-term",
+          "timestamp": ""
+        },
+        {
+          "source": "batch_16",
+          "player_name": "Christos Tzolis",
+          "stance": "hold",
+          "sentiment": "mixed",
+          "recommendation_strength": 3,
+          "confidence": 3,
+          "rationale": "Tzolis showed potential but was substituted early; expected to be first choice but may face early subs.",
+          "supporting_quote": "The half-time substitution of Christos Tzolis against Aston Villa was a concern for owners.",
+          "reasons": [
+            {
+              "category": "potential",
+              "sentiment": "positive",
+              "text": "Dangerous player and expected first choice."
+            }
+          ],
+          "risks": [
+            {
+              "category": "rotation",
+              "sentiment": "negative",
+              "text": "Subject to early substitutions."
+            }
+          ],
+          "time_horizon": "short-term",
+          "timestamp": ""
+        }
+      ],
+      "captaincy": [
+        {
+          "source": "batch_16",
+          "player_name": "Erling Haaland",
+          "mention_type": "triple_captain",
+          "confidence": 5,
+          "expert_percentage": null,
+          "rationale": "Strong fixtures, rested midweek, and high scoring potential make Haaland the best Triple Captain option.",
+          "supporting_quote": "If you are not using a Wildcard or Free Hit, choosing Haaland as your Triple Captain looks a strong option, which I am likely to run with.",
+          "timestamp": ""
+        }
+      ],
+      "themes": [
+        "Use chips to bring in premium players like Haaland",
+        "Captaincy choice critical for maximizing points",
+        "Monitor minutes risk especially for midfielders Cherki and Foden",
+        "Be cautious with new signings and early substitutions",
+        "Consider fixture congestion and rotation risks"
+      ]
+    }
+  }
+}
