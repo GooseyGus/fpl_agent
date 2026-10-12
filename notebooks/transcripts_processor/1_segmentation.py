@@ -9,26 +9,30 @@ from pathlib import Path
 from typing import Any
 
 TRANSCRIPT_CHAR_LIMIT = 80_000
-PROMPT_VERSION = "v15"
-MAX_CONCURRENT_TRANSCRIPTS = 6
+PROMPT_VERSION = "v17"
+MAX_CONCURRENT_TRANSCRIPTS = 2
 SEGMENTATION_TIMEOUT_SECONDS = 90
-SEGMENTATION_MAX_RETRIES = 0
-KEEP_SEGMENT_TYPES = {"FPL_ANALYSIS"}
-VALID_SEGMENT_TYPES = KEEP_SEGMENT_TYPES | {"INTRO", "ADVERTISEMENT", "BANTER", "OTHER"}
+SEGMENTATION_MAX_RETRIES = 5
+KEEP_SEGMENT_TYPES = {"FPL_CONTENT"}
+VALID_SEGMENT_TYPES = KEEP_SEGMENT_TYPES | {"NON_FPL_CONTENT"}
 model = "gpt-4.1-mini"
 
-SEGMENT_PROMPT_TEMPLATE = """You divide a raw auto-generated YouTube transcript about Fantasy Premier League (FPL) into broad, coherent topic sections.
+SEGMENT_PROMPT_TEMPLATE = """You divide a raw auto-generated YouTube transcript into broad, coherent topic sections and identify the Fantasy Premier League (FPL) content.
 
 Each paragraph below is numbered and starts with a [MM:SS] timestamp marker. Group consecutive paragraphs that belong to the same broader discussion, such as `Arsenal`, `Defenders`, `Captaincy`, `Fixture strategy`, or `Advertisement`. Prefer a small number of substantial sections over many timestamp-sized sections. Start a new section only when the main subject or content type clearly changes.
 
-Most content is substantive FPL analysis (player names, stats, transfers, captaincy, fixtures, chip strategy, squad structure, or expert opinions). Classify those sections as `FPL_ANALYSIS`. Classify genuinely non-analysis sections as `INTRO`, `ADVERTISEMENT`, `BANTER`, or `OTHER`.
+Classify each section as:
+- `FPL_CONTENT`: substantive FPL discussion, including players, teams, fixtures, performances, previous gameweeks, future plans, transfers, captaincy, strategy, injuries, minutes, or the speaker's FPL team.
+- `NON_FPL_CONTENT`: advertisements, channel announcements, unrelated conversation, and banter with no useful FPL information.
+
+Keep supporting context with the FPL discussion it relates to. When uncertain, use `FPL_CONTENT`.
 
 Return valid JSON only with exactly one key: `sections`.
 
 `sections` must cover every paragraph exactly once, in order, with no gaps or overlaps. Each section must have:
 - `start_index`: the first paragraph number in the section (inclusive integer)
 - `end_index`: the last paragraph number in the section (inclusive integer)
-- `type`: one of `FPL_ANALYSIS`, `INTRO`, `ADVERTISEMENT`, `BANTER`, `OTHER`
+- `type`: one of `FPL_CONTENT`, `NON_FPL_CONTENT`
 - `topic`: a concise label for the broader subject, preferably a club, position group, player comparison, or strategy topic
 
 Do not reproduce, rewrite, or quote paragraph text. Only report section boundaries, types, and topic labels.
@@ -93,9 +97,9 @@ def _normalise_section_specs(raw_sections: Any, paragraph_count: int) -> list[di
                 continue
             if start_index < 0 or end_index < start_index or start_index >= paragraph_count:
                 continue
-            segment_type = str(item.get("type", "OTHER")).upper()
+            segment_type = str(item.get("type", "FPL_CONTENT")).upper()
             if segment_type not in VALID_SEGMENT_TYPES:
-                segment_type = "OTHER"
+                segment_type = "FPL_CONTENT"
             topic = str(item.get("topic", "")).strip() or segment_type.replace("_", " ").title()
             candidates.append(
                 {
@@ -116,8 +120,8 @@ def _normalise_section_specs(raw_sections: Any, paragraph_count: int) -> list[di
                 {
                     "start_index": next_index,
                     "end_index": candidate["start_index"] - 1,
-                    "type": "FPL_ANALYSIS",
-                    "topic": "General FPL discussion",
+                    "type": "FPL_CONTENT",
+                    "topic": "Unclassified transcript content",
                 }
             )
         candidate["start_index"] = max(candidate["start_index"], next_index)
@@ -131,8 +135,8 @@ def _normalise_section_specs(raw_sections: Any, paragraph_count: int) -> list[di
             {
                 "start_index": next_index,
                 "end_index": paragraph_count - 1,
-                "type": "FPL_ANALYSIS",
-                "topic": "General FPL discussion",
+                "type": "FPL_CONTENT",
+                "topic": "Unclassified transcript content",
             }
         )
     return normalised
@@ -152,12 +156,19 @@ def build_analysis_text(segments: list[dict[str, Any]]) -> str:
     return "\n\n".join(retained_sections)
 
 
-def segment_transcript(client: Any, model: str, cache_dir: Path, text: str) -> list[dict[str, Any]]:
+def segment_transcript(
+    client: Any,
+    model: str,
+    cache_dir: Path,
+    text: str,
+    target_gameweek: int | None = None,
+) -> list[dict[str, Any]]:
     paragraphs = split_paragraphs(text)
     if not paragraphs:
         return []
 
-    key = _cache_key("segment", PROMPT_VERSION, model, text)
+    gameweek_context = f"Gameweek {target_gameweek}" if target_gameweek is not None else "the upcoming gameweek"
+    key = _cache_key("segment", PROMPT_VERSION, model, gameweek_context, text)
     cached = _read_cache(cache_dir, key)
     if cached is not None:
         section_specs = _normalise_section_specs(cached.get("sections", []), len(paragraphs))
@@ -168,7 +179,13 @@ def segment_transcript(client: Any, model: str, cache_dir: Path, text: str) -> l
             response_format={"type": "json_object"},
             messages=[
                 {"role": "system", "content": "Return valid JSON only."},
-                {"role": "user", "content": SEGMENT_PROMPT_TEMPLATE.format(numbered_text=numbered_text)},
+                {
+                    "role": "user",
+                    "content": SEGMENT_PROMPT_TEMPLATE.format(
+                        target_gameweek=gameweek_context,
+                        numbered_text=numbered_text,
+                    ),
+                },
             ],
             temperature=0,
         )

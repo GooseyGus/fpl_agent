@@ -14,14 +14,19 @@ Prefers manually-created captions over auto-generated ones, when both exist.
 from __future__ import annotations
 
 import argparse
+import math
+import random
 import re
 import sys
+import time
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
 from youtube_transcript_api import YouTubeTranscriptApi
 from youtube_transcript_api._errors import (
+    IpBlocked,
     NoTranscriptFound,
+    RequestBlocked,
     TranscriptsDisabled,
     VideoUnavailable,
 )
@@ -29,6 +34,8 @@ from youtube_transcript_api._errors import (
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 VIDEO_ID_RE = re.compile(r"^[A-Za-z0-9_-]{11}$")
+MIN_FETCH_INTERVAL_SECONDS = 30.0
+MAX_FETCH_INTERVAL_SECONDS = 90.0
 
 
 def extract_video_id(url_or_id: str) -> str:
@@ -60,6 +67,39 @@ def extract_video_id(url_or_id: str) -> str:
     raise ValueError(f"Could not extract a YouTube video ID from: {url_or_id!r}")
 
 
+def deduplicate_urls(urls: list[str]) -> tuple[list[str], int]:
+    """Keep the first reference to each video, including across URL formats."""
+    unique_urls: list[str] = []
+    seen: set[str] = set()
+    for url in urls:
+        try:
+            key = f"video:{extract_video_id(url)}"
+        except ValueError:
+            key = f"raw:{url}"
+        if key in seen:
+            continue
+        seen.add(key)
+        unique_urls.append(url)
+    return unique_urls, len(urls) - len(unique_urls)
+
+
+def skip_existing_transcripts(urls: list[str], transcripts_dir: Path) -> tuple[list[str], int]:
+    """Exclude videos whose ID-named transcript file has already been written."""
+    pending_urls: list[str] = []
+    skipped = 0
+    for url in urls:
+        try:
+            transcript_path = transcripts_dir / f"{extract_video_id(url)}.txt"
+        except ValueError:
+            pending_urls.append(url)
+            continue
+        if transcript_path.is_file():
+            skipped += 1
+        else:
+            pending_urls.append(url)
+    return pending_urls, skipped
+
+
 def format_timestamp(seconds: float) -> str:
     total_seconds = int(seconds)
     minutes, secs = divmod(total_seconds, 60)
@@ -67,6 +107,26 @@ def format_timestamp(seconds: float) -> str:
     if hours:
         return f"{hours:02d}:{minutes:02d}:{secs:02d}"
     return f"{minutes:02d}:{secs:02d}"
+
+
+def wait_for_next_request(delay: float, completed: int, total: int) -> None:
+    remaining = delay
+    while remaining > 1.0:
+        print(
+            f"\rProgress: {completed}/{total} | Next request in {math.ceil(remaining)}s",
+            end="",
+            flush=True,
+        )
+        time.sleep(1.0)
+        remaining -= 1.0
+
+    print(
+        f"\rProgress: {completed}/{total} | Next request in 1s",
+        end="",
+        flush=True,
+    )
+    time.sleep(remaining)
+    print("\r" + " " * 64 + "\r", end="", flush=True)
 
 
 def fetch_transcript_text(
@@ -164,7 +224,28 @@ def main() -> None:
         if not urls:
             parser.error(f"No URLs found in {urls_path}")
 
-        successful = sum(fetch_to_file(url, args.languages, transcripts_dir) for url in urls)
+        urls, duplicate_count = deduplicate_urls(urls)
+        if duplicate_count:
+            print(f"Skipped {duplicate_count} duplicate URL entr{'y' if duplicate_count == 1 else 'ies'}.")
+
+        urls, existing_count = skip_existing_transcripts(urls, transcripts_dir)
+        if existing_count:
+            print(f"Skipped {existing_count} existing transcript file{'s' if existing_count != 1 else ''}.")
+        if not urls:
+            print("All transcripts have already been downloaded.")
+            return
+
+        successful = 0
+        for index, url in enumerate(urls):
+            try:
+                successful += fetch_to_file(url, args.languages, transcripts_dir)
+            except (IpBlocked, RequestBlocked) as exc:
+                print(f"Error: YouTube blocked transcript requests: {exc}", file=sys.stderr)
+                print(f"Fetched {successful} of {len(urls)} transcripts before the block.")
+                sys.exit(1)
+            if index < len(urls) - 1:
+                delay = random.uniform(MIN_FETCH_INTERVAL_SECONDS, MAX_FETCH_INTERVAL_SECONDS)
+                wait_for_next_request(delay, index + 1, len(urls))
         print(f"Fetched {successful} of {len(urls)} transcripts.")
         if successful == 0:
             sys.exit(1)
@@ -183,6 +264,9 @@ def main() -> None:
         text = fetch_transcript_text(video_id, args.languages)
     except (TranscriptsDisabled, NoTranscriptFound, VideoUnavailable) as exc:
         print(f"Error: no transcript available for {video_id}: {exc}", file=sys.stderr)
+        sys.exit(1)
+    except (IpBlocked, RequestBlocked) as exc:
+        print(f"Error: YouTube blocked transcript requests: {exc}", file=sys.stderr)
         sys.exit(1)
 
     if args.out:

@@ -1,12 +1,16 @@
-"""Fetch text content for the FPL pipeline from URLs, Reddit, or RSS entries.
+"""Fetch text content for the FPL pipeline from URLs, Reddit, RSS entries, or a
+gameweek URL list.
 
 Usage examples:
 	python notebooks/text_processor/fetch_text.py url 'https://example.com/article' --gameweek 4 --name article_name
 	python notebooks/text_processor/fetch_text.py reddit 'https://www.reddit.com/r/FantasyPL/comments/abc123/post_title/' --gameweek 4
 	python notebooks/text_processor/fetch_text.py rss-item 'https://feed.url/rss' --match 'Saka' --gameweek 4
+	python notebooks/text_processor/fetch_text.py --gameweek 4 --method text_file
 
 Without --gameweek/--out, the extracted text is printed to stdout.
-With --gameweek N, the text is saved to gw/gwN/transcripts/<NAME>.txt.
+With --gameweek N, the text is saved to gw/gwN/text/<NAME>.txt.
+With --method text_file, URLs are read from gw/gwN/text/text_urls.txt and each
+result is written into the same folder.
 """
 
 from __future__ import annotations
@@ -21,6 +25,7 @@ from dataclasses import dataclass
 from html import unescape
 from pathlib import Path
 from typing import Any
+from urllib.parse import parse_qs, unquote, urlparse
 
 import feedparser
 import requests
@@ -47,14 +52,56 @@ def slugify(value: str) -> str:
 	return cleaned.strip("_") or "text_source"
 
 
+def normalize_text_url(url: str) -> str:
+	candidate = url.strip()
+	parsed = urlparse(candidate)
+	host = parsed.netloc.lower()
+	if "google." in host and parsed.path == "/url":
+		params = parse_qs(parsed.query)
+		for key in ("url", "q", "u"):
+			target = params.get(key, [""])[0].strip()
+			if target:
+				return unquote(target)
+	return candidate
+
+
+def extract_publication_year(downloaded: str | None, url: str) -> int | None:
+	metadata = trafilatura.extract_metadata(downloaded or url)
+	date_value = getattr(metadata, "date", None) if metadata is not None else None
+	if not date_value:
+		return None
+	date_text = str(date_value)
+	match = re.search(r"\b(19|20)\d{2}\b", date_text)
+	if match:
+		return int(match.group(0))
+	try:
+		return datetime.fromisoformat(date_text).year
+	except ValueError:
+		return None
+
+
+def load_url_list(path: Path) -> list[str]:
+	return [
+		line.strip()
+		for line in path.read_text(encoding="utf-8").splitlines()
+		if line.strip() and not line.lstrip().startswith("#")
+	]
+
+
 def derive_output_path(gameweek: int | None, out: Path | None, name: str | None, fallback_name: str) -> Path | None:
 	if out:
 		return out
 	if not gameweek:
 		return None
-	transcripts_dir = PROJECT_ROOT / "gw" / f"gw{gameweek}" / "transcripts"
-	transcripts_dir.mkdir(parents=True, exist_ok=True)
-	return transcripts_dir / f"{name or fallback_name}.txt"
+	text_dir = PROJECT_ROOT / "gw" / f"gw{gameweek}" / "text"
+	text_dir.mkdir(parents=True, exist_ok=True)
+	return text_dir / f"{name or fallback_name}.txt"
+
+
+def text_dir_for_gameweek(gameweek: int) -> Path:
+	text_dir = PROJECT_ROOT / "gw" / f"gw{gameweek}" / "text"
+	text_dir.mkdir(parents=True, exist_ok=True)
+	return text_dir
 
 
 def manifest_path_for_gameweek(gameweek: int) -> Path:
@@ -144,10 +191,19 @@ def get_reddit_session() -> requests.Session:
 	return session
 
 
-def extract_article_text(url: str) -> ExtractedText:
-	downloaded = trafilatura.fetch_url(url)
+def extract_article_text(url: str, min_year: int | None = None) -> ExtractedText:
+	resolved_url = normalize_text_url(url)
+	parsed_url = urlparse(resolved_url)
+	downloaded = trafilatura.fetch_url(resolved_url)
 	if downloaded is None:
-		raise ValueError(f"Unable to download article content from {url}")
+		raise ValueError(f"Unable to download article content from {resolved_url}")
+
+	publication_year = extract_publication_year(downloaded, resolved_url)
+	if min_year is not None:
+		if publication_year is None:
+			raise ValueError(f"Unable to determine publication year for {resolved_url}")
+		if publication_year < min_year:
+			raise ValueError(f"Skipping article from {publication_year}: {resolved_url}")
 
 	extracted = trafilatura.extract(
 		downloaded,
@@ -156,16 +212,23 @@ def extract_article_text(url: str) -> ExtractedText:
 		favor_precision=True,
 	)
 	if not extracted:
-		raise ValueError(f"Unable to extract readable text from {url}")
+		raise ValueError(f"Unable to extract readable text from {resolved_url}")
 
-	fallback_name = slugify(url.rsplit("/", 1)[-1] or "article")
+	path_tail = parsed_url.path.rstrip("/").rsplit("/", 1)[-1]
+	fallback_name = slugify(path_tail or parsed_url.netloc or "article")
+	metadata: dict[str, Any] = {
+		"source_type": "url",
+		"original_url": url,
+		"resolved_url": resolved_url,
+	}
+	if publication_year is not None:
+		metadata["publication_year"] = publication_year
+	if resolved_url != url:
+		metadata["normalized_from_url"] = url
 	return ExtractedText(
 		source_name=fallback_name,
 		text=extracted.strip(),
-		metadata={
-			"source_type": "url",
-			"original_url": url,
-		},
+		metadata=metadata,
 	)
 
 
@@ -349,36 +412,30 @@ def write_or_print_result(result: ExtractedText, gameweek: int | None, out: Path
 
 def build_parser() -> argparse.ArgumentParser:
 	parser = argparse.ArgumentParser(description=__doc__)
-	subparsers = parser.add_subparsers(dest="source_type", required=True)
-
-	common_output_arguments = argparse.ArgumentParser(add_help=False)
-	common_output_arguments.add_argument("--gameweek", type=int, help="Save into gw/gw{N}/transcripts/")
-	common_output_arguments.add_argument("--out", type=Path, help="Explicit output file path")
-	common_output_arguments.add_argument("--name", help="Output filename stem")
-
-	url_parser = subparsers.add_parser(
-		"url",
-		help="Extract readable text from a webpage URL",
-		parents=[common_output_arguments],
+	parser.add_argument(
+		"source_type",
+		nargs="?",
+		choices=["url", "reddit", "rss-item"],
+		help="Source type to fetch in single-item mode",
 	)
-	url_parser.add_argument("url", help="Webpage URL")
-
-	reddit_parser = subparsers.add_parser(
-		"reddit",
-		help="Fetch a Reddit post and comment text via Reddit JSON",
-		parents=[common_output_arguments],
+	parser.add_argument(
+		"source_value",
+		nargs="?",
+		help="URL or feed URL for the selected source type",
 	)
-	reddit_parser.add_argument("url", help="Reddit post URL")
-
-	rss_parser = subparsers.add_parser(
-		"rss-item",
-		help="Pick an RSS entry, then extract its linked article text",
-		parents=[common_output_arguments],
+	parser.add_argument(
+		"--method",
+		choices=["single", "text_file"],
+		default="single",
+		help="Fetch one source or all URLs from gw/gwN/text/text_urls.txt",
 	)
-	rss_parser.add_argument("feed_url", help="RSS or Atom feed URL")
-	rss_parser.add_argument("--match", help="Case-insensitive title/summary filter")
-	rss_parser.add_argument("--index", type=int, default=0, help="Matched entry index to fetch (default: 0)")
-	rss_parser.add_argument(
+	parser.add_argument("--gameweek", type=int, help="Save into gw/gw{N}/text/")
+	parser.add_argument("--out", type=Path, help="Explicit output file path")
+	parser.add_argument("--name", help="Output filename stem")
+	parser.add_argument("--min-year", type=int, help="Reject articles published before this year")
+	parser.add_argument("--match", help="Case-insensitive title/summary filter")
+	parser.add_argument("--index", type=int, default=0, help="Matched entry index to fetch (default: 0)")
+	parser.add_argument(
 		"--strict-gameweek",
 		action="store_true",
 		help="Drop RSS entries that do not explicitly mention the requested gameweek",
@@ -392,12 +449,69 @@ def main() -> None:
 	args = parser.parse_args()
 
 	try:
+		if args.method == "text_file":
+			if args.source_type or args.source_value:
+				parser.error("--method text_file cannot be combined with a source_type or source_value")
+			if args.out or args.name or args.match or args.index != 0 or args.strict_gameweek:
+				parser.error("--method text_file cannot be combined with --out, --name, --match, --index, or --strict-gameweek")
+			if args.gameweek is None:
+				parser.error("--method text_file requires --gameweek")
+
+			text_dir = text_dir_for_gameweek(args.gameweek)
+			urls_path = text_dir / "text_urls.txt"
+			if not urls_path.is_file():
+				parser.error(f"URL list not found: {urls_path}")
+
+			urls = load_url_list(urls_path)
+			if not urls:
+				parser.error(f"No URLs found in {urls_path}")
+
+			unique_urls: list[str] = []
+			seen_urls: set[str] = set()
+			for url in urls:
+				normalized_url = normalize_text_url(url)
+				if normalized_url in seen_urls:
+					continue
+				seen_urls.add(normalized_url)
+				unique_urls.append(url)
+			duplicate_count = len(urls) - len(unique_urls)
+			if duplicate_count:
+				print(f"Skipped {duplicate_count} duplicate URL entr{'y' if duplicate_count == 1 else 'ies'}.")
+
+			written = 0
+			failed = 0
+			for url in unique_urls:
+				try:
+					result = extract_article_text(url, args.min_year)
+				except (requests.RequestException, ValueError, json.JSONDecodeError) as exc:
+					failed += 1
+					print(f"Error: {exc}", file=sys.stderr)
+					continue
+
+				out_path = text_dir / f"{result.source_name}.txt"
+				if out_path.exists():
+					print(f"Skipped existing text file {out_path.relative_to(PROJECT_ROOT)}")
+					continue
+
+				out_path.write_text(result.text, encoding="utf-8")
+				update_manifest(args.gameweek, out_path, result)
+				print(f"Text written to {out_path.relative_to(PROJECT_ROOT)}")
+				written += 1
+
+			print(f"Fetched {written} of {len(unique_urls)} text sources.")
+			if written == 0 and failed:
+				sys.exit(1)
+			return
+
+		if not args.source_type or not args.source_value:
+			parser.error("source_type and source_value are required unless --method text_file is used")
+
 		if args.source_type == "url":
-			result = extract_article_text(args.url)
+			result = extract_article_text(args.source_value, args.min_year)
 		elif args.source_type == "reddit":
-			result = extract_reddit_text(args.url)
+			result = extract_reddit_text(args.source_value)
 		elif args.source_type == "rss-item":
-			result = extract_rss_entry_text(args.feed_url, args.match, args.index, args.gameweek, args.strict_gameweek)
+			result = extract_rss_entry_text(args.source_value, args.match, args.index, args.gameweek, args.strict_gameweek)
 		else:
 			raise ValueError(f"Unsupported source type: {args.source_type}")
 

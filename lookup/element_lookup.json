@@ -255,6 +255,10 @@
     "name": "Ibrahim Mbaye",
     "team": 2
   },
+  "667": {
+    "name": "James Wright",
+    "team": 2
+  },
   "57": {
     "name": "\u0110or\u0111e Petrovi\u0107",
     "team": 3
@@ -475,6 +479,18 @@
     "name": "El Hadji Malick Diouf",
     "team": 4
   },
+  "657": {
+    "name": "Gustavo Nunes Fernandes Gomes",
+    "team": 4
+  },
+  "660": {
+    "name": "Benjamin Fredrick",
+    "team": 4
+  },
+  "661": {
+    "name": "Ellery Balcombe",
+    "team": 4
+  },
   "109": {
     "name": "Bart Verbruggen",
     "team": 5
@@ -619,6 +635,10 @@
     "name": "Femi Azeez",
     "team": 5
   },
+  "658": {
+    "name": "Younes Ibrahim",
+    "team": 5
+  },
   "28": {
     "name": "Emiliano Mart\u00ednez Romero",
     "team": 6
@@ -749,6 +769,10 @@
   },
   "583": {
     "name": "Pep Chavarr\u00eda",
+    "team": 6
+  },
+  "662": {
+    "name": "Mahdi Nicoll-Jazuli",
     "team": 6
   },
   "91": {
@@ -2221,6 +2245,26 @@
   },
   "634": {
     "name": "Matias Fernandez-Pardo",
+    "team": 17
+  },
+  "659": {
+    "name": "Mason Miley",
+    "team": 17
+  },
+  "663": {
+    "name": "Miodrag Pivas",
+    "team": 17
+  },
+  "664": {
+    "name": "Vakhtang Salia",
+    "team": 17
+  },
+  "665": {
+    "name": "Michael Mills",
+    "team": 17
+  },
+  "666": {
+    "name": "Kyran Thompson",
     "team": 17
   },
   "167": {

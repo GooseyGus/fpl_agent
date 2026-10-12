@@ -1,5 +1,13 @@
 .env
 .venv/
 __pycache__/
-reports/
+reports/gw/
 .DS_Store
+.vscode
+*.txt
+*.code-workspace
+*.json
+!lookup/
+!lookup/**/*.json
+!requirements.txt
+!notes/to_do.txt

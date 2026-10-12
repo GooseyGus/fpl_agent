@@ -23,6 +23,24 @@ This project combines the FPL data created by `data_generator.ipynb` with manual
 1. Open `data_generator.ipynb`.
 2. Set `gameweek` to the upcoming deadline and run every cell from top to bottom.
 3. Put the relevant YouTube transcript files in `gw/gw[N]/transcripts/`.
+   To fetch them from YouTube URLs, create `gw/gwN/transcripts/transcript_urls.txt`
+   with one URL or video ID per line, then run:
+
+   ```zsh
+   python notebooks/transcripts_processor/fetch_transcript.py --gameweek N --method text_file
+   ```
+
+   Blank lines and lines beginning with `#` are ignored. The command removes
+   duplicate video IDs, skips transcripts already present in the folder, and waits
+   30-90 seconds between requests to reduce the chance of YouTube blocking the batch.
+   For website articles, put one URL per line in `gw/gwN/text/text_urls.txt` and run:
+
+   ```zsh
+   python notebooks/text_processor/fetch_text.py --gameweek N --method text_file --min-year 2026
+   ```
+
+   Add `--min-year 2026` to skip pre-2026 articles in the batch list.
+
    The RSS batch collector now writes article/forum text into `gw/gw[N]/text/`; the downstream pipeline only needs plain text files.
 4. Generate the report:
 
@@ -30,28 +48,33 @@ This project combines the FPL data created by `data_generator.ipynb` with manual
    python fpl_report.py --gameweek N
    ```
 
-   For a data-only report that does not make an OpenAI request:
+The command writes both the full Markdown report to `reports/gw_N_report.md`
+and a two-column `player_id,Consensus` table to `reports/gw_N_consensus.csv`.
 
-   ```zsh
-   python fpl_report.py --gameweek N --no-llm
-   ```
+### Review transcript name resolution
 
-The report is written to `reports/gw_N_report.md`.
+After running the transcript name-resolution step, launch the local review dashboard:
+
+```zsh
+streamlit run notebooks/transcripts_processor/review_name_resolution.py -- --gameweek N
+```
+
+The dashboard starts with unresolved mentions in `gw/gwN/transcript_cache/name_resolution_cache/` and records resumable decisions in `gw/gwN/data/gw_N_name_resolution_reviews.json`. Once every unresolved mention has been reviewed, it presents the existing mappings from `lookup/name_aliases.json` in a random order so each can be confirmed, corrected, or removed. Confirmed and corrected mention mappings are also written to the alias file; unsure and not-a-player decisions are kept only in the review file. Alias changes are part of the resolver cache key, so rerunning the name-resolution notebook step regenerates results with the updated aliases.
 
 ## Collecting non-YouTube text
 
 The default source shortlist lives in `lookup/text_sources.json`. That is the right place to keep websites, RSS feeds, and any future subreddit targets because it gives discovery one editable source of truth.
 
-- Extract a known web page into the transcript folder:
+- Extract a known web page into the text folder:
 
    ```zsh
-   python scripts/fetch_text.py url 'https://example.com/article' --gameweek N --name article_name
+   python notebooks/text_processor/fetch_text.py url 'https://example.com/article' --gameweek N --name article_name
    ```
 
 - Search free RSS feeds for candidate articles:
 
    ```zsh
-  python scripts/discover_text.py rss --query saka --gameweek N --limit 10
+   python scripts/discover_text.py rss --query saka --gameweek N --limit 10
    ```
 
   `--gameweek` prefers posts whose title or summary explicitly mentions that gameweek. Add `--strict-gameweek` if you want to drop ambiguous matches entirely.
@@ -59,7 +82,7 @@ The default source shortlist lives in `lookup/text_sources.json`. That is the ri
 - Fetch the linked article text from an RSS entry:
 
    ```zsh
-  python scripts/fetch_text.py rss-item 'https://www.fantasyfootballscout.co.uk/feed/' --match 'Saka' --gameweek N --strict-gameweek
+   python notebooks/text_processor/fetch_text.py rss-item 'https://www.fantasyfootballscout.co.uk/feed/' --match 'Saka' --gameweek N --strict-gameweek
    ```
 
 - Fill a whole gameweek folder in one command:
@@ -87,21 +110,19 @@ The default source shortlist lives in `lookup/text_sources.json`. That is the ri
    Reddit search requires `REDDIT_CLIENT_ID` and `REDDIT_CLIENT_SECRET` in your shell environment or `.env`. Direct Reddit post extraction is also available with:
 
    ```zsh
-   python scripts/fetch_text.py reddit 'https://www.reddit.com/r/FantasyPL/comments/POST_ID/post_title/' --gameweek N
+   python notebooks/text_processor/fetch_text.py reddit 'https://www.reddit.com/r/FantasyPL/comments/POST_ID/post_title/' --gameweek N
    ```
 
 Each saved text fetch also updates `gw/gwN/data/gw_N_source_manifest.json`, which records the output file, fetch time, source type, original URL, and any source-specific metadata such as feed URL, Reddit subreddit, or title.
 
 ## How the report works
 
-- **FPL data (used for "Players To Consider" and the data score)**: recent points, xGI per 90, minutes, availability, next-fixture difficulty, and a 5-gameweek fixture difficulty run.
-- **Transcript evidence (analyst score)**: for each transcript, OpenAI is called twice — once to strip ads/intros/filler while preserving FPL-relevant sentences, then again to extract structured `buy`, `consider`, `avoid`, `sell`, `hold`, and `captain` recommendations from the cleaned text. Results are cached on disk per source (`gw/gwN/transcript_cache/`), so re-running a report for the same gameweek only re-calls the API for new or changed transcripts.
-- **Decay**: a player's analyst score is pulled toward neutral (50) if they have fewer than 3 independent transcript mentions, so a single confident opinion can't look as strong as a corroborated consensus.
-- **Disagreement**: when transcripts disagree on a player, the report shows the split of supportive vs bearish mentions.
-- **Combined score**: 50% data score + 50% analyst score, used for "Players To Consider".
-- **Players To Avoid**: driven purely by transcript sentiment (analyst score < 50), not the data score — the data score is shown alongside for context only.
-- **Name matching**: transcript player names are resolved to FPL IDs via exact match, unique surname match, a small alias table for common nicknames/acronyms (e.g. "KDB", "TAA", "Harland"), then phonetic fuzzy matching.
-- **Your squad**: the report evaluates the most recent publicly available team picks. FPL does not expose the upcoming squad through its public API before the deadline.
+- **Inputs**: the report reads only `gw_N_transcript_extractions.json`, `gw_N_aggregated_player_form.json`, and `lookup/element_lookup.json`.
+- **Exact player join**: `element_lookup.json` is inverted into canonical name to player ID. Every final recommendation must exactly match one canonical name, and every resulting ID must exist in the aggregate. The report stops with all unmatched names listed if either contract is broken.
+- **Grouping**: recommendations are grouped by player ID, preserving every source's stance, explanation, and supporting quote.
+- **Consensus**: the report shows the raw mean stance, source and mention counts, stance distribution, and standard deviation. Its ranking score shrinks small samples toward neutral using a two-mention prior.
+- **Output**: one row per source-mentioned player, containing the FPL player ID and consensus score, ordered from highest to lowest consensus.
+- **No report LLM**: report generation is deterministic and makes no OpenAI request. LLM usage remains upstream in transcript processing, where unstructured speech is converted into reviewed structured recommendations.
 
 The report is decision support rather than a point prediction. Check the included evidence, injuries, and press-conference news before acting.
 

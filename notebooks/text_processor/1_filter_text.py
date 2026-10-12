@@ -1,8 +1,9 @@
 """Run a first-pass FPL filter over gameweek article text files.
 
 This script first builds deterministic labeled segments from each ``*.txt`` file
-in ``gw/gwN/text/``. It then asks the LLM to return only the segment ids that
-should be excluded, and reconstructs the kept text locally.
+in ``gw/gwN/text/``. It then asks the LLM to group those segments into broad,
+coherent sections, label each section as FPL or non-FPL content, and
+reconstruct the kept text locally from the retained sections.
 
 Example:
 	python notebooks/text_processor/1_filter_text.py --gameweek 3
@@ -24,9 +25,11 @@ from openai import OpenAI
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_MODEL = "gpt-4.1-mini"
-PROMPT_VERSION = "v2"
+PROMPT_VERSION = "v3"
 DEFAULT_SEGMENT_WORDS = 180
 DEFAULT_MAX_WORKERS = 4
+KEEP_SECTION_TYPES = {"FPL_CONTENT"}
+VALID_SECTION_TYPES = KEEP_SECTION_TYPES | {"NON_FPL_CONTENT"}
 
 load_dotenv(PROJECT_ROOT / ".env")
 
@@ -206,7 +209,69 @@ def get_client() -> OpenAI:
 	return client
 
 
-def choose_exclusions(
+def _normalise_response(parsed: dict[str, Any], segment_count: int) -> list[dict[str, Any]]:
+	candidates: list[dict[str, Any]] = []
+	if isinstance(parsed.get("sections"), list):
+		for item in parsed["sections"]:
+			if not isinstance(item, dict):
+				continue
+			raw_start_index = item.get("start_index")
+			raw_end_index = item.get("end_index")
+			if not isinstance(raw_start_index, (int, str)) or not isinstance(raw_end_index, (int, str)):
+				continue
+			try:
+				start_index = int(raw_start_index)
+				end_index = int(raw_end_index)
+			except (TypeError, ValueError):
+				continue
+			if start_index < 0 or end_index < start_index or start_index >= segment_count:
+				continue
+			section_type = str(item.get("type", "FPL_CONTENT")).upper()
+			if section_type not in VALID_SECTION_TYPES:
+				section_type = "FPL_CONTENT"
+			topic = str(item.get("topic", "")).strip() or section_type.replace("_", " ").title()
+			candidates.append(
+				{
+					"start_index": start_index,
+					"end_index": min(end_index, segment_count - 1),
+					"type": section_type,
+					"topic": topic,
+				}
+			)
+
+	normalised: list[dict[str, Any]] = []
+	next_index = 0
+	for candidate in sorted(candidates, key=lambda item: (item["start_index"], item["end_index"])):
+		if candidate["end_index"] < next_index:
+			continue
+		if candidate["start_index"] > next_index:
+			normalised.append(
+				{
+					"start_index": next_index,
+					"end_index": candidate["start_index"] - 1,
+					"type": "FPL_CONTENT",
+					"topic": "Unclassified FPL content",
+				}
+			)
+		candidate["start_index"] = max(candidate["start_index"], next_index)
+		normalised.append(candidate)
+		next_index = candidate["end_index"] + 1
+		if next_index >= segment_count:
+			break
+
+	if next_index < segment_count:
+		normalised.append(
+			{
+				"start_index": next_index,
+				"end_index": segment_count - 1,
+				"type": "FPL_CONTENT",
+				"topic": "Unclassified FPL content",
+			}
+		)
+	return normalised
+
+
+def choose_sections(
 	model: str,
 	cache_dir: Path,
 	source_name: str,
@@ -230,13 +295,15 @@ def choose_exclusions(
 			{
 				"role": "user",
 				"content": (
-					"You review deterministic segments from a Fantasy Premier League article. "
-					"Your job is only to identify segments that should be excluded from a first-pass FPL corpus. "
-					"Keep segments that contain FPL strategy, player discussion, transfers, fixtures, captaincy, chips, injuries, stats, or analyst opinion. "
-					"Exclude only segments that are intros, sponsor copy, social prompts, comments, navigation, unrelated football news, or filler with no useful FPL content. "
-					"Be conservative: if a segment has meaningful FPL content, keep it. "
-					"Return JSON with exactly one key: excluded_segment_ids. "
-					"excluded_segment_ids must be an array of segment ids to drop, and nothing else.\n\n"
+					"You divide a Fantasy Premier League article into broad, coherent sections and identify the FPL content. "
+					"Each input item is a deterministic article segment. Group consecutive segments that belong to the same broader discussion, such as transfer targets, captaincy, fixtures, team news, or sponsor copy. "
+					"Prefer a small number of substantial sections over many small ones. Start a new section only when the main subject or content type clearly changes. "
+					"Classify each section as FPL_CONTENT for substantive FPL discussion, or NON_FPL_CONTENT for intros, sponsor copy, navigation, social prompts, unrelated football news, and filler with no useful FPL information. "
+					"Keep supporting context with the FPL discussion it relates to. When uncertain, use FPL_CONTENT. "
+					"Return JSON with exactly one key: sections. "
+					"sections must cover every input segment exactly once, in order, with no gaps or overlaps. "
+					"Each section must have start_index, end_index, type, and topic. "
+					"Do not reproduce, rewrite, or quote segment text. Only report section boundaries, types, and topic labels.\n\n"
 					f"SOURCE:\n{source_name}\n\nSEGMENTS:\n{segment_json}"
 				),
 			},
@@ -244,13 +311,7 @@ def choose_exclusions(
 		temperature=0,
 	)
 	parsed = json.loads(response.choices[0].message.content or "{}")
-	valid_segment_ids = {segment.id for segment in segments}
-	excluded_segment_ids = [
-		str(segment_id)
-		for segment_id in parsed.get("excluded_segment_ids", [])
-		if str(segment_id) in valid_segment_ids
-	]
-	kept_segment_ids = [segment.id for segment in segments if segment.id not in set(excluded_segment_ids)]
+	section_specs = _normalise_response(parsed, len(segments))
 	payload = {
 		"source_name": source_name,
 		"cache_key": cache_key,
@@ -259,17 +320,28 @@ def choose_exclusions(
 		"prompt_version": PROMPT_VERSION,
 		"segment_words": segment_words,
 		"segment_count": len(segments),
-		"excluded_segment_ids": excluded_segment_ids,
-		"kept_segment_ids": kept_segment_ids,
+		"section_count": len(section_specs),
+		"retained_section_count": sum(1 for section in section_specs if section["type"] in KEEP_SECTION_TYPES),
+		"removed_section_count": sum(1 for section in section_specs if section["type"] not in KEEP_SECTION_TYPES),
+		"sections": section_specs,
 	}
 	write_decision_cache(cache_dir, cache_key, payload)
 	return payload
 
 
-def reconstruct_text(segments: list[Segment], excluded_segment_ids: list[str]) -> str:
-	excluded = set(excluded_segment_ids)
-	kept_segments = [segment.text for segment in segments if segment.id not in excluded and segment.text.strip()]
-	return "\n\n".join(kept_segments).strip()
+def reconstruct_text(segments: list[Segment], sections: list[dict[str, Any]]) -> str:
+	retained_sections: list[str] = []
+	for section in sections:
+		if section.get("type") not in KEEP_SECTION_TYPES:
+			continue
+		start_index = int(section["start_index"])
+		end_index = int(section["end_index"])
+		retained_text = "\n\n".join(
+			segment.text for segment in segments[start_index : end_index + 1] if segment.text.strip()
+		).strip()
+		if retained_text:
+			retained_sections.append(retained_text)
+	return "\n\n".join(retained_sections).strip()
 
 
 def process_file(
@@ -288,18 +360,31 @@ def process_file(
 			metadata={
 				"source_file": text_path.name,
 				"segment_count": 0,
-				"excluded_count": 0,
-				"kept_count": 0,
+				"section_count": 0,
+				"retained_section_count": 0,
+				"removed_section_count": 0,
+				"segment_words": segment_words,
+				"sections": [],
 			},
 		)
 
 	segments = build_segments(raw_text, segment_words)
 	source_name = text_path.stem
 	source_hash = _source_hash(raw_text)
-	decision = choose_exclusions(model, cache_dir, source_name, raw_text, segments, segment_words, refresh=refresh)
-	filtered_text = reconstruct_text(segments, list(decision.get("excluded_segment_ids", [])))
-	excluded_count = len(decision.get("excluded_segment_ids", []))
-	kept_count = len(segments) - excluded_count
+	decision = choose_sections(model, cache_dir, source_name, raw_text, segments, segment_words, refresh=refresh)
+	section_specs = list(decision.get("sections", []))
+	filtered_text = reconstruct_text(segments, section_specs)
+	section_records = [
+		{
+			**section,
+			"text": "\n\n".join(
+				segment.text for segment in segments[section["start_index"] : section["end_index"] + 1] if segment.text.strip()
+			).strip(),
+		}
+		for section in section_specs
+	]
+	retained_section_count = sum(1 for section in section_specs if section.get("type") in KEEP_SECTION_TYPES)
+	removed_section_count = sum(1 for section in section_specs if section.get("type") not in KEEP_SECTION_TYPES)
 	return FilteredText(
 		source_name=source_name,
 		text=filtered_text,
@@ -307,11 +392,11 @@ def process_file(
 			"source_file": text_path.name,
 			"source_hash": source_hash,
 			"segment_count": len(segments),
-			"excluded_count": excluded_count,
-			"kept_count": kept_count,
+			"section_count": len(section_specs),
+			"retained_section_count": retained_section_count,
+			"removed_section_count": removed_section_count,
 			"segment_words": segment_words,
-			"excluded_segment_ids": list(decision.get("excluded_segment_ids", [])),
-			"kept_segment_ids": list(decision.get("kept_segment_ids", [])),
+			"sections": section_records,
 		},
 	)
 
@@ -333,7 +418,7 @@ def process_text_folder(
 	if max_workers < 1:
 		raise ValueError("max_workers must be at least 1")
 
-	text_paths = sorted(source_dir.glob("*.txt"))
+	text_paths = [text_path for text_path in sorted(source_dir.glob("*.txt")) if text_path.name != "text_urls.txt"]
 	if not text_paths:
 		return {}
 
@@ -381,8 +466,9 @@ def main() -> None:
 		print(
 			f"Processed {source_name} "
 			f"({filtered.metadata.get('segment_count', 0)} segment(s), "
-			f"{filtered.metadata.get('excluded_count', 0)} excluded, "
-			f"{filtered.metadata.get('kept_count', 0)} kept)"
+			f"{filtered.metadata.get('section_count', 0)} section(s), "
+			f"{filtered.metadata.get('retained_section_count', 0)} retained, "
+			f"{filtered.metadata.get('removed_section_count', 0)} removed)"
 		)
 
 
