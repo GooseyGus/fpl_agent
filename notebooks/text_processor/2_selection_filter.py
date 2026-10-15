@@ -15,6 +15,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_MODEL = "gpt-4.1-mini"
 FILTER_PROMPT_VERSION = "v1"
 DEFAULT_MAX_WORKERS = 4
+KEEP_SECTION_TYPES = {"FPL_CONTENT"}
 
 FILTER_RESPONSE_FORMAT = {
 	"type": "json_schema",
@@ -148,16 +149,19 @@ def _section_payload(source: Any) -> list[dict[str, Any]]:
 	payload: list[dict[str, Any]] = []
 	if not isinstance(sections, list):
 		return payload
-	for index, section in enumerate(sections):
+	for section in sections:
 		if not isinstance(section, dict):
+			continue
+		section_type = str(section.get("type", "FPL_CONTENT")).strip() or "FPL_CONTENT"
+		if section_type not in KEEP_SECTION_TYPES:
 			continue
 		text = str(section.get("text", "")).strip()
 		if not text:
 			continue
 		payload.append(
 			{
-				"section_index": index,
-				"type": str(section.get("type", "FPL_CONTENT")).strip() or "FPL_CONTENT",
+				"section_index": len(payload),
+				"type": section_type,
 				"topic": str(section.get("topic", "")).strip(),
 				"text": text,
 			}

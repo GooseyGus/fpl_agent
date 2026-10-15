@@ -21,7 +21,7 @@ from openai import OpenAI
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_MODEL = "gpt-4.1-mini"
-EXTRACTION_PROMPT_VERSION = "v3"
+EXTRACTION_PROMPT_VERSION = "v4"
 DEFAULT_MAX_WORKERS = 4
 DEFAULT_BATCH_SIZE = 4
 
@@ -83,16 +83,20 @@ Return strict JSON only with exactly one key: `results`.
 For each result item:
 
 `recommendations` must be an array of objects. Each object must include:
-- `player_name`: the player being discussed
-- `stance`: an integer from 1 to 5 using the same scale as the transcript extractor, where 1 is strongest avoid/sell and 5 is strongest buy
-- `sentiment`: a short phrase that captures the recommendation's nuance
-- `confidence`: an integer from 1 to 5
-- `supporting_quote`: a direct quote from the article text
+- `player_name`: the player's full name as written in the article
+- `stance`: an integer recommendation score using this scale:
+    1 = strong avoid or sell; do not go near
+    2 = negative; probably avoid or do not buy
+    3 = neutral, indifferent, balanced, or hold
+    4 = positive; definitely consider
+    5 = emphatic recommendation or must-buy
+- `sentiment`: a faithful explanation of the author's full opinion and reasoning; it may be several sentences when the nuance needs it
+- `confidence`: an integer from 1 to 5 measuring confidence that you interpreted the article correctly, not confidence in the player's future performance
+- `supporting_quote`: a direct, verbatim quote that identifies the player and best supports the extracted stance; include multiple consecutive sentences when the player's name and the opinion are separated
 
-Rules:
-- Keep supporting quotes faithful to the source.
-- Do not invent players, quotes, injuries, or stats.
-- If a player is mentioned but there is no actionable recommendation, omit them.
+Extract one record for each materially distinct evaluative passage about a player. Keep separate records when the same player is evaluated in different sections or the author's view changes; do not collapse distant evidence into one summary. Do not create a recommendation from a name-only mention, a fixture list, a team news list, or neutral factual description with no evaluative opinion. Do not turn pure previous-week recap into a recommendation unless the author clearly turns it into a present or future FPL decision. Capture negative and mixed opinions as carefully as positive ones. For a mixed passage, use the net stance and preserve the qualifications in `sentiment`.
+
+Keep `supporting_quote` faithful to the article text. Do not invent players, opinions, quotes, injuries, or stats. Ignore captaincy and general themes unless they directly express whether the player is a good FPL selection. Evaluate each source independently and copy its `source` id exactly.
 
 INPUT_SOURCES:
 {sources_json}
@@ -129,23 +133,28 @@ def _normalize_response(parsed: dict[str, Any], source_name: str) -> dict[str, A
         if not isinstance(item, dict):
             continue
         player_name = str(item.get("player_name", "")).strip()
-        raw_stance = item.get("stance")
+        sentiment = str(item.get("sentiment", "")).strip()
         supporting_quote = str(item.get("supporting_quote", "")).strip()
-        if not player_name or raw_stance is None or not supporting_quote:
+        raw_stance = item.get("stance")
+        raw_confidence = item.get("confidence")
+        if not isinstance(raw_stance, (int, str)) or not isinstance(raw_confidence, (int, str)):
             continue
         try:
             stance = int(raw_stance)
+            confidence = int(raw_confidence)
         except (TypeError, ValueError):
             continue
-        if stance < 1 or stance > 5:
+        if not player_name or not sentiment or not supporting_quote:
+            continue
+        if stance not in range(1, 6) or confidence not in range(1, 6):
             continue
         recommendations.append(
             {
                 "source": source_name,
                 "player_name": player_name,
                 "stance": stance,
-                "sentiment": str(item.get("sentiment", "")).strip(),
-                "confidence": int(item.get("confidence", 3) or 3),
+                "sentiment": sentiment,
+                "confidence": confidence,
                 "supporting_quote": supporting_quote,
             }
         )

@@ -61,6 +61,26 @@ streamlit run notebooks/transcripts_processor/review_name_resolution.py -- --gam
 
 The dashboard starts with unresolved mentions in `gw/gwN/transcript_cache/name_resolution_cache/` and records resumable decisions in `gw/gwN/data/gw_N_name_resolution_reviews.json`. Once every unresolved mention has been reviewed, it presents the existing mappings from `lookup/name_aliases.json` in a random order so each can be confirmed, corrected, or removed. Confirmed and corrected mention mappings are also written to the alias file; unsure and not-a-player decisions are kept only in the review file. Alias changes are part of the resolver cache key, so rerunning the name-resolution notebook step regenerates results with the updated aliases.
 
+### Extract head-to-head comparisons
+
+After the transcript notebook has written `gw_N_transcript_selection.json`, extract explicit player comparisons ("Bruno is as good as Palmer this week") for Bradley-Terry scoring:
+
+```zsh
+python -m notebooks.transcripts_processor.5_comparisons --gameweek N
+```
+
+This makes one OpenAI call per transcript, cached in `gw/gwN/transcript_cache/comparison_cache/`, and writes `gw/gwN/data/gw_N_transcript_comparisons.json`. Comparisons whose quote is not verbatim in the transcript, or whose players do not resolve exactly to the roster, are dropped and counted.
+
+## Backtesting
+
+Score consensus, Bradley-Terry, and baseline signals (ownership, net transfers, form, form + fixture) against final points for every finished gameweek with extractions:
+
+```zsh
+python -m backtest.run_backtest
+```
+
+Final points come from the FPL `event/{gw}/live` endpoint and are cached as `gw/gwN/data/gw_N_final_points.json`; the saved `api_data_player_stats` files can be captured mid-gameweek. Bradley-Terry strengths (`reports/report_scripts/bradley_terry.py`) anchor every 1-5 stance to a neutral reference player and refine the order with comparisons, because comparisons on their own only rank players within the shortlists creators discuss.
+
 ## Collecting non-YouTube text
 
 The default source shortlist lives in `lookup/text_sources.json`. That is the right place to keep websites, RSS feeds, and any future subreddit targets because it gives discovery one editable source of truth.

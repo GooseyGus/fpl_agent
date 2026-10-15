@@ -6,6 +6,7 @@ import argparse
 import csv
 import io
 import json
+import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 from statistics import fmean, pstdev
@@ -14,7 +15,7 @@ from typing import Any
 from reports.report_scripts.fpl_report_v2 import load_name_resolution_helpers
 
 
-PROJECT_ROOT = Path(__file__).resolve().parent
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 POSITION_LABELS = {1: "GK", 2: "DEF", 3: "MID", 4: "FWD"}
 NEUTRAL_STANCE = 3.0
 PRIOR_WEIGHT = 2
@@ -42,11 +43,15 @@ def invert_element_lookup(element_lookup: dict[str, dict[str, Any]]) -> dict[str
     return {name: ids[0] for name, ids in ids_by_name.items()}
 
 
+_reported_drops: set[tuple[str, str]] = set()
+
+
 def assign_player_ids(
     recommendations: list[dict[str, Any]],
     players: dict[str, dict[str, Any]],
+    label: str = "extraction",
 ) -> list[dict[str, Any]]:
-    """Assign IDs using canonical names plus alias-aware name resolution."""
+    """Assign IDs using canonical names plus alias-aware name resolution, dropping unresolved names."""
     helpers = load_name_resolution_helpers(players)
     resolve_supported_player_id = helpers.resolve_supported_player_id
     player_names = {player["name"]: int(player_id) for player_id, player in players.items()}
@@ -61,15 +66,15 @@ def assign_player_ids(
             continue
         assigned.append({**recommendation, "player_id": player_id})
 
-    if unresolved:
-        details = "\n".join(
-            f"  - {name or '<missing player_name>'}: {count} recommendation(s)"
-            for name, count in sorted(unresolved.items())
-        )
-        raise ValueError(
-            "Recommendations contain player names that could not be resolved to canonical FPL names. "
-            "Fix the extraction or alias mapping before reporting:\n"
-            f"{details}"
+    # The report scores each extraction more than once, so announce each drop only once.
+    for name, count in sorted(unresolved.items()):
+        if (label, name) in _reported_drops:
+            continue
+        _reported_drops.add((label, name))
+        print(
+            f'"{name or "<missing player_name>"}" was dropped '
+            f"({label}, {count} recommendation(s)): no matching FPL player",
+            file=sys.stderr,
         )
 
     return assigned
@@ -215,11 +220,12 @@ def _rank_grouped_items(grouped: list[dict[str, Any]]) -> list[dict[str, Any]]:
 def _source_scores(
     extraction: dict[str, Any],
     players: dict[str, dict[str, Any]],
+    label: str = "extraction",
 ) -> tuple[list[dict[str, Any]], list[str]]:
     recommendations = extraction.get("recommendations")
     if not isinstance(recommendations, list):
         raise ValueError("Extraction file must contain a recommendations list.")
-    assigned = assign_player_ids([item for item in recommendations if isinstance(item, dict)], players)
+    assigned = assign_player_ids([item for item in recommendations if isinstance(item, dict)], players, label)
     grouped = group_recommendations(assigned, players)
     ranked = _rank_grouped_items(grouped)
     sources = sorted({str(item.get("source", "")).strip() for item in assigned if str(item.get("source", "")).strip()})
@@ -358,8 +364,8 @@ def build_report(gameweek: int) -> str:
     transcript_extraction = load_json(transcript_extraction_path) if transcript_extraction_path.exists() else {"recommendations": [], "sources": []}
     text_extraction = load_json(text_extraction_path) if text_extraction_path.exists() else {"recommendations": [], "sources": []}
 
-    transcript_ranked, transcript_sources = _source_scores(transcript_extraction, players)
-    text_ranked, text_sources = _source_scores(text_extraction, players)
+    transcript_ranked, transcript_sources = _source_scores(transcript_extraction, players, "transcript")
+    text_ranked, text_sources = _source_scores(text_extraction, players, "text")
     ranked = _combined_ranked(transcript_ranked, text_ranked)
 
     strong = [item for item in ranked if item["consensus_score"] >= 3.75 and item["source_count"] >= 2]
@@ -458,8 +464,8 @@ def build_consensus_csv(gameweek: int) -> str:
     transcript_extraction = load_json(transcript_extraction_path) if transcript_extraction_path.exists() else {"recommendations": [], "sources": []}
     text_extraction = load_json(text_extraction_path) if text_extraction_path.exists() else {"recommendations": [], "sources": []}
 
-    transcript_ranked, transcript_sources = _source_scores(transcript_extraction, players)
-    text_ranked, text_sources = _source_scores(text_extraction, players)
+    transcript_ranked, transcript_sources = _source_scores(transcript_extraction, players, "transcript")
+    text_ranked, text_sources = _source_scores(text_extraction, players, "text")
     ranked = _combined_ranked(transcript_ranked, text_ranked)
 
     transcript_map = _item_index_by_player_id(transcript_ranked)
@@ -514,7 +520,7 @@ def main() -> None:
     parser.add_argument("--output", type=Path, help="Optional output path.")
     args = parser.parse_args()
 
-    report_dir = PROJECT_ROOT / "reports" / f"gw_{args.gameweek}"
+    report_dir = PROJECT_ROOT / "reports" / "gw" / f"gw_{args.gameweek}"
     csv_path = args.output or report_dir / f"gw_{args.gameweek}_consensus.csv"
     markdown_path = report_dir / f"gw_{args.gameweek}_report.md"
     csv_path.parent.mkdir(parents=True, exist_ok=True)

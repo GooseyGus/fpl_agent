@@ -226,7 +226,7 @@ def filter_transcript_analysis(
         else:
             removed_sections.append(section_record)
 
-    filtered_analysis_text = "\n\n".join(section["text"] for section in retained_sections)
+    filtered_analysis_text = "\n\n".join(f"{section['heading']}\n{section['text']}" for section in retained_sections)
     return {
         "source": source,
         "analysis_text": analysis_text,
