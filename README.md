@@ -1,151 +1,112 @@
-# FPL Advice Report
+# fpl_hq
 
-This project combines the FPL data created by `data_generator.ipynb` with manually collected YouTube transcripts to produce a Markdown decision-support report.
+All-in-one Fantasy Premier League analysis home: data gathering, expert-opinion
+consensus, statistics, projections, optimisation, backtesting, and reports.
 
-## One-time setup
+## Map
 
-1. Activate the existing virtual environment:
+Data flows one way: **gather → consensus / stats / projections → optimiser → reports**, with
+backtest checking every stage against what actually happened.
 
-   ```zsh
-   source .venv/bin/activate
-   ```
+| Folder | What lives there |
+|---|---|
+| `fpl_hq/paths.py` | The single source of truth for every file location. Change the season here. |
+| `fpl_hq/gather/` | Fetching: FPL API players and fixtures, YouTube transcripts, web/RSS/Reddit text |
+| `fpl_hq/consensus/` | Opinion mining: LLM pipelines that turn transcripts and articles into player stances, plus Bradley-Terry rankings |
+| `fpl_hq/stats/` | Statistical analysis (form, fixtures, team strength). *Empty for now* |
+| `fpl_hq/projections/` | Expected-points models. *Empty for now: to be extracted from `notebooks/research/expected_points.ipynb`* |
+| `fpl_hq/ml/` | Machine-learning models. *Empty for now* |
+| `fpl_hq/optimiser/` | PuLP squad selection and transfers: constraints, objective, squad state, runners |
+| `fpl_hq/backtest/` | Scores signals and models against final points |
+| `fpl_hq/reports/` | Deterministic consensus report and CSV |
+| `pipelines/` | Multi-step entry points that chain the stages together |
+| `apps/` | Streamlit tools (name-resolution review; future dashboard) |
+| `notebooks/pipeline/` | Notebooks you run each week (statistics, transcripts, text) |
+| `notebooks/research/` | Exploration: expected points, neural network, old squad-selection notebook |
+| `tests/` | `pytest`: currently checks every module imports |
+| `data/` | Not in git, apart from `data/reference/` (see below) |
+| `archive/` | Not in git. Old FPL projects kept for reference, each with its own git history |
 
-2. Install the report dependencies:
+### Data layout
 
-   ```zsh
-   pip install -r requirements.txt
-   ```
+```
+data/
+├── reference/              tracked in git: element/team lookups, name_aliases.json (hand-curated), text_sources.json
+├── history/                past seasons: vaastav/ (2016-26), fpl_api/ snapshots, history_past.csv
+└── 2026-27/
+    ├── gameweeks/gwN/      transcripts/, text/, data/, *_cache/   (per-gameweek inputs, caches, derived JSON)
+    ├── season_data/        season-long player and fixture tables
+    ├── reports/gw_N/       consensus CSV + markdown report
+    ├── optimiser/          squads and optimiser reports
+    └── backtest/           backtest outputs
+```
 
-3. Create `.env` from `.env.example`, then put your own OpenAI API key in `.env`. Keep this file private; it is excluded from Git.
+Next season: set `SEASON` in `fpl_hq/paths.py`. Don't copy the repo.
+
+## Setup
+
+```zsh
+source .venv/bin/activate
+pip install -r requirements.txt
+pip install -e .
+```
+
+Create `.env` with `OPENAI_API_KEY=...` (plus `REDDIT_CLIENT_ID` / `REDDIT_CLIENT_SECRET` for Reddit search).
+
+Run every `python -m fpl_hq...` command **from the repo root**. On macOS, iCloud can mark
+files inside `.venv` as hidden. Python then skips the editable-install `.pth` file, so
+`fpl_hq` only imports when the repo root is your working directory. Notebooks, `apps/` and
+`pipelines/` handle this themselves.
 
 ## Weekly workflow
 
-1. Open `data_generator.ipynb`.
-2. Set `gameweek` to the upcoming deadline and run every cell from top to bottom.
-3. Put the relevant YouTube transcript files in `gw/gw[N]/transcripts/`.
-   To fetch them from YouTube URLs, create `gw/gwN/transcripts/transcript_urls.txt`
-   with one URL or video ID per line, then run:
-
+1. **Statistics**: open `notebooks/pipeline/statistics_processor.ipynb`, set `gameweek`, and run all cells.
+2. **Transcripts**: list YouTube URLs in `data/2026-27/gameweeks/gwN/transcripts/transcript_urls.txt`, then:
    ```zsh
-   python notebooks/transcripts_processor/fetch_transcript.py --gameweek N --method text_file
+   python -m fpl_hq.gather.fetch_transcript --gameweek N --method text_file
    ```
-
-   Blank lines and lines beginning with `#` are ignored. The command removes
-   duplicate video IDs, skips transcripts already present in the folder, and waits
-   30-90 seconds between requests to reduce the chance of YouTube blocking the batch.
-   For website articles, put one URL per line in `gw/gwN/text/text_urls.txt` and run:
-
+3. **Articles**: list URLs in `data/2026-27/gameweeks/gwN/text/text_urls.txt`, or fill the folder from RSS:
    ```zsh
-   python notebooks/text_processor/fetch_text.py --gameweek N --method text_file --min-year 2026
+   python -m fpl_hq.gather.fetch_text --gameweek N --method text_file --min-year 2026
+   python -m fpl_hq.gather.fill_text_folder --query fpl --gameweek N --limit 5
    ```
-
-   Add `--min-year 2026` to skip pre-2026 articles in the batch list.
-
-   The RSS batch collector now writes article/forum text into `gw/gw[N]/text/`; the downstream pipeline only needs plain text files.
-4. Generate the report:
-
+4. **Consensus**: run `notebooks/pipeline/transcripts_processor.ipynb` and `notebooks/pipeline/text_processor.ipynb`.
+   Optionally review name resolution:
    ```zsh
-   python fpl_report.py --gameweek N
+   streamlit run apps/review_name_resolution.py -- --gameweek N
+   python -m fpl_hq.consensus.transcripts.5_comparisons --gameweek N   # head-to-head comparisons for Bradley-Terry
    ```
-
-The command writes both the full Markdown report to `reports/gw_N_report.md`
-and a two-column `player_id,Consensus` table to `reports/gw_N_consensus.csv`.
-
-### Review transcript name resolution
-
-After running the transcript name-resolution step, launch the local review dashboard:
-
-```zsh
-streamlit run notebooks/transcripts_processor/review_name_resolution.py -- --gameweek N
-```
-
-The dashboard starts with unresolved mentions in `gw/gwN/transcript_cache/name_resolution_cache/` and records resumable decisions in `gw/gwN/data/gw_N_name_resolution_reviews.json`. Once every unresolved mention has been reviewed, it presents the existing mappings from `lookup/name_aliases.json` in a random order so each can be confirmed, corrected, or removed. Confirmed and corrected mention mappings are also written to the alias file; unsure and not-a-player decisions are kept only in the review file. Alias changes are part of the resolver cache key, so rerunning the name-resolution notebook step regenerates results with the updated aliases.
-
-### Extract head-to-head comparisons
-
-After the transcript notebook has written `gw_N_transcript_selection.json`, extract explicit player comparisons ("Bruno is as good as Palmer this week") for Bradley-Terry scoring:
-
-```zsh
-python -m notebooks.transcripts_processor.5_comparisons --gameweek N
-```
-
-This makes one OpenAI call per transcript, cached in `gw/gwN/transcript_cache/comparison_cache/`, and writes `gw/gwN/data/gw_N_transcript_comparisons.json`. Comparisons whose quote is not verbatim in the transcript, or whose players do not resolve exactly to the roster, are dropped and counted.
+5. **Report**:
+   ```zsh
+   python -m fpl_hq.reports.fpl_report --gameweek N
+   ```
+   This writes `data/2026-27/reports/gw_N/gw_N_consensus.csv` and `gw_N_report.md`.
+6. **Optimise**:
+   ```zsh
+   python -m fpl_hq.optimiser.run_optimiser --gameweek N --no-open-report
+   python -m fpl_hq.optimiser.run_dual_optimiser --gameweek N              # API ep_next vs custom gus_ep_next
+   python pipelines/run_optimiser_week.py [N]                              # refresh data, then run the dual optimiser
+   ```
 
 ## Backtesting
 
-Score consensus, Bradley-Terry, and baseline signals (ownership, net transfers, form, form + fixture) against final points for every finished gameweek with extractions:
-
 ```zsh
-python -m backtest.run_backtest
+python -m fpl_hq.backtest.run_backtest
 ```
 
-Final points come from the FPL `event/{gw}/live` endpoint and are cached as `gw/gwN/data/gw_N_final_points.json`; the saved `api_data_player_stats` files can be captured mid-gameweek. Bradley-Terry strengths (`reports/report_scripts/bradley_terry.py`) anchor every 1-5 stance to a neutral reference player and refine the order with comparisons, because comparisons on their own only rank players within the shortlists creators discuss.
+This scores consensus, Bradley-Terry, and baseline signals (ownership, net transfers, form,
+form + fixture) against final points for every finished gameweek with extractions. Final
+points come from the FPL `event/{gw}/live` endpoint and are cached per gameweek.
 
-## Collecting non-YouTube text
+## How the consensus report works
 
-The default source shortlist lives in `lookup/text_sources.json`. That is the right place to keep websites, RSS feeds, and any future subreddit targets because it gives discovery one editable source of truth.
+- **Inputs**: transcript and text extractions, the aggregated player form, and `data/reference/element_lookup.json`.
+- **Exact player join**: every recommendation must match exactly one canonical name. The report stops and lists any unmatched names.
+- **Consensus**: mean stance (1–5), shrunk toward neutral with a two-mention prior, alongside source and mention counts.
+- **No report LLM**: report generation makes no OpenAI request. LLM use stays upstream, where speech and articles become structured recommendations.
 
-- Extract a known web page into the text folder:
+## Cost and caching
 
-   ```zsh
-   python notebooks/text_processor/fetch_text.py url 'https://example.com/article' --gameweek N --name article_name
-   ```
-
-- Search free RSS feeds for candidate articles:
-
-   ```zsh
-   python scripts/discover_text.py rss --query saka --gameweek N --limit 10
-   ```
-
-  `--gameweek` prefers posts whose title or summary explicitly mentions that gameweek. Add `--strict-gameweek` if you want to drop ambiguous matches entirely.
-
-- Fetch the linked article text from an RSS entry:
-
-   ```zsh
-   python notebooks/text_processor/fetch_text.py rss-item 'https://www.fantasyfootballscout.co.uk/feed/' --match 'Saka' --gameweek N --strict-gameweek
-   ```
-
-- Fill a whole gameweek folder in one command:
-
-   ```zsh
-   python scripts/fill_text_folder.py --query fpl --gameweek N --limit 5
-   ```
-
-   This searches the curated RSS shortlist, filters by the fixture-derived publish window for the target gameweek, skips URLs containing `ucl`, writes the results into `gw/gwN/text/`, and updates the source manifest automatically.
-
-- Run a first-pass LLM cleaner over the saved article text:
-
-   ```zsh
-   python notebooks/text_processor/1_filter_text.py --gameweek N
-   ```
-
-   This reads every file in `gw/gwN/text/`, keeps only the FPL-relevant content, and writes the cleaned copies to `gw/gwN/text_clean/`. The raw source files stay untouched, and repeated runs reuse a per-file cache in `gw/gwN/text_cache/`.
-
-- Search Reddit through the official free Reddit API:
-
-   ```zsh
-   python scripts/discover_text.py reddit --query wildcard --subreddit FantasyPL --limit 10
-   ```
-
-   Reddit search requires `REDDIT_CLIENT_ID` and `REDDIT_CLIENT_SECRET` in your shell environment or `.env`. Direct Reddit post extraction is also available with:
-
-   ```zsh
-   python notebooks/text_processor/fetch_text.py reddit 'https://www.reddit.com/r/FantasyPL/comments/POST_ID/post_title/' --gameweek N
-   ```
-
-Each saved text fetch also updates `gw/gwN/data/gw_N_source_manifest.json`, which records the output file, fetch time, source type, original URL, and any source-specific metadata such as feed URL, Reddit subreddit, or title.
-
-## How the report works
-
-- **Inputs**: the report reads only `gw_N_transcript_extractions.json`, `gw_N_aggregated_player_form.json`, and `lookup/element_lookup.json`.
-- **Exact player join**: `element_lookup.json` is inverted into canonical name to player ID. Every final recommendation must exactly match one canonical name, and every resulting ID must exist in the aggregate. The report stops with all unmatched names listed if either contract is broken.
-- **Grouping**: recommendations are grouped by player ID, preserving every source's stance, explanation, and supporting quote.
-- **Consensus**: the report shows the raw mean stance, source and mention counts, stance distribution, and standard deviation. Its ranking score shrinks small samples toward neutral using a two-mention prior.
-- **Output**: one row per source-mentioned player, containing the FPL player ID and consensus score, ordered from highest to lowest consensus.
-- **No report LLM**: report generation is deterministic and makes no OpenAI request. LLM usage remains upstream in transcript processing, where unstructured speech is converted into reviewed structured recommendations.
-
-The report is decision support rather than a point prediction. Check the included evidence, injuries, and press-conference news before acting.
-
-## Notes on cost and caching
-
-Each transcript triggers two OpenAI calls (clean, then extract) the first time it's analysed. Cached results live in `gw/gwN/transcript_cache/`, keyed by a hash of the model, prompt version, and text — delete that folder (or an individual gameweek's) to force a re-analysis, e.g. after a prompt change.
+Each transcript costs OpenAI calls the first time it's analysed. Results are cached under
+`data/2026-27/gameweeks/gwN/*_cache/`, keyed by model, prompt version, and text. Delete a
+cache folder to force re-analysis, for example after a prompt change.

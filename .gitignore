@@ -1,13 +1,17 @@
+# Secrets and environments
 .env
 .venv/
 __pycache__/
-reports/gw/
+.ipynb_checkpoints/
+*.egg-info/
 .DS_Store
-.vscode
-*.txt
+.vscode/
 *.code-workspace
-*.json
-!lookup/
-!lookup/**/*.json
-!requirements.txt
-!notes/to_do.txt
+
+# Data is regenerated or downloaded, never versioned...
+data/*
+# ...except reference lookups, which include hand-curated name aliases.
+!data/reference/
+
+# Legacy projects kept for reference (each keeps its own git history).
+archive/
