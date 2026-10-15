@@ -21,6 +21,7 @@ from pathlib import Path
 from typing import Any
 
 from fpl_hq.paths import ENV_FILE, PROJECT_ROOT, REPORTS_DIR, gw_dir
+from fpl_hq.consensus.llm import MODEL, DETERMINISTIC
 REPORTS_DIR = REPORTS_DIR
 
 
@@ -43,7 +44,7 @@ CAPTAINCY_WEIGHTS = {
 
 # How many summary batches to synthesize concurrently.
 MAX_CONCURRENT_SUMMARY_BATCHES = 6
-TRANSCRIPT_PIPELINE_MODEL = "gpt-4.1-mini"
+TRANSCRIPT_PIPELINE_MODEL = MODEL
 
 
 def load_json(path: Path) -> Any:
@@ -304,7 +305,7 @@ def synthesize_player_summaries_batch(
             {"role": "system", "content": "Return valid JSON only."},
             {"role": "user", "content": SUMMARY_PROMPT_TEMPLATE.format(players_json=payload)},
         ],
-        temperature=0,
+        **DETERMINISTIC,
     )
     parsed = json.loads(response.choices[0].message.content or "{}")
     result: dict[int, dict[str, str]] = {}
@@ -655,7 +656,7 @@ def merge_captaincy_maps(*maps: dict[int, dict[str, Any]]) -> dict[int, dict[str
 def main() -> None:
     parser = argparse.ArgumentParser(description="Generate an FPL weekly recommendation report.")
     parser.add_argument("--gameweek", type=int, required=True, help="Upcoming gameweek number.")
-    parser.add_argument("--model", default="gpt-4.1-mini", help="OpenAI model for summary synthesis.")
+    parser.add_argument("--model", default=MODEL, help="OpenAI model for summary synthesis.")
     parser.add_argument("--no-llm", action="store_true", help="Generate a data-only report without OpenAI.")
     args = parser.parse_args()
 

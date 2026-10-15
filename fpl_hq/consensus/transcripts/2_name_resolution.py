@@ -11,11 +11,14 @@ from types import SimpleNamespace
 from typing import Any
 
 from fpl_hq.paths import REFERENCE_DIR
+from fpl_hq.consensus.llm import DETERMINISTIC
 
 NAME_CORRECTION_PROMPT_VERSION = "v18"
 NAME_CORRECTION_RESOLUTION_VERSION = "v6"
 NAME_CORRECTION_CANDIDATE_LIMIT = 5
 MAX_CONCURRENT_NAME_RESOLUTION = 2
+# The response lists every mention, so long videos are resolved in chunks to keep each response small.
+NAME_RESOLUTION_CHUNK_CHARS = 20_000
 # Confidence is an integer 1-5 scale (see CONFIDENCE_SCALE_LABELS); only 4 or 5 auto-resolve.
 AUTO_RESOLVE_CONFIDENCE_THRESHOLD = 4
 AUTO_RESOLVE_MARGIN_THRESHOLD = 1
@@ -497,7 +500,26 @@ def build_name_resolution_helpers(
             "reason": reason,
         }
 
+    def _split_for_resolution(analysis_text: str) -> list[str]:
+        chunks: list[str] = []
+        for section in re.split(r"\n\n(?=\[SECTION: )", analysis_text):
+            if chunks and len(chunks[-1]) + len(section) + 2 <= NAME_RESOLUTION_CHUNK_CHARS:
+                chunks[-1] = f"{chunks[-1]}\n\n{section}"
+            else:
+                chunks.append(section)
+        return chunks
+
     def resolve_transcript_names(client: Any, model: str, cache_dir: Path, source: str, analysis_text: str) -> list[dict]:
+        mentions_by_key: dict[tuple[str | None, str], dict] = {}
+        for chunk in _split_for_resolution(analysis_text):
+            for record in _resolve_chunk(client, model, cache_dir, source, chunk):
+                mention_key = (record["timestamp"], _normalise_lookup_key(record["raw_name"]))
+                existing = mentions_by_key.get(mention_key)
+                if existing is None or record["confidence"] > existing["confidence"]:
+                    mentions_by_key[mention_key] = record
+        return sorted(mentions_by_key.values(), key=lambda item: (item["timestamp"] or "", item["raw_name"]))
+
+    def _resolve_chunk(client: Any, model: str, cache_dir: Path, source: str, analysis_text: str) -> list[dict]:
         aliases_fingerprint = json.dumps(name_aliases, ensure_ascii=False, sort_keys=True)
         key = _cache_key(
             "name_correction",
@@ -527,7 +549,7 @@ def build_name_resolution_helpers(
                     ),
                 },
             ],
-            temperature=0,
+            **DETERMINISTIC,
         )
         parsed = json.loads(response.choices[0].message.content or "{}")
         mentions_by_key: dict[tuple[str | None, str], dict] = {}

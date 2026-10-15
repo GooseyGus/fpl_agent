@@ -443,7 +443,6 @@ def main() -> None:
         solution_api = build_transfer_model(
             gameweek_pool,
             current_squad=current_squad,
-            budget_cap=args.budget_cap,
             free_transfers=current_squad.free_transfers,
             ep_column="ep_next",
         )
@@ -452,7 +451,6 @@ def main() -> None:
         solution_gus = build_transfer_model(
             gameweek_pool,
             current_squad=current_squad,
-            budget_cap=args.budget_cap,
             free_transfers=current_squad.free_transfers,
             ep_column="gus_ep_next",
         )
@@ -461,7 +459,6 @@ def main() -> None:
         solution_opp = build_transfer_model(
             gameweek_pool,
             current_squad=current_squad,
-            budget_cap=args.budget_cap,
             free_transfers=current_squad.free_transfers,
             ep_column="opp_adj_gus_ep_next",
         )
@@ -470,7 +467,6 @@ def main() -> None:
         solution_adv_opp = build_transfer_model(
             gameweek_pool,
             current_squad=current_squad,
-            budget_cap=args.budget_cap,
             free_transfers=current_squad.free_transfers,
             ep_column="adv_opp_adj_gus_ep_next",
         )

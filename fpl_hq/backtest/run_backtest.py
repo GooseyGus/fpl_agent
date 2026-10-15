@@ -24,6 +24,7 @@ from fpl_hq.backtest.data import (
 )
 from fpl_hq.backtest.signals import SIGNALS, Evidence
 from fpl_hq.consensus.bradley_terry import fit_gameweek, load_comparisons
+from fpl_hq.reports.deterministic_report import source_stances
 from fpl_hq.paths import GAMEWEEKS_DIR
 
 
@@ -40,7 +41,10 @@ def build_frame(gameweek: int) -> pd.DataFrame:
     consensus = load_consensus(gameweek, players)
     final_points = load_final_points(gameweek)
     ids_by_name = {player["name"]: int(player_id) for player_id, player in players.items()}
-    stances = [(item["player"]["name"], int(e["stance"])) for item in consensus.values() for e in item["evidence"]]
+    # One anchor per source, rounding half up, matching the one-vote-per-source consensus.
+    stances = [
+        (item["player"]["name"], int(stance + 0.5)) for item in consensus.values() for stance in source_stances(item["evidence"])
+    ]
     bt_fit = fit_gameweek(gameweek, stances)
     bt_scores = {ids_by_name[name]: value for name, value in bt_fit.strengths.items()}
     compared = {ids_by_name[name] for name in {c.winner for c in load_comparisons(gameweek)} | {c.loser for c in load_comparisons(gameweek)}}

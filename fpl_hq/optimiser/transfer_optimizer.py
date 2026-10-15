@@ -30,16 +30,28 @@ class TransferConstraints:
             "starting_to_bench": LpVariable.dicts("starting_to_bench", df.index, 0, 1, LpBinary),
         }
 
-    def set_objective_function(self, df: pd.DataFrame, decision_variables: dict, prob: LpProblem, ep_column: str = "ep_next") -> None:
-        """Maximize xP from starting players only."""
+    def set_objective_function(
+        self,
+        df: pd.DataFrame,
+        decision_variables: dict,
+        prob: LpProblem,
+        ep_column: str = "ep_next",
+        min_gain: float = 0.0,
+        hit_cost: float = 4.0,
+    ) -> None:
+        """Maximize the score of starting players, less a cost per transfer.
+
+        Every transfer costs `min_gain`, so a free transfer is only made when it raises
+        the starters' score by at least that much; a paid transfer also costs `hit_cost`.
+        """
+        dv = decision_variables
         prob += lpSum(
-            decision_variables["transfer_in_starting_free"][i] * df.loc[i, ep_column]
-            + decision_variables["transfer_in_starting_paid"][i] * (df.loc[i, ep_column] - 4)
-            + decision_variables["stay_starting"][i] * df.loc[i, ep_column]
-            + decision_variables["bench_to_starting"][i] * df.loc[i, ep_column]
-            - decision_variables["transfer_in_bench_paid"][i] * 4
+            (dv["transfer_in_starting_free"][i] + dv["transfer_in_starting_paid"][i] + dv["stay_starting"][i] + dv["bench_to_starting"][i])
+            * df.loc[i, ep_column]
+            - (dv["transfer_in_starting_free"][i] + dv["transfer_in_bench_free"][i]) * min_gain
+            - (dv["transfer_in_starting_paid"][i] + dv["transfer_in_bench_paid"][i]) * (min_gain + hit_cost)
             for i in df.index
-        ), "TotalExpectedPoints"
+        ), "TotalScore"
 
     def apply_formation_constraints(self, df: pd.DataFrame, decision_variables: dict, prob: LpProblem) -> None:
         """Apply squad size and position constraints."""
@@ -198,26 +210,23 @@ class TransferConstraints:
                 prob += decision_variables["transfer_out_bench_paid"][index] == 0
                 prob += decision_variables["bench_to_starting"][index] == 0
 
-        # Transfer balance: in = out for each transfer type
+        # Owned players cannot be bought again.
+        for index in starter_indices.union(bench_indices):
+            for name in ("transfer_in_starting_free", "transfer_in_starting_paid", "transfer_in_bench_free", "transfer_in_bench_paid"):
+                prob += decision_variables[name][index] == 0
+
+        # Transfer balance: players out = players in, for free and paid transfers. Starting and
+        # bench are pooled so that, for example, selling a bench player can fund a new starter.
+        dv = decision_variables
         prob += (
-            lpSum(decision_variables["transfer_out_starting_free"][i] for i in df.index)
-            == lpSum(decision_variables["transfer_in_starting_free"][i] for i in df.index)
-        ), "StartingFreeTransfersBalance"
+            lpSum(dv["transfer_out_starting_free"][i] + dv["transfer_out_bench_free"][i] for i in df.index)
+            == lpSum(dv["transfer_in_starting_free"][i] + dv["transfer_in_bench_free"][i] for i in df.index)
+        ), "FreeTransfersBalance"
 
         prob += (
-            lpSum(decision_variables["transfer_out_starting_paid"][i] for i in df.index)
-            == lpSum(decision_variables["transfer_in_starting_paid"][i] for i in df.index)
-        ), "StartingPaidTransfersBalance"
-
-        prob += (
-            lpSum(decision_variables["transfer_out_bench_free"][i] for i in df.index)
-            == lpSum(decision_variables["transfer_in_bench_free"][i] for i in df.index)
-        ), "BenchFreeTransfersBalance"
-
-        prob += (
-            lpSum(decision_variables["transfer_out_bench_paid"][i] for i in df.index)
-            == lpSum(decision_variables["transfer_in_bench_paid"][i] for i in df.index)
-        ), "BenchPaidTransfersBalance"
+            lpSum(dv["transfer_out_starting_paid"][i] + dv["transfer_out_bench_paid"][i] for i in df.index)
+            == lpSum(dv["transfer_in_starting_paid"][i] + dv["transfer_in_bench_paid"][i] for i in df.index)
+        ), "PaidTransfersBalance"
 
         # Swap balance constraint removed for flexibility
 
@@ -244,13 +253,26 @@ class TransferConstraints:
 def build_transfer_model(
     gameweek_pool: pd.DataFrame,
     current_squad: SquadState,
-    budget_cap: float = 100.0,
+    budget_cap: float | None = None,
     free_transfers: int = 1,
     ep_column: str = "ep_next",
+    min_gain: float = 0.0,
+    hit_cost: float = 4.0,
 ) -> pd.DataFrame:
-    """Build and solve transfer optimization model following the notebook approach."""
+    """Build and solve transfer optimization model following the notebook approach.
+
+    Owned players are valued at their selling price. Without `budget_cap`, the budget is
+    the bank plus the squad's selling value, which is what FPL lets you spend.
+    """
     gameweek_pool = gameweek_pool.copy()
     gameweek_pool["value"] = gameweek_pool["now_cost"] / 10
+    owned = gameweek_pool["element"].isin(current_squad.player_ids)
+    gameweek_pool.loc[owned, "value"] = [
+        current_squad.selling_prices.get(int(player_id), value)
+        for player_id, value in gameweek_pool.loc[owned, ["element", "value"]].itertuples(index=False)
+    ]
+    if budget_cap is None:
+        budget_cap = current_squad.bank + float(gameweek_pool.loc[owned, "value"].sum())
     gameweek_pool["ep_next"] = pd.to_numeric(gameweek_pool["ep_next"], errors="coerce").fillna(0.0)
     if ep_column != "ep_next" and ep_column in gameweek_pool.columns:
         gameweek_pool[ep_column] = pd.to_numeric(gameweek_pool[ep_column], errors="coerce").fillna(0.0)
@@ -260,7 +282,9 @@ def build_transfer_model(
     constraints = TransferConstraints()
 
     decision_variables = constraints.get_decision_variables(gameweek_pool)
-    constraints.set_objective_function(gameweek_pool, decision_variables, prob, ep_column=ep_column)
+    constraints.set_objective_function(
+        gameweek_pool, decision_variables, prob, ep_column=ep_column, min_gain=min_gain, hit_cost=hit_cost
+    )
     constraints.apply_formation_constraints(gameweek_pool, decision_variables, prob)
     constraints.apply_budget_constraints(gameweek_pool, decision_variables, prob, budget_cap)
     constraints.apply_team_constraints(gameweek_pool, decision_variables, prob)
@@ -287,43 +311,43 @@ def build_transfer_model(
         in_prev_bench = player_id in current_squad.bench
 
         # Determine state and transfer status
-        if int(decision_variables["stay_starting"][idx].varValue) == 1:
+        if round(decision_variables["stay_starting"][idx].varValue or 0) == 1:
             gameweek_pool.loc[idx, "selected"] = 1
             gameweek_pool.loc[idx, "starter"] = 1
             gameweek_pool.loc[idx, "transfer_state"] = "STARTER (kept)"
-        elif int(decision_variables["transfer_in_starting_free"][idx].varValue) == 1:
+        elif round(decision_variables["transfer_in_starting_free"][idx].varValue or 0) == 1:
             gameweek_pool.loc[idx, "selected"] = 1
             gameweek_pool.loc[idx, "starter"] = 1
             gameweek_pool.loc[idx, "transfer_state"] = "IN → STARTER (free)"
-        elif int(decision_variables["transfer_in_starting_paid"][idx].varValue) == 1:
+        elif round(decision_variables["transfer_in_starting_paid"][idx].varValue or 0) == 1:
             gameweek_pool.loc[idx, "selected"] = 1
             gameweek_pool.loc[idx, "starter"] = 1
             gameweek_pool.loc[idx, "transfer_state"] = "IN → STARTER (paid, -4pts)"
-        elif int(decision_variables["bench_to_starting"][idx].varValue) == 1:
+        elif round(decision_variables["bench_to_starting"][idx].varValue or 0) == 1:
             gameweek_pool.loc[idx, "selected"] = 1
             gameweek_pool.loc[idx, "starter"] = 1
             gameweek_pool.loc[idx, "transfer_state"] = "BENCH → STARTER"
-        elif int(decision_variables["stay_bench"][idx].varValue) == 1:
+        elif round(decision_variables["stay_bench"][idx].varValue or 0) == 1:
             gameweek_pool.loc[idx, "selected"] = 1
             gameweek_pool.loc[idx, "bench"] = 1
             gameweek_pool.loc[idx, "transfer_state"] = "BENCH (kept)"
-        elif int(decision_variables["transfer_in_bench_free"][idx].varValue) == 1:
+        elif round(decision_variables["transfer_in_bench_free"][idx].varValue or 0) == 1:
             gameweek_pool.loc[idx, "selected"] = 1
             gameweek_pool.loc[idx, "bench"] = 1
             gameweek_pool.loc[idx, "transfer_state"] = "IN → BENCH (free)"
-        elif int(decision_variables["transfer_in_bench_paid"][idx].varValue) == 1:
+        elif round(decision_variables["transfer_in_bench_paid"][idx].varValue or 0) == 1:
             gameweek_pool.loc[idx, "selected"] = 1
             gameweek_pool.loc[idx, "bench"] = 1
             gameweek_pool.loc[idx, "transfer_state"] = "IN → BENCH (paid, -4pts)"
-        elif int(decision_variables["transfer_out_starting_free"][idx].varValue) == 1:
+        elif round(decision_variables["transfer_out_starting_free"][idx].varValue or 0) == 1:
             gameweek_pool.loc[idx, "transfer_state"] = "OUT (free transfer)"
-        elif int(decision_variables["transfer_out_starting_paid"][idx].varValue) == 1:
+        elif round(decision_variables["transfer_out_starting_paid"][idx].varValue or 0) == 1:
             gameweek_pool.loc[idx, "transfer_state"] = "OUT (paid transfer, -4pts)"
-        elif int(decision_variables["transfer_out_bench_free"][idx].varValue) == 1:
+        elif round(decision_variables["transfer_out_bench_free"][idx].varValue or 0) == 1:
             gameweek_pool.loc[idx, "transfer_state"] = "OUT (free transfer)"
-        elif int(decision_variables["transfer_out_bench_paid"][idx].varValue) == 1:
+        elif round(decision_variables["transfer_out_bench_paid"][idx].varValue or 0) == 1:
             gameweek_pool.loc[idx, "transfer_state"] = "OUT (paid transfer, -4pts)"
-        elif int(decision_variables["starting_to_bench"][idx].varValue) == 1:
+        elif round(decision_variables["starting_to_bench"][idx].varValue or 0) == 1:
             gameweek_pool.loc[idx, "selected"] = 1
             gameweek_pool.loc[idx, "bench"] = 1
             gameweek_pool.loc[idx, "transfer_state"] = "STARTER → BENCH"

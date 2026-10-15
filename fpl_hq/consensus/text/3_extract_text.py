@@ -20,7 +20,8 @@ from dotenv import load_dotenv
 from openai import OpenAI
 
 from fpl_hq.paths import ENV_FILE
-DEFAULT_MODEL = "gpt-4.1-mini"
+from fpl_hq.consensus.llm import MODEL, DETERMINISTIC
+DEFAULT_MODEL = MODEL
 EXTRACTION_PROMPT_VERSION = "v4"
 DEFAULT_MAX_WORKERS = 4
 DEFAULT_BATCH_SIZE = 4
@@ -199,7 +200,7 @@ def extract_from_text_batch(
                 "content": EXTRACTION_PROMPT_TEMPLATE.format(sources_json=payload_json),
             },
         ],
-        temperature=0,
+        **DETERMINISTIC,
     )
     parsed = json.loads(response.choices[0].message.content or "{}")
     raw_results = parsed.get("results", []) if isinstance(parsed, dict) else []

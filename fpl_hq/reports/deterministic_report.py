@@ -80,6 +80,16 @@ def assign_player_ids(
     return assigned
 
 
+def source_stances(evidence: list[dict[str, Any]]) -> list[float]:
+    """One stance per source, the mean of its mentions, so repeat mentions in one video add no votes."""
+    by_source: dict[Any, list[float]] = defaultdict(list)
+    for item in evidence:
+        if isinstance(item.get("stance"), bool) or not isinstance(item.get("stance"), (int, float)):
+            continue
+        by_source[str(item.get("source", "")).strip() or id(item)].append(float(item["stance"]))
+    return [fmean(stances) for stances in by_source.values()]
+
+
 def group_recommendations(
     recommendations: list[dict[str, Any]],
     players: dict[str, dict[str, Any]],
@@ -101,7 +111,7 @@ def group_recommendations(
     result = []
     for player_id, evidence in grouped.items():
         player = players[str(player_id)]
-        stances = [float(item["stance"]) for item in evidence]
+        stances = source_stances(evidence)
         sources = sorted({str(item.get("source", "")).strip() for item in evidence if item.get("source")})
         mean_stance = fmean(stances)
         shrunk_stance = (sum(stances) + NEUTRAL_STANCE * PRIOR_WEIGHT) / (
@@ -115,7 +125,7 @@ def group_recommendations(
                 "mean_stance": mean_stance,
                 "consensus_score": shrunk_stance,
                 "stance_deviation": pstdev(stances),
-                "stance_counts": Counter(int(stance) for stance in stances),
+                "stance_counts": Counter(int(item["stance"]) for item in evidence),
                 "mention_count": len(evidence),
                 "sources": sources,
                 "source_count": len(sources),
@@ -266,7 +276,8 @@ def _combined_ranked(
     result: list[dict[str, Any]] = []
     for player_id, entry in grouped_like.items():
         evidence = entry["evidence"]
-        stances = [float(item["stance"]) for item in evidence if isinstance(item.get("stance"), (int, float))]
+        mention_stances = [int(item["stance"]) for item in evidence if isinstance(item.get("stance"), (int, float))]
+        stances = source_stances(evidence)
         if not stances:
             continue
         mean_stance = fmean(stances)
@@ -279,8 +290,8 @@ def _combined_ranked(
                 "mean_stance": mean_stance,
                 "consensus_score": consensus_score,
                 "stance_deviation": pstdev(stances) if len(stances) > 1 else 0.0,
-                "stance_counts": Counter(int(stance) for stance in stances),
-                "mention_count": len(stances),
+                "stance_counts": Counter(mention_stances),
+                "mention_count": len(mention_stances),
                 "sources": sorted({str(source).strip() for source in entry["sources"] if str(source).strip()}),
                 "source_count": len({str(source).strip() for source in entry["sources"] if str(source).strip()}),
             }
@@ -397,7 +408,7 @@ def build_report(gameweek: int) -> str:
         f"- **Coverage:** {len(transcript_extraction.get('recommendations', []))} transcript recommendations, "
         f"{len(text_extraction.get('recommendations', []))} text recommendations, {len(ranked)} combined players.",
         f"- **Sources:** {len(transcript_sources)} transcript source(s), {len(text_sources)} text source(s).",
-        f"- **Consensus score:** raw 1-5 stances shrunk toward neutral using a {PRIOR_WEIGHT}-mention prior. "
+        f"- **Consensus score:** one 1-5 stance per source (the mean of its mentions), shrunk toward neutral using a {PRIOR_WEIGHT}-source prior. "
         "The raw mean, source count, distribution, and disagreement remain visible.",
         "",
         *

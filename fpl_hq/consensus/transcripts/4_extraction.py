@@ -5,8 +5,9 @@ import json
 import unicodedata
 from pathlib import Path
 from typing import Any
+from fpl_hq.consensus.llm import DETERMINISTIC
 
-EXTRACTION_PROMPT_VERSION = "v3"
+EXTRACTION_PROMPT_VERSION = "v4"
 MAX_CONCURRENT_EXTRACTIONS = 6
 
 EXTRACTION_RESPONSE_FORMAT = {
@@ -47,9 +48,7 @@ EXTRACTION_RESPONSE_FORMAT = {
 
 EXTRACTION_PROMPT_TEMPLATE = """You extract structured Fantasy Premier League (FPL) player recommendations from retained transcript analysis.
 
-The transcript is grouped under `[SECTION: topic | start-end]` metadata headings. Use these broader topics to connect related analysis across consecutive paragraphs. The headings were generated during segmentation: use them as context, but never return them as supporting quotes.
-
-The retained text has already passed a separate relevance filter. Still, do not turn pure previous-week recap into a recommendation unless the speaker clearly turns it into a present or future FPL decision.
+The transcript is grouped under `[SECTION: topic | start-end]` metadata headings. FPL videos are organised by topic (position groups, price brackets, teams, fixtures, transfers, captaincy), so a player's assessment may be spread across a section and expressed relative to the other players discussed there. Use the headings as context, but never return them as supporting quotes.
 
 You are given:
 - a transcript source id
@@ -60,19 +59,26 @@ Return strict JSON with exactly one key: `recommendations`.
 
 `recommendations` must be an array of objects. Each object must include:
 - `player_name`: the canonical player name when supported by NAME_CORRECTIONS; otherwise the name as spoken
-- `stance`: an integer recommendation score using this scale:
-    1 = strong avoid or sell; do not go near
-    2 = negative; probably avoid or do not buy
-    3 = neutral, indifferent, balanced, or hold
-    4 = positive; definitely consider
-    5 = emphatic recommendation or must-buy
+- `stance`: an integer answering "should an FPL manager bring this player into their team now?", covering the next deadline and the next few gameweeks:
+    5 = top priority: a must-have, the speaker's captain or triple-captain pick, or the clear best option in a position or price bracket
+    4 = recommended: a good buy or strong option to bring in now or for an upcoming fixture run
+    3 = neutral: fine to keep but not worth buying, a close call, or a genuinely mixed view
+    2 = not recommended: do not buy; owners could move him on
+    1 = sell or avoid: get rid now, or do not go near
 - `sentiment`: a faithful explanation of the speaker's full opinion and reasoning; it may be several sentences when the nuance needs it
 - `confidence`: an integer from 1 to 5 measuring confidence that you interpreted the transcript correctly, not confidence in the player's future performance
-- `supporting_quote`: a direct, verbatim quote that identifies the player and best supports the extracted stance; include multiple consecutive sentences when the player's name and the opinion are separated
+- `supporting_quote`: a direct, verbatim quote that identifies the player and best supports the stance; include multiple consecutive sentences when the player's name and the opinion are separated
 
-Extract one record for each materially distinct evaluative passage about a player. Keep separate records when the same player is evaluated in different sections or the speaker's view changes; do not collapse distant evidence into one summary. Do not create a recommendation from a name-only mention, a fixture list, or neutral factual description with no evaluative opinion. Capture negative and mixed opinions as carefully as positive ones. For a mixed passage, use the net stance and preserve the qualifications in `sentiment`.
+Rules:
+1. Return at most one record per player: the speaker's overall view for the next deadline onwards, considering everything said about the player across the transcript. If the speaker changes their mind, use the final view. Put any other relevant points in `sentiment`.
+2. Rate the advice, not the speaker's ownership. "He's an easy hold but I wouldn't buy him" is 3. Keeping a player only because selling costs a transfer is 3.
+3. Past performance alone is not a recommendation. Points scored last gameweek, hauls, blanks, captain results, or calling a past pick a good or bad decision ("good wildcard pick", "he let me down") produce no record unless the speaker also gives a view on the player from now on.
+4. When a recommendation depends on something unknown, such as fitness or minutes, rate the stated recommendation, but no higher than 4, and note the condition in `sentiment`.
+5. A long-term target ("I want him for the run from gameweek 10") is a recommendation: usually 4.
+6. When two speakers disagree, use their net view and describe the disagreement in `sentiment`.
+7. Do not create a record from a name-only mention, a fixture list, or neutral factual description with no evaluative opinion. Capture negative opinions as carefully as positive ones.
 
-Use NAME_CORRECTIONS only to normalize `player_name`. Never apply corrections to `supporting_quote`, which must remain faithful to ANALYSIS_TEXT. Do not invent players, opinions, or quotes. Ignore captaincy and general themes unless they directly express whether the player is a good FPL selection.
+Use NAME_CORRECTIONS only to normalize `player_name`. Never apply corrections to `supporting_quote`, which must remain faithful to ANALYSIS_TEXT. Do not invent players, opinions, or quotes.
 
 SOURCE:
 {source}
@@ -202,7 +208,7 @@ def extract_from_transcript(
                 ),
             },
         ],
-        temperature=0,
+        **DETERMINISTIC,
     )
     parsed = json.loads(response.choices[0].message.content or "{}")
     normalized = _normalise_response(

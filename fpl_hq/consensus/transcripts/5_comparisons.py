@@ -22,7 +22,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from typing import Any, Callable
 
-from fpl_hq.paths import ENV_FILE, REFERENCE_DIR, gw_data_dir, gw_dir
+from fpl_hq.paths import ENV_FILE, PROJECT_ROOT, REFERENCE_DIR, gw_data_dir, gw_dir
+from fpl_hq.consensus.llm import MODEL, DETERMINISTIC
 
 COMPARISON_PROMPT_VERSION = "v2"
 MAX_CONCURRENT_COMPARISONS = 6
@@ -235,7 +236,7 @@ def extract_comparisons(
                     ),
                 },
             ],
-            temperature=0,
+            **DETERMINISTIC,
         )
         parsed = json.loads(response.choices[0].message.content or "{}")
         cached = parsed if isinstance(parsed, dict) else {}
@@ -321,7 +322,7 @@ def main() -> None:
 
     parser = argparse.ArgumentParser(description="Extract player comparisons for one gameweek from saved files.")
     parser.add_argument("--gameweek", type=int, required=True)
-    parser.add_argument("--model", default="gpt-4.1-mini")
+    parser.add_argument("--model", default=MODEL)
     args = parser.parse_args()
 
     data_dir = gw_data_dir(args.gameweek)
@@ -356,7 +357,7 @@ def main() -> None:
 
     output_path = data_dir / f"gw_{args.gameweek}_transcript_comparisons.json"
     output = write_transcript_comparisons_output(output_path, gameweek=args.gameweek, comparisons_by_source=results)
-    print(f"Wrote {output['counts']['comparisons']} comparison(s) to {output_path.relative_to(project_root)}")
+    print(f"Wrote {output['counts']['comparisons']} comparison(s) to {output_path.relative_to(PROJECT_ROOT)}")
     print(f"Dropped: {output['counts']['dropped']}")
 
 

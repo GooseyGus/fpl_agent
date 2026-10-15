@@ -83,6 +83,7 @@ files inside `.venv` as hidden. Python then skips the editable-install `.pth` fi
    This writes `data/2026-27/reports/gw_N/gw_N_consensus.csv` and `gw_N_report.md`.
 6. **Optimise**:
    ```zsh
+   python -m fpl_hq.optimiser.run_transfer_optimiser --gameweek N             # your real squad: transfers that maximise consensus
    python -m fpl_hq.optimiser.run_optimiser --gameweek N --no-open-report
    python -m fpl_hq.optimiser.run_dual_optimiser --gameweek N              # API ep_next vs custom gus_ep_next
    python pipelines/run_optimiser_week.py [N]                              # refresh data, then run the dual optimiser
@@ -102,7 +103,7 @@ points come from the FPL `event/{gw}/live` endpoint and are cached per gameweek.
 
 - **Inputs**: transcript and text extractions, the aggregated player form, and `data/reference/element_lookup.json`.
 - **Exact player join**: every recommendation must match exactly one canonical name. The report stops and lists any unmatched names.
-- **Consensus**: mean stance (1–5), shrunk toward neutral with a two-mention prior, alongside source and mention counts.
+- **Consensus**: one stance (1–5) per source, the mean of its mentions, so repeat mentions add no votes. The mean across sources is shrunk toward neutral with a two-source prior, alongside source and mention counts.
 - **No report LLM**: report generation makes no OpenAI request. LLM use stays upstream, where speech and articles become structured recommendations.
 
 ## Cost and caching

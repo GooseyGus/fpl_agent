@@ -7,19 +7,22 @@ import json
 import re
 from pathlib import Path
 from typing import Any
+from fpl_hq.consensus.llm import MODEL, DETERMINISTIC
 
 TRANSCRIPT_CHAR_LIMIT = 80_000
-PROMPT_VERSION = "v17"
+PROMPT_VERSION = "v18"
 MAX_CONCURRENT_TRANSCRIPTS = 2
 SEGMENTATION_TIMEOUT_SECONDS = 90
 SEGMENTATION_MAX_RETRIES = 5
+# Paragraphs are ~18 seconds apart, so this caps a section at roughly eight minutes.
+MAX_SECTION_PARAGRAPHS = 26
 KEEP_SEGMENT_TYPES = {"FPL_CONTENT"}
 VALID_SEGMENT_TYPES = KEEP_SEGMENT_TYPES | {"NON_FPL_CONTENT"}
-model = "gpt-4.1-mini"
+model = MODEL
 
 SEGMENT_PROMPT_TEMPLATE = """You divide a raw auto-generated YouTube transcript into broad, coherent topic sections and identify the Fantasy Premier League (FPL) content.
 
-Each paragraph below is numbered and starts with a [MM:SS] timestamp marker. Group consecutive paragraphs that belong to the same broader discussion, such as `Arsenal`, `Defenders`, `Captaincy`, `Fixture strategy`, or `Advertisement`. Prefer a small number of substantial sections over many timestamp-sized sections. Start a new section only when the main subject or content type clearly changes.
+Each paragraph below is numbered and starts with a [MM:SS] timestamp marker. Group consecutive paragraphs that belong to the same discussion, such as `Last gameweek review`, `Arsenal`, `Budget midfielders`, `Premium forwards`, `Captaincy`, `Fixture swings`, or `Advertisement`. FPL videos are usually organised by topic: a review of the previous gameweek, then position groups, price brackets, team-by-team or fixture discussion, transfers, captaincy and chips. Start a new section whenever the speaker moves to a new one of these topics. A section is typically one to five minutes long; avoid sections longer than about eight minutes. Keep a review of the previous gameweek in its own section, separate from discussion of upcoming decisions.
 
 Classify each section as:
 - `FPL_CONTENT`: substantive FPL discussion, including players, teams, fixtures, performances, previous gameweeks, future plans, transfers, captaincy, strategy, injuries, minutes, or the speaker's FPL team.
@@ -33,7 +36,7 @@ Return valid JSON only with exactly one key: `sections`.
 - `start_index`: the first paragraph number in the section (inclusive integer)
 - `end_index`: the last paragraph number in the section (inclusive integer)
 - `type`: one of `FPL_CONTENT`, `NON_FPL_CONTENT`
-- `topic`: a concise label for the broader subject, preferably a club, position group, player comparison, or strategy topic
+- `topic`: a concise label for the subject, preferably a club, position group, price bracket, player comparison, or strategy topic
 
 Do not reproduce, rewrite, or quote paragraph text. Only report section boundaries, types, and topic labels.
 
@@ -142,6 +145,23 @@ def _normalise_section_specs(raw_sections: Any, paragraph_count: int) -> list[di
     return normalised
 
 
+def _split_long_sections(section_specs: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Cut any section longer than MAX_SECTION_PARAGRAPHS into equal parts that keep its topic and type."""
+    result = []
+    for section in section_specs:
+        length = section["end_index"] - section["start_index"] + 1
+        parts = -(-length // MAX_SECTION_PARAGRAPHS)
+        if parts == 1:
+            result.append(section)
+            continue
+        size = -(-length // parts)
+        for part in range(parts):
+            start = section["start_index"] + part * size
+            end = min(start + size - 1, section["end_index"])
+            result.append({**section, "start_index": start, "end_index": end, "topic": f"{section['topic']} (part {part + 1})"})
+    return result
+
+
 def build_analysis_text(segments: list[dict[str, Any]]) -> str:
     retained_sections = []
     for segment in segments:
@@ -187,7 +207,7 @@ def segment_transcript(
                     ),
                 },
             ],
-            temperature=0,
+            **DETERMINISTIC,
         )
         parsed = json.loads(response.choices[0].message.content or "{}")
         section_specs = _normalise_section_specs(parsed.get("sections", []), len(paragraphs))
@@ -198,5 +218,5 @@ def segment_transcript(
             **section,
             "text": "\n\n".join(paragraphs[section["start_index"] : section["end_index"] + 1]),
         }
-        for section in section_specs
+        for section in _split_long_sections(section_specs)
     ]

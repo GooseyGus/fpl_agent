@@ -12,7 +12,8 @@ from dotenv import load_dotenv
 from openai import OpenAI
 
 from fpl_hq.paths import ENV_FILE
-DEFAULT_MODEL = "gpt-4.1-mini"
+from fpl_hq.consensus.llm import MODEL, DETERMINISTIC
+DEFAULT_MODEL = MODEL
 FILTER_PROMPT_VERSION = "v1"
 DEFAULT_MAX_WORKERS = 4
 KEEP_SECTION_TYPES = {"FPL_CONTENT"}
@@ -245,7 +246,7 @@ def select_text_source(
 					),
 				},
 			],
-			temperature=0,
+			**DETERMINISTIC,
 		)
 		parsed = json.loads(response.choices[0].message.content or "{}")
 		decisions = _normalise_response(parsed if isinstance(parsed, dict) else {}, len(sections))

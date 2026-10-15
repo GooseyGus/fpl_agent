@@ -5,8 +5,9 @@ import json
 import re
 from pathlib import Path
 from typing import Any
+from fpl_hq.consensus.llm import DETERMINISTIC
 
-FILTER_PROMPT_VERSION = "v1"
+FILTER_PROMPT_VERSION = "v2"
 MAX_CONCURRENT_SELECTION_FILTERS = 6
 
 FILTER_RESPONSE_FORMAT = {
@@ -37,23 +38,21 @@ FILTER_RESPONSE_FORMAT = {
     },
 }
 
-FILTER_PROMPT_TEMPLATE = """You filter retained Fantasy Premier League (FPL) transcript sections before player-recommendation extraction.
+FILTER_PROMPT_TEMPLATE = """You filter Fantasy Premier League (FPL) transcript sections before player-recommendation extraction.
 
-Each input item is one section from a previous segmentation pass. Your job is only to decide whether the section should remain for upcoming-gameweek recommendation extraction.
+Each input item is one section from a previous segmentation pass. Decide only whether the section contains advice about upcoming decisions: from the next deadline onwards.
 
-Keep a section only if it is materially actionable for the upcoming gameweek:
-- buy, sell, hold, start, bench, captain, transfer, wildcard, punt, or team selection
-- a current judgment that affects a near-term decision
-- a retrospective result that is explicitly used to justify such a decision
+Keep a section when it contains forward-looking advice:
+- buy, sell, hold, start, bench, captain, transfer, wildcard, chip, punt, or team selection for the next deadline or later
+- an assessment of a player's or team's prospects, fixtures, minutes, or role from now on
+- price-bracket or position comparisons, tier lists, or shortlists of options
 
-Drop a section if it is only:
-- a recap of the previous gameweek
-- score, rank, points, haul, or blank commentary with no current decision attached
-- hindsight commentary that does not change the next move
-- generic narrative filler or historical context
+Drop a section when it only reviews what already happened:
+- the previous gameweek's points, hauls, blanks, captain results, rank or green arrows
+- praise or criticism of past picks ("good wildcard decision", "he let me down") with no decision for the next deadline
+- hindsight, banter, narrative filler or historical context
 
-If a section is mixed, keep it only when the current or future-facing decision is materially present.
-If you are unsure, keep the section.
+A previous-gameweek review stays dropped even when it praises or criticises players. Keep a mixed section only when it contains a clear decision or assessment for the next deadline or later.
 
 Return strict JSON with exactly one key: `sections`.
 
@@ -205,7 +204,7 @@ def filter_transcript_analysis(
                     ),
                 },
             ],
-            temperature=0,
+            **DETERMINISTIC,
         )
         parsed = json.loads(response.choices[0].message.content or "{}")
         decisions = _normalise_response(parsed if isinstance(parsed, dict) else {}, len(sections))

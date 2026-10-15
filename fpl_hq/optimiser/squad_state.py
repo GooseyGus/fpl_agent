@@ -7,13 +7,15 @@ class SquadState:
     """Stores and loads squad composition: 15 player IDs (11 starters + 4 bench)."""
     
     def __init__(self, player_ids: list[int] | None = None, gameweek: int = 0, 
-                 bank: float = 0.0, free_transfers: int = 1):
+                 bank: float = 0.0, free_transfers: int = 1,
+                 selling_prices: dict[int, float] | None = None):
         """
         Args:
             player_ids: List of 15 player IDs (last 4 are bench)
             gameweek: Gameweek this squad is for
             bank: Money in the bank (millions)
             free_transfers: Available free transfers
+            selling_prices: Selling price (millions) per player ID; current price when absent
         """
         if player_ids:
             if len(player_ids) != 15:
@@ -23,6 +25,7 @@ class SquadState:
         self.gameweek = gameweek
         self.bank = bank
         self.free_transfers = free_transfers
+        self.selling_prices = {int(pid): float(price) for pid, price in (selling_prices or {}).items()}
     
     @property
     def starters(self) -> list[int]:
@@ -41,6 +44,7 @@ class SquadState:
             "player_ids": [int(pid) for pid in self.player_ids],  # Convert numpy int64 to int
             "bank": float(self.bank),
             "free_transfers": int(self.free_transfers),
+            "selling_prices": {str(pid): price for pid, price in self.selling_prices.items()},
         }
         filepath.parent.mkdir(parents=True, exist_ok=True)
         with open(filepath, "w") as f:
@@ -61,6 +65,7 @@ class SquadState:
             gameweek=data["gameweek"],
             bank=data["bank"],
             free_transfers=data["free_transfers"],
+            selling_prices=data.get("selling_prices"),
         )
     
     def __repr__(self) -> str:

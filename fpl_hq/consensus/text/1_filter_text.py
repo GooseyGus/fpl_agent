@@ -24,7 +24,8 @@ from dotenv import load_dotenv
 from openai import OpenAI
 
 from fpl_hq.paths import ENV_FILE, PROJECT_ROOT, gw_dir
-DEFAULT_MODEL = "gpt-4.1-mini"
+from fpl_hq.consensus.llm import MODEL, DETERMINISTIC
+DEFAULT_MODEL = MODEL
 PROMPT_VERSION = "v3"
 DEFAULT_SEGMENT_WORDS = 180
 DEFAULT_MAX_WORKERS = 4
@@ -308,7 +309,7 @@ def choose_sections(
 				),
 			},
 		],
-		temperature=0,
+		**DETERMINISTIC,
 	)
 	parsed = json.loads(response.choices[0].message.content or "{}")
 	section_specs = _normalise_response(parsed, len(segments))
