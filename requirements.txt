@@ -5,3 +5,12 @@ feedparser>=6.0.0,<7.0.0
 trafilatura>=1.12.0,<2.0.0
 youtube-transcript-api>=0.6.0,<2.0.0
 streamlit>=1.40.0,<2.0.0
+
+# fpl_2026_27 (optimiser / analysis)
+pandas>=3.0.0,<4.0.0
+numpy>=2.4.0,<3.0.0
+pulp>=2.9.0,<3.0.0
+matplotlib>=3.10.0,<4.0.0
+seaborn>=0.13.0,<1.0.0
+jupyter>=1.1.0,<2.0.0
+ipykernel>=7.2.0,<8.0.0
